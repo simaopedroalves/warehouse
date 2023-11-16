@@ -59,8 +59,9 @@ clientC.addEventListener('input', () => {
 material.addEventListener('input', () => {
   list.innerText = material.value
   returnDiv.innerText = material.value
-  searchNumbers()
-  delSemiCol()
+  // searchNumbers()
+  // delSemiCol()
+  deleteNumbToReturn()
   //  deltest()
 }) 
 
@@ -72,27 +73,36 @@ patC.addEventListener('input', () => {
   patPrint.textContent = "PAT: " + patC.value
 })
 
-function searchNumbers() {
-  let array = returnDiv.innerText.split('')
-  console.log(array)
-  let arr = (returnDiv.innerText).split(/^\d*\s+/g);
-  console.log(arr)
-  arr = arr.toString().replace(/;\d{1,3}/g , ";")
-  console.log(arr)
-  arr = arr.replace(/^,/, " ")
-  let test = arr
-  console.log(test)
-  test = test.replace(/;/g, "\n")
-  console.log(test)
-  returnDiv.innerText = test
+// function searchNumbers() {
+//   let array = returnDiv.innerText.split('')
+//   console.log(array)
+//   let arr = (returnDiv.innerText).split(/^\d*\s+/g);
+//   console.log(arr)
+//   arr = arr.toString().replace(/;\d{1,3}/g , ";")
+//   console.log(arr)
+//   arr = arr.replace(/^,/, " ")
+//   let test = arr
+//   console.log(test)
+//   test = test.replace(/;/g, "\n")
+//   console.log(test)
+//   returnDiv.innerText = test
+// }
+
+function deleteNumbToReturn () {
+  let numbersToDelete = new RegExp(/(\d+)[.,]*(\d*)(\s+)/g)
+  let myreturnText = list.innerText.replace(numbersToDelete, "")
+
+  list.innerText = list.innerText.replace(/;/g, "\n")
+  // returnDiv.innerText = myreturnText
+  returnDiv.innerText = myreturnText.replace(/;/g, "\n")
+  console.log(myreturnText)
 }
 
+// function delSemiCol () {
+//   let a = list.innerText.toString().replace(/;/g, "\n")
 
-function delSemiCol () {
-  let a = list.innerText.toString().replace(/;/g, "\n")
-
-  list.innerText = a
-}
+//   list.innerText = a
+// }
 // function deltest() {
 //   let a = (list.innerText).split(/;/g)
 //   console.log(list.innerText)
