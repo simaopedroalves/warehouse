@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-transparent: rgba(1, 153, 255, 0.2);
+    --blue: rgba(1, 153, 255, 1);
+    --green: rgba(1, 255, 22, 0.2);
+    --red: rgb(255, 1, 1, 0.2);
+}
+
+body {
+    margin: 1rem;
+    padding: 0;
+    background-color: var(--blue-transparent);
+}
+
+header {
+    width: auto;
+    max-height: 20vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    display: none;
+}
+
+.logo {
+    object-fit: cover;
+    width: auto;
+    border-radius: 5%;
+    max-height: 10vh;
+}
+
+.box {
+    display: grid;
+    gap: 0;
+    margin: 2rem 0;
+}
+
+.caisBtn {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.formCarga {
+    background-color: var(--green);
+}
+
+.formDescarga {
+    background-color: var(--red);
+}
+
+.formulario {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    color: blue;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+input {
+    border: solid 0.1rem var(--blue);
+    min-height: 2rem;
+    width: 95%;
+    border-radius: 0.5rem;
+    padding-left: 0.2rem;
+}
+
+.clientName {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+textarea {
+    border: solid 0.1rem var(--blue);
+    width: 95%;
+    height: 20vh;
+    resize: vertical;
+    border-radius: 0.5rem;
+    padding-left: 0.2rem;
+}
+
+label {
+    font-weight: 700;
+}
+
+.formDescarga {
+    display: none;
+}
+
+.btn {
+    padding: 0.2rem auto;
+}
+
+.btn-info {
+    margin: 1rem auto;
+}
+
+.fa-print {
+    outline: 0;
+    border: 0;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.by {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.byName {
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+/* ============PRINT=============== */
+.printMode {
+    display: none;
+}
+
+/* .printModeStyle {
+    display: grid;
+    justify-content: center;
+} */
+
+.new-row {
+    border: solid black 0.1rem;
+    height: 5rem;
+    width: 5rem;
+}
+
+
+@media screen and (min-width: 650px){
+    body {
+        margin: 1rem 5rem;
+        height: 100vh;
+    }
+    header {
+        min-height: 10vh;
+    }
+    .formulario {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    
+    }
+    .btn.btn-info {
+        grid-row-start: 6;
+    }
+    /* .media-test {
+       grid-area: 1 / 2 / 6 / 2;
+    } */
+
+   
+    /* label {
+        align-items: flex-start;
+    } */
+}
+
+
+@media screen and (max-width: 999px) and (orientation: landscape){
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    textarea {
+        min-width: 20vh;
+        min-height: 55vh;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .formulario {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    textarea {
+        min-width: 98%;
+        min-height: 33vh;
+        grid-column: span 3;
+    }
+    #obs {
+        grid-column: span 3;
+        min-width: 98%
+    }
+    .buttons {
+        grid-column-start: 2;
+    }
+}
+
+
+@media print {
+    header, .caisBtn, .box {
+        display: none;
+    }
+    .printMode {
+        display: grid;
+    }
+    .printMode h3 {
+        text-transform: uppercase;
+    }
+    .list {
+        font-size: 12pt;
+        margin-top: 3rem;
+        text-transform: uppercase;
+    }
+    .nameAndDate {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        border: solid black 0.1rem;
+        padding: 0.5rem;
+    }
+    .clientName {
+        font-size: 15pt;
+    }
+    .date-print, .pat-print {
+        font-size: 12pt;
+        display: flex;
+        align-items: center;
+    }
+    .big-container {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1rem;
+        margin: 3rem 0 0 0;
+        padding: 0;
+        /* border: solid red 4px; */
+    }
+    .printMode .logo {
+        max-height: 8vh;
+    }
+    .logoToPrint {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    .border-div-print {
+        border: solid black 0.1rem;
+        padding: 2rem;
+        
+    }
+    .underline {
+        /* text-decoration: underline solid 0.2rem; */
+        display: grid;
+        justify-content: center;
+    }
+    /* .newLine {
+        border-bottom: solid black 0.2rem;
+        width: 3rem;
+        display: grid;
+    } */
+    .list-return {
+        margin-top: 1rem;
+        margin-left: 2rem;
+    }
+    .retorno {
+        margin: 0 auto;
+    }
+}
