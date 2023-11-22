@@ -109,10 +109,18 @@ label {
     border: 0;
 }
 
+.fa-whatsapp {
+    color: white;
+    outline: 0;
+    border: 0;
+    font-size: 1.2rem;
+}
+
 .buttons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin: 0 auto;
+    gap: 2rem;
 }
 
 .by {

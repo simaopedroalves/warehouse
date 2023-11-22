@@ -59,10 +59,7 @@ clientC.addEventListener('input', () => {
 material.addEventListener('input', () => {
   list.innerText = material.value
   returnDiv.innerText = material.value
-  // searchNumbers()
-  // delSemiCol()
   deleteNumbToReturn()
-  //  deltest()
 }) 
 
 dateC.addEventListener('input', () => {
@@ -72,21 +69,6 @@ dateC.addEventListener('input', () => {
 patC.addEventListener('input', () => {
   patPrint.textContent = "PAT: " + patC.value
 })
-
-// function searchNumbers() {
-//   let array = returnDiv.innerText.split('')
-//   console.log(array)
-//   let arr = (returnDiv.innerText).split(/^\d*\s+/g);
-//   console.log(arr)
-//   arr = arr.toString().replace(/;\d{1,3}/g , ";")
-//   console.log(arr)
-//   arr = arr.replace(/^,/, " ")
-//   let test = arr
-//   console.log(test)
-//   test = test.replace(/;/g, "\n")
-//   console.log(test)
-//   returnDiv.innerText = test
-// }
 
 function deleteNumbToReturn () {
   let numbersToDelete = new RegExp(/(\d+)[.,]*(\d*)(\s+)/g)
@@ -98,15 +80,25 @@ function deleteNumbToReturn () {
   console.log(myreturnText)
 }
 
-// function delSemiCol () {
-//   let a = list.innerText.toString().replace(/;/g, "\n")
 
-//   list.innerText = a
-// }
-// function deltest() {
-//   let a = (list.innerText).split(/;/g)
-//   console.log(list.innerText)
-//   console.log(a)
-//   list.innerText = a.join(' ')
-// }
+// ===================== Click the Whatsapp Button =========================
 
+const whatsappBtn = document.querySelector('#whatsappBtn');
+
+whatsappBtn.addEventListener('click', () => {
+  sendValuesToWhatsapp()
+})
+
+function sendValuesToWhatsapp() {
+  let wtMessage = material.value.replace(/;/g, "%0a")
+  let sendMaterialWt = "Carga para: " + "%0a" +
+                       clientC.value + "%0a" + 
+                       "PAT: " + patC.value + "%0a" + "%0a" +
+                       "MATERIAL:" + "%0a" + wtMessage;
+
+  let number = +351963120728;
+
+  let url = "https://wa.me/" + number + "?text=" + sendMaterialWt;
+ 
+  window.open(url, '_blank');
+}
