@@ -66,7 +66,7 @@ h2 {
     border-radius: 0.5rem;
 }
 
-input {
+input, .select-team {
     border: solid 0.1rem var(--blue);
     min-height: 2rem;
     width: 95%;
@@ -81,7 +81,7 @@ input {
 
 textarea {
     border: solid 0.1rem var(--blue);
-    width: 95%;
+    min-width: 95%;
     height: 20vh;
     resize: vertical;
     border-radius: 0.5rem;
@@ -141,11 +141,6 @@ a {
     display: none;
 }
 
-/* .printModeStyle {
-    display: grid;
-    justify-content: center;
-} */
-
 .new-row {
     border: solid black 0.1rem;
     height: 5rem;
@@ -153,7 +148,7 @@ a {
 }
 
 
-@media screen and (min-width: 650px){
+@media screen and (min-width: 650px) and (max-width: 999px){
     body {
         margin: 1rem 5rem;
         height: 100vh;
@@ -161,22 +156,28 @@ a {
     header {
         min-height: 10vh;
     }
+
     .formulario {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
-    
+        min-width: 80vw;
+        max-height: 110vh;
     }
-    .btn.btn-info {
-        grid-row-start: 6;
+  
+    textarea {
+        width: 100%;
+        height: 10%;
     }
-    /* .media-test {
-       grid-area: 1 / 2 / 6 / 2;
-    } */
 
-   
-    /* label {
-        align-items: flex-start;
-    } */
+    .textareaDiv {
+        grid-column: span 2;
+        max-width: 98%;
+        max-height: 10%;
+    }
+    .buttons {
+        grid-row-start: 5;
+        grid-column: span 2;
+    }
 }
 
 
@@ -194,18 +195,23 @@ a {
 
 @media screen and (min-width: 1000px){
     .formulario {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 0.5rem;
         justify-content: center;
+        margin: 2rem 5rem;
     }
     textarea {
         min-width: 98%;
         min-height: 33vh;
+        grid-column: span ;
+        grid-template-columns: 3;
+    }
+    .textareaDiv {
         grid-column: span 3;
     }
     #obs {
         grid-column: span 3;
-        min-width: 98%
+        max-width: 95%
     }
     .buttons {
         grid-column-start: 2;
@@ -238,10 +244,10 @@ a {
     .clientName {
         font-size: 15pt;
     }
-    .date-print, .pat-print {
+    .date-print, .pat-print, .guia-print {
         font-size: 12pt;
-        display: flex;
-        align-items: center;
+        /* display: flex;
+        align-items: center; */
     }
     .big-container {
         display: flex;
@@ -249,7 +255,6 @@ a {
         gap: 1rem;
         margin: 3rem 0 0 0;
         padding: 0;
-        /* border: solid red 4px; */
     }
     .printMode .logo {
         max-height: 8vh;
@@ -262,21 +267,14 @@ a {
     .border-div-print {
         border: solid black 0.1rem;
         padding: 2rem;
-        
     }
     .underline {
-        /* text-decoration: underline solid 0.2rem; */
         display: grid;
         justify-content: center;
     }
-    /* .newLine {
-        border-bottom: solid black 0.2rem;
-        width: 3rem;
-        display: grid;
-    } */
+ 
     .list-return {
         margin-top: 1rem;
-        margin-left: 2rem;
     }
     .retorno {
         margin: 0 auto;

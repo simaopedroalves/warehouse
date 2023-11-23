@@ -42,23 +42,49 @@
             <input type="hidden" name="_subject" value="" id="subjectC">
             <input type="hidden" name="_template" value="table">
             <div class="formulario formCarga" id="formularioC">
-                 <label for="teamC">Equipa</label>
-                    <input type="text" name="Team" id="teamC" required>
+                
+               <div>
+                    <label for="teamC">Equipa</label>
+                    <select type="text" name="Team" id="teamC" class="select-team" required>
+                        <option value="Fábio" id="opFabio">Fábio</option>
+                        <option value="Pedro" id="opPedro">Pedro</option>
+                        <option value="Ricardo" id="opRicardo">Ricardo</option>
+                        <option value="Armazém" id="opArmazem">Armazém</option>
+                        <option value="Cristiano" id="opCristiano">Cristiano</option>
+                        <option value="Indefinida" id="opIndefinidda">Indefinida</option>
+                    </select>
+               </div>
                
-                <label for="pat">PAT</label>
+                <div>
+                    <label for="pat">PAT</label>
                     <input type="number" name="PAT" id="patC">
+                </div>
+
+                <div>
+                    <label for="pat">Guia</label>
+                    <input type="number" name="Guia" id="guia" required>
+                </div>    
                  
-                <label for="dateC">Data</label>
-                 <input type="date" name="Date" id="dateC" required>
+                <div>
+                    <label for="dateC">Data</label>
+                    <input type="date" name="Date" id="dateC" required>
+                </div>
 
-                <label for="clientC">Cliente</label>
+                <div>
+                    <label for="clientC">Cliente</label>
                     <input type="text" name="Client" id="clientC" required>
+                </div>
 
-                <label for="material" class="media-test">Material</label>
-                    <textarea id="material" name="Material" required autocorrect></textarea>
-            
-                <label for="obs" class="obs">Obs</label>
+                <div>
+                    <label for="obs" class="obs">Obs</label>
                     <input type="text" name="obs" id="obs">
+                </div>
+
+               <div class="textareaDiv">
+                <label for="material" class="media-test">Material</label>
+                <textarea id="material" name="Material" required autocorrect></textarea>
+               </div>
+            
              <!-- ======================= BUTTONS ==================== -->
                 <div class="buttons">
                     <button type="submit" name="q" id="submitC" class="btn btn-info">Submeter</button>
@@ -109,6 +135,7 @@
             <!-- <h5 class="underline">Cliente:</h5> -->
             <div id="clientName" class="clientName"></div>
             <div class="pat-print" id="patPrint"></div>
+            <div class="guia-print" id="guiaPrint"></div>
             <div class="date-print" id="datePrint"></div>
         </div> 
 

@@ -47,6 +47,8 @@ const patPrint = document.querySelector('#patPrint')
 const patC = document.querySelector('#patC')
 const returnDiv = document.querySelector('#returnDiv')
 const newLine = document.querySelector('#newLine')
+const guia = document.querySelector('#guia')
+const guiaPrint = document.querySelector('#guiaPrint')
 
 printBtn.addEventListener('click', () => {
   window.print()
@@ -70,6 +72,10 @@ patC.addEventListener('input', () => {
   patPrint.textContent = "PAT: " + patC.value
 })
 
+guia.addEventListener('input', () => {
+  guiaPrint.textContent = "Guia n: " + guia.value
+})
+
 function deleteNumbToReturn () {
   let numbersToDelete = new RegExp(/(\d+)[.,]*(\d*)(\s+)/g)
   let myreturnText = list.innerText.replace(numbersToDelete, "")
@@ -87,13 +93,15 @@ const whatsappBtn = document.querySelector('#whatsappBtn');
 
 whatsappBtn.addEventListener('click', () => {
   sendValuesToWhatsapp()
+  chooseNumberToSend()
 })
 
 function sendValuesToWhatsapp() {
   let wtMessage = material.value.replace(/;/g, "%0a")
   let sendMaterialWt = "Carga para: " + "%0a" +
                        clientC.value + "%0a" + 
-                       "PAT: " + patC.value + "%0a" + "%0a" +
+                       "PAT: " + patC.value + "%0a" + 
+                       "Guia nº: " + guia.value + "%0a" + "%0a" +
                        "MATERIAL:" + "%0a" + wtMessage;
 
   let number = +351963120728;
@@ -101,4 +109,15 @@ function sendValuesToWhatsapp() {
   let url = "https://wa.me/" + number + "?text=" + sendMaterialWt;
  
   window.open(url, '_blank');
+}
+
+// =============== WHATSAPP ASSOCIATION ============
+// IF IT IS FOR THIS TEAM,WHEN THE USER CLICKS ON WHATSAPP BUTTON
+// THE WHATSAPP MESSAGE GOES TO THIS TEAM MOBILE PHONE
+
+function chooseNumberToSend() {
+
+  // numbsArray = [+351915401856, +351932172345, +351915252942, +351963120728, +351916060662]
+
+  
 }
