@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+    <title>Armazem Crisavac</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ff1abd11bd.js" crossorigin="anonymous"></script>
-    <meta name="description" content="Cais de Carga e Descarga do Armazem da Crisavac, empresa especializada em climatização">
-    <meta name="Armazem Crisavac" content="Cais de Carga e Descarga">
+    <meta name="description" content="Cais de Carga e Descarga do Armazem da Crisavac">
+    <!-- <meta name="Armazem Crisavac" content="Cais de Carga e Descarga Crisavac"> -->
     <meta name="keywords" content="armazem crisavac, crisavac, armazem, crisavac armazem, Crisavac, CRISAVAC, ARMAZEM, ARMAZÉM">
     <meta name="author" content="Crisavac">
     <meta name="robots" content="index,follow">
+    
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
@@ -19,8 +22,8 @@
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Armazem Crisavac</title>
-    <meta name="google-site-verification" content="CN3jq77UBMOM7Dpb6d3JSU8vg1XVkxNAa5zDjrbVlSc" />
+    
+    <!-- <meta name="google-site-verification" content="CN3jq77UBMOM7Dpb6d3JSU8vg1XVkxNAa5zDjrbVlSc" /> -->
 </head>
 <body>
     
@@ -100,24 +103,37 @@
             <input type="hidden" name="_subject" value="" id="subjectD">
             <input type="hidden" name="_template" value="table">
             <div class="formulario formDescarga" id="formularioD">
-                <label for="teamD">Equipa</label>
-                    <input type="text" name="Team" id="teamD" required>
-
-                <label for="pat">PAT</label>
-                 <input type="number" name="PAT" id="pat">
-
-                <label for="dateD">Data</label>
-                    <input type="date" name="Date" id="dateD" required>
-
-                <label for="clientD">Cliente</label>
-                    <input type="text" name="Client" id="clientD" required>
-
-                <label for="material" class="media-test">Material</label>
-                    <textarea id="material" name="Material" rows="5" required autocorrect></textarea>
                 
-                <label for="obs">Obs</label>
+               <div>
+                <label for="teamD">Equipa</label>
+                <input type="text" name="Team" id="teamD" required>
+               </div>
+
+               <div>
+                <label for="pat">PAT</label>
+                <input type="number" name="PAT" id="pat">
+               </div>
+
+                <div>
+                 <label for="dateD">Data</label>
+                 <input type="date" name="Date" id="dateD" required>
+                </div>
+
+                <div>
+                    <label for="clientD">Cliente</label>
+                    <input type="text" name="Client" id="clientD" required>
+                </div>
+
+                <div>
+                    <label for="obs">Obs</label>
                     <input type="text" name="obs" id="obs">
-            
+                </div>
+
+                <div class="textareaDiv">
+                    <label for="material" class="media-test">Material</label>
+                    <textarea id="material" name="Material" rows="5" required autocorrect></textarea>
+                </div>
+                
                 <div class="buttons">
                     <button type="submit" name="q" id="submitD" class="btn btn-info">Submeter</button>
                 </div>
