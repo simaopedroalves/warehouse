@@ -49,6 +49,9 @@ const returnDiv = document.querySelector('#returnDiv')
 const newLine = document.querySelector('#newLine')
 const guia = document.querySelector('#guia')
 const guiaPrint = document.querySelector('#guiaPrint')
+const obsC = document.querySelector('#obsC')
+const printObsDiv = document.querySelector('.print-obs-div')
+const printObsCarga = document.querySelector('#printObs')
 
 printBtn.addEventListener('click', () => {
   window.print()
@@ -85,6 +88,27 @@ function deleteNumbToReturn () {
   returnDiv.innerText = myreturnText.replace(/;/g, "\n")
   console.log(myreturnText)
 }
+
+// ============================ OBSERVAÇÕES PRINT ==============================
+
+obsC.addEventListener('input', () => {
+
+  printObsCarga.textContent = obsC.value;
+
+  function showsObs () {
+
+    if (obsC.value !== "") {
+      printObsDiv.style.display = 'grid'
+    }
+    else return
+
+  }
+
+  showsObs()
+
+})
+
+// =======================================================================
 
 
 // ===================== Click the Whatsapp Button =========================

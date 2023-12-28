@@ -84,8 +84,8 @@
                 </div>
 
                 <div>
-                    <label for="obs" class="obs">Obs</label>
-                    <input type="text" name="obs" id="obs">
+                    <label for="obsC" class="obsC">Obs</label>
+                    <input type="text" name="obsC" id="obsC">
                 </div>
 
                <div class="textareaDiv">
@@ -139,8 +139,8 @@
                 </div>
 
                 <div>
-                    <label for="obs">Obs</label>
-                    <input type="text" name="obs" id="obs">
+                    <label for="obsD">Obs</label>
+                    <input type="text" name="obsD" id="obsD">
                 </div>
 
                 <div class="textareaDiv">
@@ -172,14 +172,20 @@
 
         <div class="big-container">
             <div class="border-div-print">
-                <h5 class="underline">ARMAZÉM para CLIENTE</h5>
+                <h5 class="underline-one">ARMAZÉM <span><i class="fa-solid fa-arrow-right"></i></span> CLIENTE</h5>
                 <div id="list" class="list"></div>
             </div>
             <div class="return-data border-div-print" id="returnData">   
-                <h5 class="underline">CLIENTE para ARMAZÉM <br>
-                    <span class="retorno">(Retorno)</span></h5>
+                <h5 class="underline-one">CLIENTE <span><i class="fa-solid fa-arrow-right"></i></span> ARMAZÉM </h5>
+                    <span class="retorno">(Retorno)</span>
                 <div id="returnDiv" class="list list-return"></div>
             </div>
+          
+        </div>
+
+        <div class="print-obs-div">
+            <h6 id="obsTitle" class="obs-title">OBSERVAÇÕES:</h6>
+            <p id="printObs" class="print-obs"></p>
         </div>
 
         <div class="logoToPrint">

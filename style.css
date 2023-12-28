@@ -188,7 +188,7 @@ a {
     .textareaDiv {
         grid-column: span 3;
     }
-    #obs {
+    #obsC, #obsD {
         grid-column: span 3;
         max-width: 95%
     }
@@ -208,7 +208,7 @@ a {
         text-transform: uppercase;
     }
     .list {
-        font-size: 12pt;
+        font-size: 10pt;
         margin-top: 3rem;
         text-transform: uppercase;
     }
@@ -220,10 +220,10 @@ a {
         padding: 0.5rem;
     }
     .clientName {
-        font-size: 15pt;
+        font-size: 12pt;
     }
     .date-print, .pat-print, .guia-print {
-        font-size: 12pt;
+        font-size: 10pt;
         /* display: flex;
         align-items: center; */
     }
@@ -246,9 +246,20 @@ a {
         border: solid black 0.1rem;
         padding: 2rem;
     }
-    .underline {
+    .underline-one {
+        display: flex;
+        justify-content: center;
+        font-size: 12pt;
+    }
+
+    .underline-two {
         display: grid;
         justify-content: center;
+        font-size: 12pt;
+    }
+
+    .fa-arrow-right {
+        margin: 0 1rem;
     }
  
     .list-return {
@@ -256,5 +267,25 @@ a {
     }
     .retorno {
         margin: 0 auto;
+        font-size: 10pt;
+    }
+
+    .return-data {
+        display: grid;
+    }
+
+    .print-obs-div {
+        margin: 5rem 0;
+        display: none;
+    }
+
+    .obs-title {
+        font-weight: bold;
+        font-size: 12pt;
+        text-decoration: underline;
+    }
+
+    .print-obs {
+        font-size: 10pt;
     }
 }
