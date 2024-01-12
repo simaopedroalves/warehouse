@@ -2,15 +2,26 @@ const formDescarga = document.querySelector('.formDescarga')
 const descargaBtn = document.getElementById('descargaBtn')
 const formCarga = document.querySelector('.formCarga')
 const cargaBtn = document.getElementById('cargaBtn')
+const prepBtn = document.getElementById('prepBtn')
+const formPrep = document.querySelector('.formPrep')
+
+
+prepBtn.addEventListener('click', () => {
+  formDescarga.style.display = 'none'
+  formCarga.style.display = 'none'
+  formPrep.style.display = 'grid'
+})
 
 descargaBtn.addEventListener('click', () => {
     formDescarga.style.display = 'grid'
     formCarga.style.display = 'none'
+    formPrep.style.display = 'none'
 })
 
 cargaBtn.addEventListener('click', () => {
     formDescarga.style.display = 'none'
     formCarga.style.display = 'grid'
+    formPrep.style.display = 'none'
 })
 
 const subjectC = document.getElementById('subjectC')
@@ -67,6 +78,8 @@ material.addEventListener('input', () => {
   deleteNumbToReturn()
 }) 
 
+
+
 dateC.addEventListener('input', () => {
   datePrint.textContent = dateC.value
 })
@@ -89,7 +102,7 @@ function deleteNumbToReturn () {
   console.log(myreturnText)
 }
 
-// ============================ OBSERVAÇÕES PRINT ==============================
+// ============================ OBSERVAÇÕES PRINT CARGA==============================
 
 obsC.addEventListener('input', () => {
 
@@ -107,6 +120,70 @@ obsC.addEventListener('input', () => {
   showsObs()
 
 })
+
+
+//  PRINT PREPARAÇÃO
+
+const printBtnPrep = document.querySelector('#printBtnPrep')
+const clientNamePrep = document.querySelector('#clientNamePrep')
+const clientP = document.querySelector('#clientP')
+const localPrint = document.querySelector('#localPrint')
+const localP = document.querySelector('#localP')
+const teamPrint = document.querySelector('#teamPrint')
+const teamP = document.querySelector('#teamP')
+const datePrintPrep = document.querySelector('#datePrintPrep')
+const dateP = document.querySelector('#dateP')
+const listPrep = document.querySelector('#listPrep')
+const cargaPrep = document.querySelector('#cargaPrep')
+const materialPrep = document.querySelector('#materialPrep')
+const faturaP = document.querySelector('#faturaP')
+const faturaPrintPrep = document.querySelector('#faturaPrintPrep')
+const obsPrintPrep = document.querySelector('#printObsPrep')
+const obsP = document.querySelector('#obsP')
+
+printBtnPrep.addEventListener('click', () => {
+  window.print()
+})
+
+faturaP.addEventListener('input', () => {
+  faturaPrintPrep.textContent = faturaP.value;
+})
+
+clientP.addEventListener('input', () => {
+  clientNamePrep.textContent = clientP.value;
+})
+
+dateP.addEventListener('input', () => {
+  datePrintPrep.textContent = dateP.value;
+})
+
+localP.addEventListener('input', () => {
+  localPrint.textContent = localP.value;
+})
+
+obsP.addEventListener('input', () => {
+  obsPrintPrep.textContent = obsP.value
+})
+
+teamP.addEventListener('input', () => {
+  teamPrint.textContent = teamP.value
+})
+
+materialPrep.addEventListener('input', () => {
+  listPrep.innerText = materialPrep.value
+  cargaPrep.innerText = materialPrep.value
+  deleteNumbToReturnOnPrep()
+}) 
+
+function deleteNumbToReturnOnPrep() {
+  let numbersToDelete = new RegExp(/(\d+)[.,]*(\d*)(\s+)/g)
+  let myreturnText = listPrep.innerText.replace(numbersToDelete, "")
+
+  listPrep.innerText = listPrep.innerText.replace(/;/g, "\n")
+  // returnDiv.innerText = myreturnText
+  cargaPrep.innerText = myreturnText.replace(/;/g, "\n")
+  console.log(myreturnText)
+}
 
 // =======================================================================
 

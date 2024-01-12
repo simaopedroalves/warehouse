@@ -37,10 +37,74 @@
     <section class="box" id="box">
         
         <div class="caisBtn" id="">
+            <button type="button" class="btn btn-primary" id="prepBtn">Preparar</button>
             <button class="cargaBtn btn btn-success" id="cargaBtn">Carga</button>
             <button class="descargaBtn btn btn-danger" id="descargaBtn">Descarga</button>
             <!-- <button></button> button to create a declaration -->
         </div>
+
+
+        <!-- PREPARAR MATERIAL PARA A OBRA OU INSTALAÇÃO -->
+        <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST">
+            <!-- <input type="hidden" name="_url" value="https://armazemcrisavac.netlify.app"> -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://formsend.netlify.app">
+            <input type="hidden" name="_subject" value="" id="subjectC">
+            <input type="hidden" name="_template" value="table">
+            <div class="formulario formPrep" id="formularioP">
+                
+               <div>
+                    <label for="teamP">Equipa</label>
+                    <select type="text" name="Team" id="teamP" class="select-team" required>
+                        <option value="">Chefe de Equipa</option>
+                        <option value="Fábio" id="opFabio">Fábio</option>
+                        <option value="Pedro" id="opPedro">Pedro</option>
+                        <option value="Ricardo" id="opRicardo">Ricardo</option>
+                        <option value="Armazém" id="opArmazem">Armazém</option>
+                        <option value="Cristiano" id="opCristiano">Cristiano</option>
+                        <option value="Indefinida" id="opIndefinidda">Indefinida</option>
+                    </select>
+               </div>
+               
+                <div>
+                    <label for="faturaP">Fatura para</label>
+                    <input type="text" name="Nome p/Fatura" id="faturaP" required>
+                </div>
+
+                <div>
+                    <label for="clientP">Cliente</label>
+                    <input type="text" name="Client" id="clientP" required>
+                </div>
+
+                <div>
+                    <label for="dateP">Data</label>
+                    <input type="date" name="Date" id="dateP" required>
+                </div>
+
+                <div>
+                    <label for="localP" class="localP">Local</label>
+                    <input type="text" name="localP" id="localP">
+                </div>
+
+                <div>
+                    <label for="obsP" class="obsP">Obs</label>
+                    <input type="text" name="obsP" id="obsP">
+                </div>
+
+               <div class="textareaDiv">
+                <label for="material" class="media-test">Material</label>
+                <textarea id="materialPrep" name="Material" required autocorrect></textarea>
+               </div>
+            
+             <!-- ======================= BUTTONS ==================== -->
+                <div class="buttons">
+                    <button type="submit" name="q" id="submitP" class="btn btn-info">Submeter</button>
+                    <button type="button" class="btn btn-warning" id="printBtnPrep"><i class="fa-solid fa-print"></i></button>
+                    <button type="button" class="btn btn-success" id="whatsappBtn"><i class="fa-brands fa-whatsapp"></i></button>    
+                </div>
+            </div>
+        </form>
+
               <!-- ============================ CARGA ======================= <input type="hidden" name="_url" value="https://yourdomain.co/contact.html"> -->
         <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST">
             <!-- <input type="hidden" name="_url" value="https://armazemcrisavac.netlify.app"> -->
@@ -192,6 +256,45 @@
             <img src="img/logo.png" class="logo" alt="">
         </div>
     </div>
+
+<!--                PRINT MODE PARA PREPARAÇÃO -->
+
+    <div class="printModePrep" id="toPrintPrep">
+        
+        <h3>Material para <span id="faturaPrintPrep"></span></h3>
+
+        <div class="nameAndDate">
+            <!-- <h5 class="underline">Cliente:</h5> -->
+            <div id="clientNamePrep" class="clientName"></div>
+            <div class="local-print" id="localPrint"></div>
+            <div class="team-Print" id="teamPrint"></div>
+            <div class="date-print" id="datePrintPrep"></div>
+        </div> 
+
+        <div class="big-container">
+            <div class="border-div-print">
+                <h5 class="underline-one">NECESSÁRIO</h5>
+                <div id="listPrep" class="list"></div>
+            </div>
+            <div class="return-data border-div-print" id="returnData">   
+                <h5 class="underline-one">CARGA</h5>
+                <div id="cargaPrep" class="list list-return"></div>
+            </div>
+          
+        </div>
+
+        <div class="print-obs-div">
+            <h6 id="obsTitle" class="obs-title">OBSERVAÇÕES:</h6>
+            <p id="printObsPrep" class="print-obs"></p>
+        </div>
+
+        <div class="logoToPrint">
+            <img src="img/logo.png" class="logo" alt="">
+        </div>
+    </div>
+
+
+
 
 </body>
 </html>

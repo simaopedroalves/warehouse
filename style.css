@@ -9,6 +9,7 @@
     --blue: rgba(1, 153, 255, 1);
     --green: rgba(1, 255, 22, 0.2);
     --red: rgb(255, 1, 1, 0.2);
+    --white: rgb(255,255,255,1);
 }
 
 body {
@@ -49,14 +50,6 @@ h2 {
     margin-bottom: 2rem;
 }
 
-.formCarga {
-    background-color: var(--green);
-}
-
-.formDescarga {
-    background-color: var(--red);
-}
-
 .formulario {
     display: grid;
     gap: 1rem;
@@ -88,12 +81,26 @@ textarea {
     padding-left: 0.2rem;
 }
 
-label {
-    font-weight: 700;
+.formPrep {
+    background-color: var(--blue);
+}
+
+.formPrep label, .formPrep .btn-info {
+    color: var(--white)
+}
+
+.formCarga {
+    background-color: var(--green);
+    display: none;
 }
 
 .formDescarga {
+    background-color: var(--red);
     display: none;
+}
+
+label {
+    font-weight: 700;
 }
 
 .btn {
@@ -137,7 +144,7 @@ a {
   text-decoration: none;
 }
 /* ============PRINT=============== */
-.printMode {
+.printMode, .printModePrep {
     display: none;
 }
 
@@ -201,8 +208,11 @@ a {
     header, .caisBtn, .box {
         display: none;
     }
-    .printMode {
+    .printMode, .printModePrep {
         display: grid;
+        /* atributo abaixo permite que o print mode da carga fique numa pagina
+        e o print mode da preparacao fique noutra */
+        break-after: page; 
     }
     .printMode h3 {
         text-transform: uppercase;
@@ -218,6 +228,7 @@ a {
         align-content: center;
         border: solid black 0.1rem;
         padding: 0.5rem;
+        text-transform: uppercase;
     }
     .clientName {
         font-size: 12pt;
@@ -245,7 +256,13 @@ a {
     .border-div-print {
         border: solid black 0.1rem;
         padding: 2rem;
+        min-width: 45vw;
     }
+
+    .printModePrep .border-div-print:nth-child(2) {
+        padding-left: 4rem;
+    }
+    
     .underline-one {
         display: flex;
         justify-content: center;
@@ -287,5 +304,13 @@ a {
 
     .print-obs {
         font-size: 10pt;
+    }
+
+    #faturaPrintPrep {
+        text-transform: uppercase;
+    }
+
+    .printModePrep h3{
+        margin-top: 20pt;
     }
 }
