@@ -30,6 +30,7 @@ const submitC = document.getElementById('submitC')
 const clientC = document.getElementById('clientC')
 
 
+
 submitC.addEventListener('click', () => {
     if (teamC.value !== '') {
       subjectC.value = 'CARGA do ' + teamC.value + ' para ' + clientC.value;
@@ -184,6 +185,15 @@ function deleteNumbToReturnOnPrep() {
   cargaPrep.innerText = myreturnText.replace(/;/g, "\n")
   console.log(myreturnText)
 }
+
+const submitP = document.querySelector('#submitP')
+const subjectP = document.querySelector('#subjectP')
+
+submitP.addEventListener('click', () => {
+  if (clientP.value !== '') {
+    subjectP.value = 'PREPARAR MATERIAL PARA ' + clientP.value;
+  }
+})
 
 // =======================================================================
 
