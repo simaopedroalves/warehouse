@@ -47,7 +47,7 @@ submitD.addEventListener('click', () => {
       subjectD.value = 'DESCARGA do ' + teamD.value + ' de ' + clientD.value;
     }
 })
-
+// PRINT
 const printBtn = document.querySelector('#printBtn')
 const toPrint = document.querySelector('#toPrint')
 const list = document.querySelector('#list')
@@ -77,9 +77,8 @@ material.addEventListener('input', () => {
   list.innerText = material.value
   returnDiv.innerText = material.value
   deleteNumbToReturn()
+  emptyValueToPrint()  
 }) 
-
-
 
 dateC.addEventListener('input', () => {
   datePrint.textContent = dateC.value
@@ -141,9 +140,26 @@ const faturaP = document.querySelector('#faturaP')
 const faturaPrintPrep = document.querySelector('#faturaPrintPrep')
 const obsPrintPrep = document.querySelector('#printObsPrep')
 const obsP = document.querySelector('#obsP')
+const obsPrepDiv = document.querySelector('.obs-div-prep')
+
+obsP.addEventListener('input', () => {
+  
+  obsPrintPrep.textContent = obsP.value;
+
+  function showsObsP() {
+
+    if (obsP.value !== "") {
+      obsPrepDiv.style.display = 'grid'
+    }
+    else return
+
+  }
+    showsObsP()
+  
+})
 
 printBtnPrep.addEventListener('click', () => {
-  window.print()
+  window.print();
 })
 
 faturaP.addEventListener('input', () => {
@@ -151,7 +167,7 @@ faturaP.addEventListener('input', () => {
 })
 
 clientP.addEventListener('input', () => {
-  clientNamePrep.textContent = clientP.value;
+  clientNamePrep.textContent = "Cliente: " + clientP.value;
 })
 
 dateP.addEventListener('input', () => {
@@ -159,7 +175,7 @@ dateP.addEventListener('input', () => {
 })
 
 localP.addEventListener('input', () => {
-  localPrint.textContent = localP.value;
+  localPrint.textContent = "Local: " + localP.value;
 })
 
 obsP.addEventListener('input', () => {
@@ -226,9 +242,10 @@ function sendValuesToWhatsapp() {
 // IF IT IS FOR THIS TEAM,WHEN THE USER CLICKS ON WHATSAPP BUTTON
 // THE WHATSAPP MESSAGE GOES TO THIS TEAM MOBILE PHONE
 
-function chooseNumberToSend() {
+// function chooseNumberToSend() {
 
-  // numbsArray = [+351915401856, +351932172345, +351915252942, +351963120728, +351916060662]
+//   numbsArray = [+351915401856, +351932172345, +351915252942, +351963120728, +351916060662]
 
   
-}
+// }
+

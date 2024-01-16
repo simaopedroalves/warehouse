@@ -230,10 +230,8 @@ a {
         padding: 0.5rem;
         text-transform: uppercase;
     }
-    .clientName {
-        font-size: 12pt;
-    }
-    .date-print, .pat-print, .guia-print {
+    
+    .clientName, .local-print, .date-print, .pat-print, .guia-print, .team-Print {
         font-size: 10pt;
         /* display: flex;
         align-items: center; */
@@ -262,7 +260,7 @@ a {
     .printModePrep .border-div-print:nth-child(2) {
         padding-left: 4rem;
     }
-    
+
     .underline-one {
         display: flex;
         justify-content: center;
@@ -282,6 +280,11 @@ a {
     .list-return {
         margin-top: 1rem;
     }
+
+    .carga-list {
+        margin-top: 2rem;
+    }
+
     .retorno {
         margin: 0 auto;
         font-size: 10pt;
@@ -291,7 +294,7 @@ a {
         display: grid;
     }
 
-    .print-obs-div {
+    .print-obs-div, .obs-div-prep {
         margin: 5rem 0;
         display: none;
     }
