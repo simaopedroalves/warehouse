@@ -1,0 +1,49 @@
+{
+
+    "cabo": [
+        {
+            "name": "2g0.75",
+            "oneMeterweight": 0.0465
+        },
+        {
+            "name": "3g0.75",
+            "oneMeterweight": 0.1
+        },
+        {
+            "name": "3g1.5",
+            "oneMeterweight": 0.093
+        },
+        {
+            "name": "3g2.5",
+            "oneMeterweight": 0.1556
+        },
+        {
+            "name": "3g4",
+            "oneMeterweight": 0.22547
+        },
+        {
+            "name": "3g6",
+            "oneMeterweight": 0.28
+        },
+        {
+            "name": "4g0.75",
+            "oneMeterweight": 0.074
+        },
+        {
+            "name": "4g1.5",
+            "oneMeterweight": 0.6
+        },
+        {
+            "name": "4g2.5",
+            "oneMeterweight": 0.7
+        },
+        {
+            "name": "5g1.5",
+            "oneMeterweight": 0.1606
+        },
+        {
+            "name": "5g2.5",
+            "oneMeterweight": 0.2389
+        }
+    ]
+}

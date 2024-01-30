@@ -4,24 +4,36 @@ const formCarga = document.querySelector('.formCarga')
 const cargaBtn = document.getElementById('cargaBtn')
 const prepBtn = document.getElementById('prepBtn')
 const formPrep = document.querySelector('.formPrep')
+const calcBtn = document.querySelector('#calcBtn')
+const calcDiv = document.querySelector('.calculation')
 
 
 prepBtn.addEventListener('click', () => {
   formDescarga.style.display = 'none'
   formCarga.style.display = 'none'
   formPrep.style.display = 'grid'
+  calcDiv.style.display = 'none'
 })
 
 descargaBtn.addEventListener('click', () => {
     formDescarga.style.display = 'grid'
     formCarga.style.display = 'none'
     formPrep.style.display = 'none'
+    calcDiv.style.display = 'none'
 })
 
 cargaBtn.addEventListener('click', () => {
     formDescarga.style.display = 'none'
     formCarga.style.display = 'grid'
     formPrep.style.display = 'none'
+    calcDiv.style.display = 'none'
+})
+
+calcBtn.addEventListener('click', () => {
+  formDescarga.style.display = 'none'
+  formCarga.style.display = 'none'
+  formPrep.style.display = 'none'
+  calcDiv.style.display = 'grid'
 })
 
 const subjectC = document.getElementById('subjectC')
@@ -55,7 +67,7 @@ const material = document.querySelector('#material')
 const clientName = document.querySelector('#clientName')
 const datePrint = document.querySelector('#datePrint')
 const dateC = document.querySelector('#dateC')
-const patPrint = document.querySelector('#patPrint') 
+const patPrint = document.querySelector('#patPrint')
 const patC = document.querySelector('#patC')
 const returnDiv = document.querySelector('#returnDiv')
 const newLine = document.querySelector('#newLine')
@@ -77,8 +89,8 @@ material.addEventListener('input', () => {
   list.innerText = material.value
   returnDiv.innerText = material.value
   deleteNumbToReturn()
-  emptyValueToPrint()  
-}) 
+  emptyValueToPrint()
+})
 
 dateC.addEventListener('input', () => {
   datePrint.textContent = dateC.value
@@ -143,7 +155,7 @@ const obsP = document.querySelector('#obsP')
 const obsPrepDiv = document.querySelector('.obs-div-prep')
 
 obsP.addEventListener('input', () => {
-  
+
   obsPrintPrep.textContent = obsP.value;
 
   function showsObsP() {
@@ -155,7 +167,7 @@ obsP.addEventListener('input', () => {
 
   }
     showsObsP()
-  
+
 })
 
 printBtnPrep.addEventListener('click', () => {
@@ -190,7 +202,7 @@ materialPrep.addEventListener('input', () => {
   listPrep.innerText = materialPrep.value
   cargaPrep.innerText = materialPrep.value
   deleteNumbToReturnOnPrep()
-}) 
+})
 
 function deleteNumbToReturnOnPrep() {
   let numbersToDelete = new RegExp(/(\d+)[.,]*(\d*)(\s+)/g)
@@ -226,15 +238,15 @@ whatsappBtn.addEventListener('click', () => {
 function sendValuesToWhatsapp() {
   let wtMessage = material.value.replace(/;/g, "%0a")
   let sendMaterialWt = "Carga para: " + "%0a" +
-                       clientC.value + "%0a" + 
-                       "PAT: " + patC.value + "%0a" + 
+                       clientC.value + "%0a" +
+                       "PAT: " + patC.value + "%0a" +
                        "Guia nº: " + guia.value + "%0a" + "%0a" +
                        "MATERIAL:" + "%0a" + wtMessage;
 
   let number = +351963120728;
 
   let url = "https://wa.me/" + number + "?text=" + sendMaterialWt;
- 
+
   window.open(url, '_blank');
 }
 
@@ -246,6 +258,88 @@ function sendValuesToWhatsapp() {
 
 //   numbsArray = [+351915401856, +351932172345, +351915252942, +351963120728, +351916060662]
 
-  
+
 // }
+
+        // METERS CALCULATOR OF EACH TYPE OF CABLE OR PIPE
+
+async function callData () {
+  return (await fetch('calculator.json')).json();
+}
+
+// fetch('calculator.json')
+// .then(res => res.json())
+// .then(data => console.log(data))
+
+document.addEventListener('DOMContentLoaded', async () => {
+
+  let  object = '';
+
+  try {
+  object = await callData();
+  } catch (error) {
+  console.error('ERROR')
+  console.log(error)
+  }
+
+  // let output = ''
+
+  for (let i = 0; i < object.cabo.length; i++) {
+
+    let name = object.cabo[i].name;
+    let weight = object.cabo[i].oneMeterweight;
+
+    const calculationDiv = document.querySelector('.calculation')
+
+    calculationDiv.innerHTML += `
+            <div class="calculation-box">
+            <h2>${name}</h2>
+            <input type="number" id="weightValue" class="weightValue" placeholder="KG">
+            <button type="button" class="btn btn-dark">Calcular</button>
+            <h3 class="meters"></h3>
+            <h3 class="hidden">${weight}</h3><br>
+            </div>`
+  }
+  convertionBtn()
+
+})
+
+function convertionBtn () {
+
+  let calcBtn = document.querySelectorAll('.btn-dark')
+
+  calcBtn.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+       conversaoParaMetros(i)
+    })
+  })
+}
+// let weight = document.querySelectorAll('.hidden')
+
+
+function conversaoParaMetros(i) {
+
+  let inp = document.querySelectorAll('input')
+  let resultado = document.querySelectorAll('.meters')
+  let weight = document.querySelectorAll('.hidden')
+  //  console.log(typeof(Number(weight[i])))
+  let input = parseInt(inp[i].value);
+  let peso = Number(weight[i].textContent);
+// peso = parseInt(peso)
+  // console.log(peso.toFixed(6))
+  // peso = Number(peso.toFixed(6))
+  let test =  resultado[i].textContent += input / peso  
+  test = Number(test)
+  resultado[i].textContent = test.toFixed(1) + " Metros"
+
+
+  // if (input = ' ') {
+  //   resultado[i].textContent = "Insere um valor"
+  //   setTimeout(() => {location.reload()}, 1000)
+  //   } 
+  //  else {return}
+
+//   resultado[i].innerHTML = resultado[i]
+}
+
 

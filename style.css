@@ -26,10 +26,10 @@ header {
     margin-bottom: 2rem;
 }
 
-h2 {
+/* h2 {
     text-transform: uppercase;
     display: none;
-}
+} */
 
 .logo {
     object-fit: cover;
@@ -45,7 +45,9 @@ h2 {
 }
 
 .caisBtn {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
     justify-content: space-around;
     margin-bottom: 2rem;
 }
@@ -143,6 +145,8 @@ label {
 a {
   text-decoration: none;
 }
+
+
 /* ============PRINT=============== */
 .printMode, .printModePrep {
     display: none;
