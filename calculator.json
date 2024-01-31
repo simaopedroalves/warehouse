@@ -7,7 +7,7 @@
         },
         {
             "name": "3g0.75",
-            "oneMeterweight": 0.1
+            "oneMeterweight": 0.0582
         },
         {
             "name": "3g1.5",
@@ -31,7 +31,7 @@
         },
         {
             "name": "4g1.5",
-            "oneMeterweight": 0.6
+            "oneMeterweight": 0.1252
         },
         {
             "name": "4g2.5",
