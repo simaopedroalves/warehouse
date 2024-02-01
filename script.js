@@ -288,20 +288,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let name = object.cabo[i].name;
     let weight = object.cabo[i].oneMeterweight;
+    let un = object.cabo[i].un;
+
 
     const calculationDiv = document.querySelector('.calculation')
 
     calculationDiv.innerHTML += `
             <div class="calculation-box">
-            <h2>${name}</h2>
-            <input type="number" id="weightValue" class="weightValue" placeholder="KG">
+            <h2 class="productName">${name}</h2>
+            <input type="number" class="weightValue" placeholder="KG">
             <button type="button" class="btn btn-dark">Calcular</button>
             <h3 class="meters"></h3>
             <h3 class="hidden">${weight}</h3><br>
             </div>`
   }
   convertionBtn()
-
 })
 
 function convertionBtn () {
@@ -322,17 +323,22 @@ function conversaoParaMetros(i) {
   let inp = document.querySelectorAll('input')
   let resultado = document.querySelectorAll('.meters')
   let weight = document.querySelectorAll('.hidden')
-  //  console.log(typeof(Number(weight[i])))
-  let input = parseInt(inp[i].value);
-  let peso = Number(weight[i].textContent);
-// peso = parseInt(peso)
-  // console.log(peso.toFixed(6))
-  // peso = Number(peso.toFixed(6))
-  let test =  resultado[i].textContent += input / peso  
-  test = Number(test)
-  resultado[i].textContent = test.toFixed(1) + " Metros"
+  // let productName = document.querySelectorAll('.productName')
 
+  let input = inp[i].value;
+  let peso = Number(weight[i].innerHTML);
+  let test =  resultado[i].innerHTML = input / peso  
+  resultado[i].innerHTML = test.toFixed(1) + " Metros"
 
+  // if (productName[i].innerHTML = "Isolamento lã Rocha") {
+  // resultado[i].innerHTML = test.toFixed(1) + " Metros Quadrados"
+  // } 
+  // if (productName[i].innerHTML = "Vareta Cobre") {
+  //   resultado[i].innerHTML = test.toFixed(1) + " Varetas"
+  // }
+  // else {
+  //   return
+  // }
   // if (input = ' ') {
   //   resultado[i].textContent = "Insere um valor"
   //   setTimeout(() => {location.reload()}, 1000)

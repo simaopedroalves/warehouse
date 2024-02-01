@@ -44,6 +44,43 @@
         {
             "name": "5g2.5",
             "oneMeterweight": 0.2389
+        },
+        {
+            "name": "Tubo Condensados 16mm",
+            "oneMeterweight": 0.0713
+        },
+        {
+            "name": "Anelado Azul c/guia",
+            "oneMeterweight": 0.0416
+        },
+        {
+            "name": "Mangueira Condensados",
+            "oneMeterweight": 0.0444
+        },
+        {
+            "name": "Tubo Anelado cinza 30mm",
+            "oneMeterweight": 0.198
+        },
+        {
+            "name": "Tubo Anelado Branco 25mm",
+            "oneMeterweight": 0.19
+        },
+        {
+            "name": "Tubo Gris cinza c/guia",
+            "oneMeterweight": 0.1175
+        },
+        {
+            "name": "Isolamento Lã Rocha",
+            "oneMeterweight": 0.73579,
+            "un": "Metros Quadrados"
+        },
+        {
+            "name": "Vareta Cobre",
+            "oneMeterweight": 0.012234637
+        },
+        {
+            "name": "Lira Inox 1/2'",
+            "oneMeterweight": 0.2389
         }
     ]
 }

@@ -9,7 +9,8 @@
     --blue: rgba(1, 153, 255, 1);
     --green: rgba(1, 255, 22, 0.2);
     --red: rgb(255, 1, 1, 0.2);
-    --white: rgb(255,255,255,1);
+    --white: rgb(255,255,255, 1);
+    --grey: rgb(180, 180, 184, 0.5);
 }
 
 body {
@@ -41,15 +42,15 @@ header {
 .box {
     display: grid;
     gap: 0;
-    margin: 2rem 0;
+    margin: 2rem auto;
 }
 
 .caisBtn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
-    justify-content: space-around;
-    margin-bottom: 2rem;
+    justify-content: center;
+    margin: 0 auto 3rem auto;
 }
 
 .formulario {
@@ -184,6 +185,11 @@ a {
 }
 
 @media screen and (min-width: 1000px){
+    .caisBtn {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 80vw;
+        justify-content: center;
+    }
     .formulario {
         grid-template-columns: repeat(3, 1fr);
         gap: 0.5rem;
