@@ -58,18 +58,18 @@
 
 @media screen and (min-width: 650px) {
     .calculation {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
     }
     .calculation h2 {
-        grid-column: span 2;
+        grid-column: span 3;
     }
 }
 
 @media screen and (min-width: 1000px){
     .calculation {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
     .calculation h2 {
-        grid-column: span 3;
+        grid-column: span 4;
     }
 }
