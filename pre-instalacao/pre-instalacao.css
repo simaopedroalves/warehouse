@@ -1,0 +1,41 @@
+.pre-instalacao {
+    display: none;
+    background-color: var(--yellow);
+}
+
+.selection-zone-pre-instalacao {
+    margin: 0 auto;
+    max-width: 100vw;
+}
+
+.cobre {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.cobre h6 {
+    grid-column: span 2;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.cobre div {
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cobre div input[type="number"] {
+    max-width: 3rem;
+    border-radius: 0.5rem;
+    padding-left: 0.2rem;
+}
+
+.tubo-anelado {
+
+}

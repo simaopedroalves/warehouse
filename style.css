@@ -11,6 +11,7 @@
     --red: rgb(255, 1, 1, 0.2);
     --white: rgb(255,255,255, 1);
     --grey: rgb(180, 180, 184, 0.5);
+    --yellow: rgb(247, 215, 22)
 }
 
 body {
@@ -62,7 +63,7 @@ header {
     border-radius: 0.5rem;
 }
 
-input, .select-team {
+input:not(.cobre input, .cabo input), .select-team {
     border: solid 0.1rem var(--blue);
     min-height: 2rem;
     min-width: 95%;

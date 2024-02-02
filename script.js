@@ -349,3 +349,15 @@ function conversaoParaMetros(i) {
 }
 
 
+//  PRE-INSTALAÇÃO  =================================================================
+
+const preInsBtn = document.querySelector('#preInsBtn')
+const preInsSec = document.querySelector('.pre-instalacao')
+
+preInsBtn.addEventListener('click', () => {
+  formDescarga.style.display = 'none'
+  formCarga.style.display = 'none'
+  formPrep.style.display = 'none'
+  calcDiv.style.display = 'none'
+  preInsSec.style.display = 'grid'
+})

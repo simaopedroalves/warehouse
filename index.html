@@ -23,6 +23,8 @@
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="calculation/calc.css">
+        <link rel="stylesheet" href="pre-instalacao/pre-instalacao.css">
+
 
     <script src="script.js" defer></script>
     
@@ -39,6 +41,7 @@
     <section class="box" id="box">
         
         <div class="caisBtn" id="">
+            <button class="calcBtn btn btn-warning" id="preInsBtn">Pré-instalação</button>
             <button class="calcBtn btn btn-secondary" id="calcBtn">Calculadora</button>
             <button type="button" class="btn btn-primary" id="prepBtn">Preparar</button>
             <button class="cargaBtn btn btn-success" id="cargaBtn">Carga</button>
@@ -51,6 +54,116 @@
             <h2>Medir Metragem</h2>
         </div>
 
+
+        <!-- PRÉ-INSTALAÇÃO DE AR CONDICIONADO -->
+
+        <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST">
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://formsend.netlify.app">
+            <input type="hidden" name="_subject" value="" id="subjectP">
+            <input type="hidden" name="_template" value="table">
+
+            <div class="pre-instalacao formulario">
+
+                <label for="teamP">Equipa</label>
+                <select type="text" name="Team" id="teamP" class="select-team" required>
+                    <option value="">Chefe de Equipa</option>
+                    <option value="Fábio" id="opFabio">Fábio</option>
+                    <option value="Pedro" id="opPedro">Pedro</option>
+                    <option value="Ricardo" id="opRicardo">Ricardo</option>
+                    <option value="Armazém" id="opArmazem">Armazém</option>
+                    <option value="Cristiano" id="opCristiano">Cristiano</option>
+                    <option value="Indefinida" id="opIndefinidda">Indefinida</option> 
+                </select>
+
+                <div>
+                    <label for="clientP">Cliente</label>
+                    <input type="text" name="Client" id="clientP" required>
+                </div>
+
+                <div>
+                    <label for="dateP">Data</label>
+                    <input type="date" name="Date" id="dateP" required>
+                </div>
+
+                <div>
+                    <label for="localP" class="localP">Local</label>
+                    <input type="text" name="localP" id="localP">
+                </div>
+
+                <div class="selection-zone-pre-instalacao">
+                    <div class="cobre">
+                        <h6>Cobre</h6>
+                        <div>
+                            <input type="radio" id="cobre14" name="1" value="1/4">
+                            <label for="cobre14">1/4'</label>
+                            <input type="number" placeholder="MT" id="mtcobre14">
+                        </div>
+                        <div>
+                            <input type="radio" id="cobre38" name="2" value="3/8">
+                            <label for="cobre38">3/8'</label>
+                            <input type="number" placeholder="MT" id="mtcobre38">
+                        </div>
+                        <div>
+                            <input type="radio" id="cobre12" name="2" value="1/2">
+                            <label for="cobre12">1/2'</label>
+                            <input type="number" placeholder="MT" id="mtcobre12">
+                        </div>
+                        <div>
+                            <input type="radio" id="cobre58" name="2" value="5/8">
+                            <label for="cobre58">5/8'</label>
+                            <input type="number" placeholder="MT" id="mtcobre58">
+                        </div>
+                    </div>
+                    <!-- ======================================== -->
+                    <div class="cabo cobre">
+                        <h6>Cabo</h6>
+                        <div>
+                            <input type="radio" id="cabo3g15" name="3" value="3G1.5">
+                            <label for="cabo3g15">3G1.5</label>
+                            <input type="number" placeholder="MT" id="mtcabo315">
+                        </div>
+                        <div>
+                            <input type="radio" id="cabo3g25" name="3" value="3G2.5">
+                            <label for="cabo3g25">3G2.5</label>
+                            <input type="number" placeholder="MT" id="mtcabo325">
+                        </div>
+                        <div>
+                            <input type="radio" id="cabo5g15" name="4" value="5G1.5">
+                            <label for="cabo5g15">5G1.5</label>
+                            <input type="number" placeholder="MT" id="mtcabo515">
+                        </div>
+                        <div>
+                            <input type="radio" id="cabo5g25" name="4" value="5G2.5">
+                            <label for="cabo5g25">5G2.5</label>
+                            <input type="number" placeholder="MT" id="mtcabo525">
+                        </div>
+                    </div>
+                    <div class="cobre tubo-anelado">
+                        <h6>Tubo Guia</h6>
+                        <div>
+                            <input type="radio" id="anelazul" name="5" value="AneladoAzul">
+                            <label for="anelazul">Anelado azul</label>
+                            <input type="number" placeholder="MT" id="mtAnelAzul">
+                        </div>
+                        <div>
+                            <input type="radio" id="gris" name="5" value="TuboGris">
+                            <label for="gris">Gris</label>
+                            <input type="number" placeholder="MT" id="mtcabo315">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="buttons">
+                    <button type="submit" name="q" id="submitP" class="btn btn-info">Submeter</button>
+                    <button type="button" class="btn btn-warning" id="printBtnPrep"><i class="fa-solid fa-print"></i></button>
+                    <button type="button" class="btn btn-success" id="whatsappBtn"><i class="fa-brands fa-whatsapp"></i></button>    
+                </div>
+
+            </div>
+           
+        </form>
 
         <!-- PREPARAR MATERIAL PARA A OBRA OU INSTALAÇÃO -->
         <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST">
