@@ -13,6 +13,8 @@ prepBtn.addEventListener('click', () => {
   formCarga.style.display = 'none'
   formPrep.style.display = 'grid'
   calcDiv.style.display = 'none'
+  preInsSec.style.display = 'none'
+
 })
 
 descargaBtn.addEventListener('click', () => {
@@ -20,6 +22,7 @@ descargaBtn.addEventListener('click', () => {
     formCarga.style.display = 'none'
     formPrep.style.display = 'none'
     calcDiv.style.display = 'none'
+    preInsSec.style.display = 'none'
 })
 
 cargaBtn.addEventListener('click', () => {
@@ -27,6 +30,7 @@ cargaBtn.addEventListener('click', () => {
     formCarga.style.display = 'grid'
     formPrep.style.display = 'none'
     calcDiv.style.display = 'none'
+    preInsSec.style.display = 'none'
 })
 
 calcBtn.addEventListener('click', () => {
@@ -34,6 +38,7 @@ calcBtn.addEventListener('click', () => {
   formCarga.style.display = 'none'
   formPrep.style.display = 'none'
   calcDiv.style.display = 'grid'
+  preInsSec.style.display = 'none'
 })
 
 const subjectC = document.getElementById('subjectC')
