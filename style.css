@@ -58,9 +58,9 @@ header {
     display: grid;
     gap: 1rem;
     padding: 1rem;
+    border-radius: 0.5rem;
     color: blue;
     font-weight: 600;
-    border-radius: 0.5rem;
 }
 
 input:not(.cobre input, .cabo input), .select-team {

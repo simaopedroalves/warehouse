@@ -1,6 +1,9 @@
 .pre-instalacao {
     display: none;
     background-color: var(--yellow);
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
 
 .selection-zone-pre-instalacao {
