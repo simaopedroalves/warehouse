@@ -51,7 +51,7 @@
 
         <!-- CALCULATOR / CONVERSOR -- KG => METERS -->
         <div class="calculation">
-            <h2>Medir Metragem</h2>
+            <h2>Contagem de Metros</h2>
         </div>
 
 
@@ -65,26 +65,27 @@
             <input type="hidden" name="_template" value="table">
 
             <div class="pre-instalacao">
-
-                <label for="teamP">Equipa</label>
-                <select type="text" name="Team" id="teamP" class="select-team" required>
-                    <option value="">Chefe de Equipa</option>
-                    <option value="Fábio" id="opFabio">Fábio</option>
-                    <option value="Pedro" id="opPedro">Pedro</option>
-                    <option value="Ricardo" id="opRicardo">Ricardo</option>
-                    <option value="Armazém" id="opArmazem">Armazém</option>
-                    <option value="Cristiano" id="opCristiano">Cristiano</option>
-                    <option value="Indefinida" id="opIndefinidda">Indefinida</option> 
-                </select>
+                <div>
+                    <label for="teamP">Equipa</label>
+                    <select type="text" name="Team" id="teamP" class="select-team" required>
+                        <option value="">Chefe de Equipa</option>
+                        <option value="Fábio" id="opFabio">Fábio</option>
+                        <option value="Pedro" id="opPedro">Pedro</option>
+                        <option value="Ricardo" id="opRicardo">Ricardo</option>
+                        <option value="Armazém" id="opArmazem">Armazém</option>
+                        <option value="Cristiano" id="opCristiano">Cristiano</option>
+                        <option value="Indefinida" id="opIndefinidda">Indefinida</option> 
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="dateP">Data</label>
+                    <input type="date" name="Date" id="dateP" required>
+                </div>
 
                 <div>
                     <label for="clientP">Cliente</label>
                     <input type="text" name="Client" id="clientP" required>
-                </div>
-
-                <div>
-                    <label for="dateP">Data</label>
-                    <input type="date" name="Date" id="dateP" required>
                 </div>
 
                 <div>
@@ -144,7 +145,7 @@
                         <h6>Tubo Guia</h6>
                         <div>
                             <input type="radio" id="anelazul" name="5" value="AneladoAzul">
-                            <label for="anelazul">Anelado azul</label>
+                            <label for="anelazul">Azul</label>
                             <input type="number" placeholder="MT" id="mtAnelAzul">
                         </div>
                         <div>
@@ -154,14 +155,15 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="buttons">
-                    <button type="submit" name="q" id="submitP" class="btn btn-info">Submeter</button>
-                    <button type="button" class="btn btn-warning" id="printBtnPrep"><i class="fa-solid fa-print"></i></button>
-                    <button type="button" class="btn btn-success" id="whatsappBtn"><i class="fa-brands fa-whatsapp"></i></button>    
-                </div>
 
+                <div class="buttons">
+                    <button type="submit" name="q" id="submitPreIns" class="btn btn-info">Submeter</button>
+                    <button type="button" class="btn btn-warning" id="printBtnPreIns"><i class="fa-solid fa-print"></i></button>
+                    <button type="button" class="btn btn-success" id="whatsappBtnPreIns"><i class="fa-brands fa-whatsapp"></i></button>    
+                </div>
+                
             </div>
+            
            
         </form>
 
@@ -415,6 +417,7 @@
             <img src="img/logo.png" class="logo" alt="">
         </div>
     </div>
+
 
 
 

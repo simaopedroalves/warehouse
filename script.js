@@ -64,7 +64,7 @@ submitD.addEventListener('click', () => {
       subjectD.value = 'DESCARGA do ' + teamD.value + ' de ' + clientD.value;
     }
 })
-// PRINT
+// PRINT CARGA
 const printBtn = document.querySelector('#printBtn')
 const toPrint = document.querySelector('#toPrint')
 const list = document.querySelector('#list')
@@ -83,6 +83,8 @@ const printObsDiv = document.querySelector('.print-obs-div')
 const printObsCarga = document.querySelector('#printObs')
 
 printBtn.addEventListener('click', () => {
+  // printPrepDiv.style.display = 'none'
+  // toPrint.style.display = 'grid'
   window.print()
 })
 
@@ -140,7 +142,7 @@ obsC.addEventListener('input', () => {
 
 
 //  PRINT PREPARAÇÃO
-
+const printPrepDiv = document.querySelector('.printModePrep')
 const printBtnPrep = document.querySelector('#printBtnPrep')
 const clientNamePrep = document.querySelector('#clientNamePrep')
 const clientP = document.querySelector('#clientP')
@@ -176,6 +178,8 @@ obsP.addEventListener('input', () => {
 })
 
 printBtnPrep.addEventListener('click', () => {
+  // toPrint.style.display = 'none'
+  // printPrepDiv.style.display = 'grid'
   window.print();
 })
 
@@ -237,7 +241,7 @@ const whatsappBtn = document.querySelector('#whatsappBtn');
 
 whatsappBtn.addEventListener('click', () => {
   sendValuesToWhatsapp()
-  chooseNumberToSend()
+  // chooseNumberToSend()
 })
 
 function sendValuesToWhatsapp() {
@@ -260,10 +264,6 @@ function sendValuesToWhatsapp() {
 // THE WHATSAPP MESSAGE GOES TO THIS TEAM MOBILE PHONE
 
 // function chooseNumberToSend() {
-
-//   numbsArray = [+351915401856, +351932172345, +351915252942, +351963120728, +351916060662]
-
-
 // }
 
         // METERS CALCULATOR OF EACH TYPE OF CABLE OR PIPE
@@ -366,3 +366,4 @@ preInsBtn.addEventListener('click', () => {
   calcDiv.style.display = 'none'
   preInsSec.style.display = 'grid'
 })
+

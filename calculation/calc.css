@@ -68,21 +68,14 @@
     }
 }
 
-@media screen and (min-width: 1000px){
-    .calculation {
-        grid-template-columns: repeat(6,1fr);
-    }
-    .calculation h2 {
-        grid-column: span 6;
-    }
-}
+
 
 @media screen and (min-width: 1000px){
     .calculation {
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(5,1fr);
     }
     .calculation h2 {
-        grid-column: span 4;
-        font-size: 0.8rem;
+        grid-column: span 5;
+        font-size: 1.1rem;
     }
 }

@@ -1,44 +1,98 @@
 .pre-instalacao {
     display: none;
     background-color: var(--yellow);
+    /* border: solid purple 2px; */
     gap: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
 }
 
 .selection-zone-pre-instalacao {
-    margin: 0 auto;
+    margin: 2rem auto;
     max-width: 100vw;
+    display: grid;
+    gap: 0.7rem;
+    align-items: center;
+    /* border: solid green 2px; */
 }
 
 .cobre {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem;
+    padding: 0.5rem;
     gap: 1rem;
+    border: solid var(--blue) 1px;
+    border-radius: 2rem;
+    font-size: 0.7rem;
 }
 
 .cobre h6 {
     grid-column: span 2;
     margin: 1rem auto;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: underline;
 }
 
 .cobre div {
     display: flex;
-    max-width: 90%;
+    max-width: 100%;
+    gap: 0.3rem;
     align-items: center;
     justify-content: space-around;
 }
 
 .cobre div input[type="number"] {
     max-width: 3rem;
+    font-size: 0.8rem;
     border-radius: 0.5rem;
     padding-left: 0.2rem;
 }
 
-.tubo-anelado {
+@media screen and (min-width: 700px) {
+    .pre-instalacao {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+    .selection-zone-pre-instalacao {
+        grid-column: span 2;
+        grid-template-columns: repeat(2, 1fr);
+        width: max-content;
+    }
+    .cobre {
+        padding-bottom: 1rem;
+    }
+    .cobre div input[type="number"] {
+        max-width: 4rem;
+        font-size: 1rem;
+    }
+    .cobre h6 {
+        font-size: 1.5rem;
+    }
+    .cobre div label {
+        font-size: 1rem;
+    }
+    .tubo-anelado {
+        height: 100%;
+    }
+}
 
+@media screen and (min-width: 1000px) {
+    .pre-instalacao {
+        /* max-width: 60vw; */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        justify-content: center;
+        margin: 2rem auto;
+        font-size: 1.5rem;
+    }
+   
+    .cobre div input[type="number"] {
+        max-width: 5rem;
+        font-size: 1.1rem;
+    }
+    .selection-zone-pre-instalacao {
+        grid-column: span 4;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
