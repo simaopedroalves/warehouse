@@ -19,16 +19,16 @@
 .cobre {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0.5rem;
+    padding: 1rem;
     gap: 1rem;
     border: solid var(--blue) 1px;
     border-radius: 2rem;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .cobre h6 {
     grid-column: span 2;
-    margin: 1rem auto;
+    margin: 0 auto;
     font-size: 1rem;
     font-weight: 700;
     text-decoration: underline;
@@ -40,13 +40,40 @@
     gap: 0.3rem;
     align-items: center;
     justify-content: space-around;
+    padding: 0.5rem;
 }
 
 .cobre div input[type="number"] {
     max-width: 3rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     border-radius: 0.5rem;
     padding-left: 0.2rem;
+}
+
+.cxPreIns {
+    display: grid;
+    align-items: space-between;
+    justify-content: center;
+    border: solid var(--blue) 1px;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.cxPreIns input {
+    max-width: 3rem;
+    max-height: 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    padding-left: 0.2rem;
+}
+
+.cxPreIns h6 {
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 700px) {
@@ -59,6 +86,9 @@
         grid-template-columns: repeat(2, 1fr);
         width: max-content;
     }
+    .pre-instalacao .buttons {
+        grid-column: span 2;
+    }
     .cobre {
         padding-bottom: 1rem;
     }
@@ -66,33 +96,37 @@
         max-width: 4rem;
         font-size: 1rem;
     }
-    .cobre h6 {
+    .cobre h6, .cxPreIns h6 {
         font-size: 1.5rem;
     }
     .cobre div label {
         font-size: 1rem;
     }
-    .tubo-anelado {
+    .tubo-anelado, .cxPreIns {
         height: 100%;
     }
+
 }
 
 @media screen and (min-width: 1000px) {
     .pre-instalacao {
-        /* max-width: 60vw; */
-        grid-template-columns: repeat(4, 1fr);
+        max-width: fit-content;
+        grid-template-columns: repeat(5, 1fr);
         gap: 0.5rem;
         justify-content: center;
         margin: 2rem auto;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
    
     .cobre div input[type="number"] {
         max-width: 5rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .selection-zone-pre-instalacao {
-        grid-column: span 4;
-        grid-template-columns: repeat(3, 1fr);
+        grid-column: span 5;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .pre-instalacao .buttons {
+        grid-column: span 5;
     }
 }

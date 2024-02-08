@@ -354,8 +354,7 @@ function conversaoParaMetros(i) {
 }
 
 
-//  PRE-INSTALAÇÃO  =================================================================
-
+// ========================= PRE-INSTALAÇÃO  =========================
 const preInsBtn = document.querySelector('#preInsBtn')
 const preInsSec = document.querySelector('.pre-instalacao')
 
@@ -367,3 +366,182 @@ preInsBtn.addEventListener('click', () => {
   preInsSec.style.display = 'grid'
 })
 
+// Radio Buttons and Inputs type Number
+const printPreInsDiv = document.querySelector('.printModePreIns')
+const printBtnPreIns = document.querySelector('#printBtnPreIns')
+const clientNamePreIns = document.querySelector('#clientPreIns')
+const printClientPreIns = document.querySelector('#clientNamePreIns')
+const printLocalPreIns = document.querySelector('#localPreInsPrint')
+const localPreIns = document.querySelector('#localPreIns')
+const teamPreIns = document.querySelector('#teamPreIns')
+const printTeamPreIns = document.querySelector('#teamPreInsPrint')
+const datePreIns = document.querySelector('#datePreIns')
+const printDatePreIns = document.querySelector('#datePreInsPrint')
+const printListPreIns = document.querySelector('#listPreIns')
+const selectZone = document.querySelector('.selection-zone-pre-instalacao')
+
+// Cobre Names and input Values
+const cobre14Name = document.querySelector('#cobre14')
+const mtCobre14 = document.querySelector('#mtcobre14')
+const cobre38Name = document.querySelector('#cobre38')
+const mtCobre38 = document.querySelector('#mtcobre38')
+const cobre12Name = document.querySelector('#cobre12')
+const mtCobre12 = document.querySelector('#mtcobre12')
+const cobre58Name = document.querySelector('#cobre58')
+const mtCobre58 = document.querySelector('#mtcobre58')
+
+// Cabo Names
+const cabo3g15 = document.querySelector('#cabo3g15')
+const mtCabo3g15 = document.querySelector('#mtcabo3g15')
+const cabo3g25 = document.querySelector('#cabo3g25')
+const mtCabo3g25 = document.querySelector('#mtcabo3g25')
+const cabo5g15 = document.querySelector('#cabo5g15')
+const mtCabo5g15 = document.querySelector('#mtcabo5g15')
+const cabo5g25 = document.querySelector('#cabo5g25')
+const mtCabo5g25 = document.querySelector('#mtcabo5g25')
+
+// Tubo p/cabo Eletrico
+const tAnelAzul = document.querySelector('#tAnelAzul')
+const mtAnelAzul = document.querySelector('#mtAnelAzul')
+const tGris = document.querySelector('#gris')
+const mtGris = document.querySelector('#mtGris')
+
+// Caixa Pre-Instalação
+const cxName = document.querySelector('#cxPreInsName')
+const numbCxPreIns = document.querySelector('#cxPreIns')
+
+// AddEventListener's for Each input
+printBtnPreIns.addEventListener('click', () => {
+  window.print()
+})
+
+clientNamePreIns.addEventListener('input', () => {
+  printClientPreIns.textContent = "Cliente: " + clientNamePreIns.value;
+})
+
+localPreIns.addEventListener('input', () => {
+  printLocalPreIns.textContent = "Local: " + localPreIns.value;
+})
+
+teamPreIns.addEventListener('input', () => {
+  printTeamPreIns.textContent = "Equipa: " + teamPreIns.value;
+})
+
+datePreIns.addEventListener('input', () => {
+  printDatePreIns.textContent = "Data: " + datePreIns.value;
+})
+
+
+
+const allRadioBtn = document.querySelectorAll('input[type="radio"]')
+const mtValue = document.querySelectorAll('.mtValue')
+
+mtValue.forEach(el => el.setAttribute("disabled", ""))
+
+allRadioBtn.forEach((btn, i) => {
+
+  btn.addEventListener('click' , () => {
+   printed(i)
+  })
+})
+
+function printed(i) {
+  printListPreIns.innerHTML += btn[i].value
+}
+// function printPreIns() {
+
+//   // printListPreIns.innerHTML += ``
+
+//   allRadioBtn.forEach((btn, i) => {
+//     btn.addEventListener('click', () => {
+//       // enableInput(i)
+//     })
+//   })
+// }
+
+
+// function enableInput(i) {
+//   mtValue.forEach((el, i) => {
+//     el[i].removeAttribute("disabled", '')
+//   })
+// }
+cobre14Name.addEventListener('click', () => {
+  if (cobre14Name.checked) {
+    mtCobre14.removeAttribute("disabled", '')
+}
+})
+
+cobre12Name.addEventListener('click', () => {
+  if (cobre12Name.checked) {
+    mtCobre12.removeAttribute("disabled", '')
+}
+})
+
+cobre38Name.addEventListener('click', () => {
+  if (cobre38Name.checked) {
+    mtCobre38.removeAttribute("disabled", '')
+}
+})
+
+cobre58Name.addEventListener('click', () => {
+  if (cobre58Name.checked) {
+    mtCobre58.removeAttribute("disabled", '')
+}
+})
+
+cabo3g15.addEventListener('click', () => {
+  if (cabo3g15.checked) {
+    mtCabo3g15.removeAttribute("disabled", '')
+}
+})
+
+cabo3g25.addEventListener('click', () => {
+  if (cabo3g25.checked) {
+    mtCabo3g25.removeAttribute("disabled", '')
+}
+})
+
+cabo5g15.addEventListener('click', () => {
+  if (cabo5g15.checked) {
+    mtCabo5g15.removeAttribute("disabled", '')
+}
+})
+
+cabo5g25.addEventListener('click', () => {
+  if (cabo5g25.checked) {
+    mtCabo5g25.removeAttribute("disabled", '')
+}
+})
+
+cabo5g25.addEventListener('click', () => {
+  if (cabo5g25.checked) {
+    mtCabo5g25.removeAttribute("disabled", '')
+}
+})
+
+tAnelAzul.addEventListener('click', () => {
+  if (tAnelAzul.checked) {
+    mtAnelAzul.removeAttribute("disabled", '')
+}
+})
+
+tGris.addEventListener('click', () => {
+  if (tGris.checked) {
+    mtGris.removeAttribute("disabled", '')
+} else {
+  return
+}
+})
+
+
+
+
+//   allRadioBtn.forEach((btn, i) => {
+//     btn.addEventListener('click', () => {
+
+//       if (btn[i].checked) {
+//         mtValue[i].removeAttribute("disabled", '')
+//       }
+//   })  
+// })
+// printPreIns()

@@ -66,8 +66,8 @@
 
             <div class="pre-instalacao">
                 <div>
-                    <label for="teamP">Equipa</label>
-                    <select type="text" name="Team" id="teamP" class="select-team" required>
+                    <label for="teamPreIns">Equipa</label>
+                    <select type="text" name="Team" id="teamPreIns" class="select-team" required>
                         <option value="">Chefe de Equipa</option>
                         <option value="Fábio" id="opFabio">Fábio</option>
                         <option value="Pedro" id="opPedro">Pedro</option>
@@ -79,42 +79,42 @@
                 </div>
                 
                 <div>
-                    <label for="dateP">Data</label>
-                    <input type="date" name="Date" id="dateP" required>
+                    <label for="datePreIns">Data</label>
+                    <input type="date" name="Date" id="datePreIns" required>
                 </div>
 
                 <div>
-                    <label for="clientP">Cliente</label>
-                    <input type="text" name="Client" id="clientP" required>
+                    <label for="clientPreIns">Cliente</label>
+                    <input type="text" name="Client" id="clientPreIns" required>
                 </div>
 
                 <div>
-                    <label for="localP" class="localP">Local</label>
-                    <input type="text" name="localP" id="localP">
+                    <label for="localPreIns" class="localP">Local</label>
+                    <input type="text" name="localPreIns" id="localPreIns">
                 </div>
 
                 <div class="selection-zone-pre-instalacao">
                     <div class="cobre">
                         <h6>Cobre</h6>
                         <div>
-                            <input type="radio" id="cobre14" name="1" value="1/4">
+                            <input type="radio" id="cobre14" name="14" value="1/4">
                             <label for="cobre14">1/4'</label>
-                            <input type="number" placeholder="MT" id="mtcobre14">
+                            <input type="number" placeholder="MT" id="mtcobre14" class="mtValue">
                         </div>
                         <div>
-                            <input type="radio" id="cobre38" name="2" value="3/8">
+                            <input type="radio" id="cobre38" name="38" value="3/8">
                             <label for="cobre38">3/8'</label>
-                            <input type="number" placeholder="MT" id="mtcobre38">
+                            <input type="number" placeholder="MT" id="mtcobre38" class="mtValue">
                         </div>
                         <div>
-                            <input type="radio" id="cobre12" name="2" value="1/2">
+                            <input type="radio" id="cobre12" name="12" value="1/2">
                             <label for="cobre12">1/2'</label>
-                            <input type="number" placeholder="MT" id="mtcobre12">
+                            <input type="number" placeholder="MT" id="mtcobre12" class="mtValue">
                         </div>
                         <div>
-                            <input type="radio" id="cobre58" name="2" value="5/8">
+                            <input type="radio" id="cobre58" name="58" value="5/8">
                             <label for="cobre58">5/8'</label>
-                            <input type="number" placeholder="MT" id="mtcobre58">
+                            <input type="number" placeholder="MT" id="mtcobre58" class="mtValue">
                         </div>
                     </div>
                     <!-- ======================================== -->
@@ -123,36 +123,40 @@
                         <div>
                             <input type="radio" id="cabo3g15" name="3" value="3G1.5">
                             <label for="cabo3g15">3G1.5</label>
-                            <input type="number" placeholder="MT" id="mtcabo315">
+                            <input type="number" placeholder="MT" id="mtcabo3g15" class="mtValue">
                         </div>
                         <div>
                             <input type="radio" id="cabo3g25" name="3" value="3G2.5">
                             <label for="cabo3g25">3G2.5</label>
-                            <input type="number" placeholder="MT" id="mtcabo325">
+                            <input type="number" placeholder="MT" id="mtcabo3g25" class="mtValue"> 
                         </div>
                         <div>
                             <input type="radio" id="cabo5g15" name="4" value="5G1.5">
                             <label for="cabo5g15">5G1.5</label>
-                            <input type="number" placeholder="MT" id="mtcabo515">
+                            <input type="number" placeholder="MT" id="mtcabo5g15" class="mtValue"> 
                         </div>
                         <div>
                             <input type="radio" id="cabo5g25" name="4" value="5G2.5">
                             <label for="cabo5g25">5G2.5</label>
-                            <input type="number" placeholder="MT" id="mtcabo525">
+                            <input type="number" placeholder="MT" id="mtcabo5g25" class="mtValue">
                         </div>
                     </div>
                     <div class="cobre tubo-anelado">
                         <h6>Tubo Guia</h6>
                         <div>
-                            <input type="radio" id="anelazul" name="5" value="AneladoAzul">
-                            <label for="anelazul">Azul</label>
-                            <input type="number" placeholder="MT" id="mtAnelAzul">
+                            <input type="radio" id="tAnelAzul" name="5" value="AneladoAzul">
+                            <label for="tAnelAzul">Azul</label>
+                            <input type="number" placeholder="MT" id="mtAnelAzul" class="mtValue">
                         </div>
                         <div>
                             <input type="radio" id="gris" name="5" value="TuboGris">
                             <label for="gris">Gris</label>
-                            <input type="number" placeholder="MT" id="mtcabo315">
+                            <input type="number" placeholder="MT" id="mtGris" class="mtValue">
                         </div>
+                    </div>
+                    <div class="cxPreIns">
+                        <h6 id="cxPreInsName">Caixa Pré-instalação</h6>
+                        <input type="number" placeholder="Nº de Caixas" id="cxPreIns" required>
                     </div>
                 </div>
 
@@ -418,6 +422,36 @@
         </div>
     </div>
 
+
+    <!-- PRINT MODE TO PRE-INSTALAÇÃO -->
+
+    <div class="printModePreIns" id="toPrintPreIns">
+        
+        <h5>PRÉ-INSTALAÇÃO</h5>
+
+        <div class="nameAndDate">
+            <div id="clientNamePreIns" class="clientName"></div>
+            <div class="local-print" id="localPreInsPrint"></div>
+            <div class="team-Print" id="teamPreInsPrint"></div>
+            <div class="date-print" id="datePreInsPrint"></div>
+        </div> 
+
+        <div class="big-container">
+            <div class="border-div-print necessary-div">
+                <h5 class="underline-one">NECESSÁRIO</h5>
+                <div id="listPreIns" class="list"></div>
+            </div>
+        </div>
+
+        <div class="obs-div-prep">
+            <h6 id="obsTitle" class="obs-title">OBSERVAÇÕES:</h6>
+            <p id="printObsPreIns" class="print-obs"></p>
+        </div>
+
+        <div class="logoToPrint">
+            <img src="img/logo.png" class="logo" alt="">
+        </div>
+    </div>
 
 
 

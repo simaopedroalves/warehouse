@@ -149,8 +149,10 @@ a {
 }
 
 
+
+
 /* ============PRINT=============== */
-.printMode, .printModePrep {
+.printMode, .printModePrep, .printModePreIns {
     display: none;
 }
 
@@ -223,7 +225,7 @@ a {
     header, .caisBtn, .box {
         display: none;
     }
-    .printMode, .printModePrep {
+    .printMode, .printModePrep, .printModePreIns {
         display: grid;
         /* atributo abaixo permite que o print mode da carga fique numa pagina
         e o print mode da preparacao fique noutra */
