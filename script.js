@@ -7,7 +7,7 @@ const formPrep = document.querySelector('.formPrep')
 const calcBtn = document.querySelector('#calcBtn')
 const calcDiv = document.querySelector('.calculation')
 
-
+// COLOR BUTONS ON TOP OF THE PAGE
 prepBtn.addEventListener('click', () => {
   formDescarga.style.display = 'none'
   formCarga.style.display = 'none'
@@ -41,6 +41,7 @@ calcBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
 })
 
+// EMAIL SUBJECT AND TITLES TO CARGA
 const subjectC = document.getElementById('subjectC')
 const teamC = document.getElementById('teamC')
 const submitC = document.getElementById('submitC')
@@ -54,6 +55,7 @@ submitC.addEventListener('click', () => {
     }
 })
 
+// EMAIL SUBJECT AND TITLES TO DESCARGA
 const subjectD = document.getElementById('subjectD')
 const teamD = document.getElementById('teamD')
 const submitD = document.getElementById('submitD')
@@ -223,6 +225,7 @@ function deleteNumbToReturnOnPrep() {
   console.log(myreturnText)
 }
 
+// EMAIL SUBJECT AND TITLE TO PREPARAR
 const submitP = document.querySelector('#submitP')
 const subjectP = document.querySelector('#subjectP')
 
@@ -355,6 +358,7 @@ function conversaoParaMetros(i) {
 
 
 // ========================= PRE-INSTALAÇÃO  =========================
+
 const preInsBtn = document.querySelector('#preInsBtn')
 const preInsSec = document.querySelector('.pre-instalacao')
 
@@ -492,6 +496,7 @@ cobre58Name.addEventListener('click', () => {
 cabo3g15.addEventListener('click', () => {
   if (cabo3g15.checked) {
     mtCabo3g15.removeAttribute("disabled", '')
+    mtCabo3g15.setAttribute("name",`${mtCabo3g15.value}`)
 }
 })
 
@@ -533,7 +538,9 @@ tGris.addEventListener('click', () => {
 }
 })
 
-
+mtCabo3g15.addEventListener('input' , () => {
+  mtCabo3g15.value = mtCabo3g15.value
+})
 
 
 //   allRadioBtn.forEach((btn, i) => {
@@ -545,3 +552,16 @@ tGris.addEventListener('click', () => {
 //   })  
 // })
 // printPreIns()
+
+
+// EMAIL SUBJECT AND TITLE TO PRE-INS
+
+const submitPreIns = document.querySelector('#submitPreIns')
+const subjectPreIns = document.querySelector('#subjectPreIns')
+const clientPreIns = document.querySelector('#clientPreIns')
+
+submitPreIns.addEventListener('click', () => {
+  if (clientPreIns.value !== '') {
+    subjectPreIns.value = `PREPARA PRÉ-INSTALAÇÃO PARA ${clientPreIns.value}`;
+  }
+})

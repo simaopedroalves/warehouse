@@ -11,7 +11,7 @@
     <!-- <meta name="Armazem Crisavac" content="Cais de Carga e Descarga Crisavac"> -->
     <meta name="keywords" content="armazem, crisavac">
     <meta name="author" content="Crisavac">
-    <meta name="robots" content="index,follow">
+    <meta name="robots" content="index, follow">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -61,7 +61,7 @@
 
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://formsend.netlify.app">
-            <input type="hidden" name="_subject" value="" id="subjectP">
+            <input type="hidden" name="_subject" value="" id="subjectPreIns">
             <input type="hidden" name="_template" value="table">
 
             <div class="pre-instalacao">
@@ -90,7 +90,7 @@
 
                 <div>
                     <label for="localPreIns" class="localP">Local</label>
-                    <input type="text" name="localPreIns" id="localPreIns">
+                    <input type="text" name="Local" id="localPreIns">
                 </div>
 
                 <div class="selection-zone-pre-instalacao">
@@ -121,9 +121,9 @@
                     <div class="cabo cobre">
                         <h6>Cabo</h6>
                         <div>
-                            <input type="radio" id="cabo3g15" name="3" value="3G1.5">
+                            <input type="radio" id="cabo3g15">
                             <label for="cabo3g15">3G1.5</label>
-                            <input type="number" placeholder="MT" id="mtcabo3g15" class="mtValue">
+                            <input type="number" placeholder="MT" id="mtcabo3g15" class="mtValue" name="3G1.5">
                         </div>
                         <div>
                             <input type="radio" id="cabo3g25" name="3" value="3G2.5">
@@ -336,7 +336,7 @@
 
                 <div class="textareaDiv">
                     <label for="material" class="media-test">Material</label>
-                    <textarea id="material" name="Material" rows="5" required autocorrect></textarea>
+                    <textarea id="materialD" name="Material" rows="5" required autocorrect></textarea>
                 </div>
                 
                 <div class="buttons">

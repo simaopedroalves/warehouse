@@ -81,6 +81,14 @@
         {
             "name": "Lira Inox 1/2'",
             "oneMeterweight": 0.2389
+        },
+        {
+            "name": "Cobre 18'",
+            "oneMeterweight": 0.407547
+        },
+        {
+            "name": "Cobre 15'",
+            "oneMeterweight": 0.36923
         }
     ]
 }
