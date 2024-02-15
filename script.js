@@ -481,7 +481,6 @@ cobre58Name.addEventListener('click', () => {
 cabo3g15.addEventListener('click', () => {
   if (cabo3g15.checked) {
     mtCabo3g15.removeAttribute("disabled", '')
-    mtCabo3g15.setAttribute("name",`${mtCabo3g15.value}`)
 }
 })
 
@@ -523,9 +522,6 @@ tGris.addEventListener('click', () => {
 }
 })
 
-mtCabo3g15.addEventListener('input' , () => {
-  mtCabo3g15.value = mtCabo3g15.value
-})
 
 
 //    allRadioBtn.forEach((btn, i) => {
