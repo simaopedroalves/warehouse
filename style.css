@@ -151,12 +151,12 @@ a {
 
 
 
-/* ============PRINT=============== */
+
 .printMode, .printModePrep, .printModePreIns {
     display: none;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 860px) {
     body {
         margin: 1rem 5rem;
         min-height: 100vh;

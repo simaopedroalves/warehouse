@@ -98,7 +98,7 @@ material.addEventListener('input', () => {
   list.innerText = material.value
   returnDiv.innerText = material.value
   deleteNumbToReturn()
-  emptyValueToPrint()
+  // emptyValueToPrint()
 })
 
 dateC.addEventListener('input', () => {
@@ -142,6 +142,29 @@ obsC.addEventListener('input', () => {
 
 })
 
+// ===================== Click the Whatsapp Button - CARGA =========================
+
+const whatsappBtn = document.querySelector('#whatsappBtn');
+
+whatsappBtn.addEventListener('click', () => {
+  sendValuesToWhatsapp()
+  // chooseNumberToSend()
+})
+
+function sendValuesToWhatsapp() {
+  let wtMessage = material.value.replace(/;/g, "%0a")
+  let sendMaterialWt = "Carga para: " + "%0a" +
+                       clientC.value + "%0a" +
+                       "PAT: " + patC.value + "%0a" +
+                       "Guia nº: " + guia.value + "%0a" + "%0a" +
+                       "MATERIAL:" + "%0a" + wtMessage;
+
+  let number = +351963120728;
+
+  let url = "https://wa.me/" + number + "?text=" + sendMaterialWt;
+
+  window.open(url, '_blank');
+}
 
 //  PRINT PREPARAÇÃO
 const printPrepDiv = document.querySelector('.printModePrep')
@@ -235,24 +258,20 @@ submitP.addEventListener('click', () => {
   }
 })
 
-// =======================================================================
+// ===================== Click the Whatsapp Button - PREPARAÇÃO =========================
 
+const whatsappBtnPrep = document.querySelector('#whatsappBtnPrep');
 
-// ===================== Click the Whatsapp Button =========================
-
-const whatsappBtn = document.querySelector('#whatsappBtn');
-
-whatsappBtn.addEventListener('click', () => {
-  sendValuesToWhatsapp()
-  // chooseNumberToSend()
+whatsappBtnPrep.addEventListener('click', () => {
+  sendValuesToWhatsappPrep()
 })
 
-function sendValuesToWhatsapp() {
-  let wtMessage = material.value.replace(/;/g, "%0a")
-  let sendMaterialWt = "Carga para: " + "%0a" +
-                       clientC.value + "%0a" +
-                       "PAT: " + patC.value + "%0a" +
-                       "Guia nº: " + guia.value + "%0a" + "%0a" +
+function sendValuesToWhatsappPrep() {
+  let wtMessage = (materialPrep.value).replace(/;/g, "%0a")
+  let sendMaterialWt = "Preparar material para: " + "%0a" +
+                       clientP.value + "%0a" +
+                       "Data: " + dateP.value + "%0a" +
+                       "Equipa: " + teamP.value + "%0a" + "%0a" +
                        "MATERIAL:" + "%0a" + wtMessage;
 
   let number = +351963120728;
@@ -260,16 +279,10 @@ function sendValuesToWhatsapp() {
   let url = "https://wa.me/" + number + "?text=" + sendMaterialWt;
 
   window.open(url, '_blank');
+
 }
 
-// =============== WHATSAPP ASSOCIATION ============
-// IF IT IS FOR THIS TEAM,WHEN THE USER CLICKS ON WHATSAPP BUTTON
-// THE WHATSAPP MESSAGE GOES TO THIS TEAM MOBILE PHONE
-
-// function chooseNumberToSend() {
-// }
-
-        // METERS CALCULATOR OF EACH TYPE OF CABLE OR PIPE
+// METERS CALCULATOR OF EACH TYPE OF CABLE OR PIPE
 
 async function callData () {
   return (await fetch('calculator.json')).json();
@@ -296,8 +309,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let name = object.cabo[i].name;
     let weight = object.cabo[i].oneMeterweight;
-    let un = object.cabo[i].un;
-
 
     const calculationDiv = document.querySelector('.calculation')
 
@@ -436,39 +447,13 @@ datePreIns.addEventListener('input', () => {
 })
 
 
-
+// ACTIVATE INPUTS THAT ARE SELECTED BY RADIO BUTTONS
 const allRadioBtn = document.querySelectorAll('input[type="radio"]')
 const mtValue = document.querySelectorAll('.mtValue')
 
 mtValue.forEach(el => el.setAttribute("disabled", ""))
 
-allRadioBtn.forEach((btn, i) => {
 
-  btn.addEventListener('click' , () => {
-   printed(i)
-  })
-})
-
-function printed(i) {
-  printListPreIns.innerHTML += btn[i].value
-}
-// function printPreIns() {
-
-//   // printListPreIns.innerHTML += ``
-
-//   allRadioBtn.forEach((btn, i) => {
-//     btn.addEventListener('click', () => {
-//       // enableInput(i)
-//     })
-//   })
-// }
-
-
-// function enableInput(i) {
-//   mtValue.forEach((el, i) => {
-//     el[i].removeAttribute("disabled", '')
-//   })
-// }
 cobre14Name.addEventListener('click', () => {
   if (cobre14Name.checked) {
     mtCobre14.removeAttribute("disabled", '')
@@ -543,14 +528,14 @@ mtCabo3g15.addEventListener('input' , () => {
 })
 
 
-//   allRadioBtn.forEach((btn, i) => {
-//     btn.addEventListener('click', () => {
+//    allRadioBtn.forEach((btn, i) => {
+//      btn.addEventListener('click', () => {
 
-//       if (btn[i].checked) {
-//         mtValue[i].removeAttribute("disabled", '')
-//       }
-//   })  
-// })
+//        if (btn[i].checked == false) {
+//          mtValue[i].removeAttribute("disabled", '')
+//        }
+//    })  
+//  })
 // printPreIns()
 
 
@@ -565,3 +550,53 @@ submitPreIns.addEventListener('click', () => {
     subjectPreIns.value = `PREPARA PRÉ-INSTALAÇÃO PARA ${clientPreIns.value}`;
   }
 })
+
+// ===================== Click the Whatsapp Button - PRE-INSTALAÇÃO =========================
+
+const whatsappBtnPreIns = document.querySelector('#whatsappBtnPreIns');
+
+whatsappBtnPreIns.addEventListener('click', () => {
+  sendValuesToWhatsappPreIns()
+  // chooseNumberToSend()
+})
+
+var wtMessage = ''
+console.log(wtMessage)
+
+function sendValuesToWhatsappPreIns() {
+  // let wtMessage = mtCobre14.name + ' ' + mtCobre14.value
+  for (i = 0; i < mtValue.length; i++) {
+   wtMessage = mtValue[i].name + ' ' + mtValue[i].value;
+   console.log(wtMessage)
+
+   wtArr = wtMessage.split(' ')
+console.log(wtMessage)
+
+  }
+    let sendMaterialWt = "Pre-Instalação para: " + "%0a" + clientC.value + "%0a" +
+                          "Data: " + dateP.value + "%0a" +
+                          "Equipa: " + teamP.value + "%0a" + "%0a" +
+                          "MATERIAL:" + "%0a" + wtMessage;
+                          console.log(wtMessage)
+
+console.log(sendMaterialWt)
+    let number = +351963120728;
+
+    let url = "https://wa.me/" + number + "?text=" + sendMaterialWt;
+    // window.open(url, '_blank');
+    
+  
+}
+
+// function preInsValues() {
+
+//   let lisOfItems = ''
+//   console.log(typeof(wtMessage))
+
+//   if(mtCobre14.value > 0) {
+//     lisOfItems += `${cobre14Name.textContent} ${mtCobre14.value}`  
+//     }
+
+//   else return
+// }
+
