@@ -547,52 +547,35 @@ submitPreIns.addEventListener('click', () => {
   }
 })
 
-// ===================== Click the Whatsapp Button - PRE-INSTALAÇÃO =========================
 
-const whatsappBtnPreIns = document.querySelector('#whatsappBtnPreIns');
+// CALCULATION OF FERRAGENS ITEMS
 
-whatsappBtnPreIns.addEventListener('click', () => {
-  sendValuesToWhatsappPreIns()
-  // chooseNumberToSend()
-})
-
-var wtMessage = ''
-console.log(wtMessage)
-
-function sendValuesToWhatsappPreIns() {
-  // let wtMessage = mtCobre14.name + ' ' + mtCobre14.value
-  for (i = 0; i < mtValue.length; i++) {
-   wtMessage = mtValue[i].name + ' ' + mtValue[i].value;
-   console.log(wtMessage)
-
-   wtArr = wtMessage.split(' ')
-console.log(wtMessage)
-
-  }
-    let sendMaterialWt = "Pre-Instalação para: " + "%0a" + clientC.value + "%0a" +
-                          "Data: " + dateP.value + "%0a" +
-                          "Equipa: " + teamP.value + "%0a" + "%0a" +
-                          "MATERIAL:" + "%0a" + wtMessage;
-                          console.log(wtMessage)
-
-console.log(sendMaterialWt)
-    let number = +351963120728;
-
-    let url = "https://wa.me/" + number + "?text=" + sendMaterialWt;
-    // window.open(url, '_blank');
-    
-  
+async function callFerragensData() {
+  return (await fetch('calculation/ferragens.json')).json();
 }
 
-// function preInsValues() {
+document.addEventListener('DOMContentLoaded', async () => {
 
-//   let lisOfItems = ''
-//   console.log(typeof(wtMessage))
+  let newObj = '';
 
-//   if(mtCobre14.value > 0) {
-//     lisOfItems += `${cobre14Name.textContent} ${mtCobre14.value}`  
-//     }
+  try {
+    newObj = await callFerragensData();
+  }
+  catch (error) {
+    console.error("ERROR!")
+    console.log(error)
+  }
 
-//   else return
-// }
+  for (let i = 0; i < newObj.anilhas.length; i++) {
+    
+    let name = newObj.anilhas[i].name;
+    let weight = newObj.anilhas[i].unWeight;
+
+    console.log()
+
+  }
+
+});
+
+
 

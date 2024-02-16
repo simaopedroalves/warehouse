@@ -176,6 +176,7 @@ a {
         gap: 0.5rem;
         min-width: 80vw;
         max-height: 110vh;
+        justify-content: center;
     }
 
     textarea {
@@ -201,8 +202,6 @@ a {
     .formulario {
         grid-template-columns: repeat(3, 1fr);
         gap: 0.5rem;
-        justify-content: center;
-        margin: 2rem 5rem;
     }
     textarea {
         min-width: 98%;
