@@ -425,10 +425,19 @@ const mtGris = document.querySelector('#mtGris')
 const cxName = document.querySelector('#cxPreInsName')
 const numbCxPreIns = document.querySelector('#cxPreIns')
 
+
 // AddEventListener's for Each input
 printBtnPreIns.addEventListener('click', () => {
+  printValueOfMeters()
   window.print()
 })
+
+const allInputsWithMeters = document.querySelectorAll('.valToPrint')
+
+function printValueOfMeters() {
+  allInputsWithMeters.forEach((inp) => 
+  printListPreIns.innerHTML += `${inp.value} metros de ${inp.name} <br>`
+)}
 
 clientNamePreIns.addEventListener('input', () => {
   printClientPreIns.textContent = "Cliente: " + clientNamePreIns.value;
@@ -456,7 +465,7 @@ mtValue.forEach(el => el.setAttribute("disabled", ""))
 
 cobre14Name.addEventListener('click', () => {
   if (cobre14Name.checked) {
-    mtCobre14.removeAttribute("disabled", '')
+    mtCobre14.removeAttribute("disabled", '');
 }
 })
 
@@ -523,6 +532,26 @@ tGris.addEventListener('click', () => {
 })
 
 
+// const allInputsWithMeters = document.querySelectorAll('.valToPrint')
+
+// function printValueOfMeters () {
+
+//  allInputsWithMeters.forEach((inp) => 
+//   inp.addEventListener('input', () => {
+//     let newP = document.createElement('p')
+//     newP.textContent = `${inp.value} metros de ${inp.name} <br>`
+//     newP = newP.textContent
+//     printListPreIns.innerHTML += newP
+//     console.log(printListPreIns.textContent)
+//   })
+
+//  )
+// }
+
+// printValueOfMeters()
+// `${inp.value} metros de ${inp.name} <br>`
+
+
 
 //    allRadioBtn.forEach((btn, i) => {
 //      btn.addEventListener('click', () => {
@@ -547,6 +576,12 @@ submitPreIns.addEventListener('click', () => {
   }
 })
 
+
+function newFunction() {
+  cabo3g15.addEventListener('input', () => {
+    printListPreIns.textContent = `${cabo3g15.value} metros de cabo 3G1.5`
+  })
+}
 
 // CALCULATION OF FERRAGENS ITEMS
 
