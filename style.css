@@ -11,7 +11,8 @@
     --red: rgb(255, 1, 1, 0.2);
     --white: rgb(255,255,255, 1);
     --grey: rgb(180, 180, 184, 0.5);
-    --yellow: rgb(247, 215, 22, 0.5)
+    --yellow: rgb(247, 215, 22, 0.5);
+    --black: rgb(0,0,0)
 }
 
 body {
@@ -134,23 +135,23 @@ label {
     gap: 2rem;
 }
 
-.by {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .byName {
     color: var(--red);
     text-transform: uppercase;
 }
 
-a {
-  text-decoration: none;
+a .design {
+    text-decoration: none;
+    color: var(--white);
 }
 
-
-
-
+.by a {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-content: center;
+    text-decoration: none;
+}
 
 .printMode, .printModePrep, .printModePreIns {
     display: none;
@@ -249,8 +250,6 @@ a {
     
     .clientName, .local-print, .date-print, .pat-print, .guia-print, .team-Print {
         font-size: 10pt;
-        /* display: flex;
-        align-items: center; */
     }
     .big-container {
         display: flex;
@@ -266,6 +265,12 @@ a {
         position: fixed;
         bottom: 0;
         right: 0;
+    }
+    .by {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        color: var(--black);
     }
     .border-div-print {
         border: solid black 0.1rem;

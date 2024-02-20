@@ -47,8 +47,6 @@ const teamC = document.getElementById('teamC')
 const submitC = document.getElementById('submitC')
 const clientC = document.getElementById('clientC')
 
-
-
 submitC.addEventListener('click', () => {
     if (teamC.value !== '') {
       subjectC.value = 'CARGA do ' + teamC.value + ' para ' + clientC.value;
@@ -305,14 +303,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // let output = ''
 
-  for (let i = 0; i < object.cabo.length; i++) {
+  for (let i = 0; i < object.item.length; i++) {
 
-    let name = object.cabo[i].name;
-    let weight = object.cabo[i].oneMeterweight;
+    let name = object.item[i].name;
+    let weight = object.item[i].oneMeterweight;
 
-    const calculationDiv = document.querySelector('.calculation')
-
-    calculationDiv.innerHTML += `
+    calcDiv.innerHTML += `
             <div class="calculation-box">
             <h2 class="productName">${name}</h2>
             <input type="number" class="weightValue" placeholder="KG">
@@ -334,8 +330,6 @@ function convertionBtn () {
     })
   })
 }
-// let weight = document.querySelectorAll('.hidden')
-
 
 function conversaoParaMetros(i) {
 
@@ -424,20 +418,26 @@ const mtGris = document.querySelector('#mtGris')
 // Caixa Pre-Instalação
 const cxName = document.querySelector('#cxPreInsName')
 const numbCxPreIns = document.querySelector('#cxPreIns')
+const allInputsWithMeters = document.querySelectorAll('.valToPrint')
 
 
 // AddEventListener's for Each input
+function funcAddInputValue() {
+  allInputsWithMeters.forEach((inp) => printListPreIns.innerHTML += (inp.value + ' metros de ' + inp.name + `<br>`)
+)}
+
 printBtnPreIns.addEventListener('click', () => {
-  printValueOfMeters()
+  funcAddInputValue()
   window.print()
 })
 
-const allInputsWithMeters = document.querySelectorAll('.valToPrint')
+// ADD PRINT CONTENT TO PRINT BUTTON =================
+  
+    //  printListPreIns.innerHTML += `${inp.value} metros de ${inp.name} <br>`
 
-function printValueOfMeters() {
-  allInputsWithMeters.forEach((inp) => 
-  printListPreIns.innerHTML += `${inp.value} metros de ${inp.name} <br>`
-)}
+
+
+// INPUT EVENTS
 
 clientNamePreIns.addEventListener('input', () => {
   printClientPreIns.textContent = "Cliente: " + clientNamePreIns.value;
@@ -583,34 +583,6 @@ function newFunction() {
   })
 }
 
-// CALCULATION OF FERRAGENS ITEMS
-
-async function callFerragensData() {
-  return (await fetch('calculation/ferragens.json')).json();
-}
-
-document.addEventListener('DOMContentLoaded', async () => {
-
-  let newObj = '';
-
-  try {
-    newObj = await callFerragensData();
-  }
-  catch (error) {
-    console.error("ERROR!")
-    console.log(error)
-  }
-
-  for (let i = 0; i < newObj.anilhas.length; i++) {
-    
-    let name = newObj.anilhas[i].name;
-    let weight = newObj.anilhas[i].unWeight;
-
-    console.log()
-
-  }
-
-});
 
 
 
