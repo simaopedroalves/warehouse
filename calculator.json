@@ -1,6 +1,6 @@
 {
 
-    "item": [
+    "itemKg": [
         {
             "name": "2g0.75",
             "oneMeterweight": 0.0465
@@ -58,8 +58,12 @@
             "oneMeterweight": 0.0416
         },
         {
-            "name": "Mangueira Condensados",
+            "name": "Mangueira Condensados 6mm",
             "oneMeterweight": 0.0444
+        },
+        {
+            "name": "Mangueira Condensados 8mm",
+            "oneMeterweight": 0.0674
         },
         {
             "name": "Tubo Anelado cinza 30mm",
@@ -79,10 +83,6 @@
             "un": "Metros Quadrados"
         },
         {
-            "name": "Vareta Cobre",
-            "oneMeterweight": 0.012234637
-        },
-        {
             "name": "Lira Inox 1/2'",
             "oneMeterweight": 0.2389
         },
@@ -93,98 +93,105 @@
         {
             "name": "Cobre 15'",
             "oneMeterweight": 0.36923
+        }
+    ],
+    
+    "ferragens": [
+        {
+            "name": "Vareta Cobre",
+            "oneUnweight": 0.012234637
         },
         {
             "name": "Anilha M4",
-            "unWeight": 0.074
+            "oneUnweight": 0.074
         },
         {
             "name": "Anilha M6",
-            "unWeight": 0.22
+            "oneUnweight": 0.22
         },
         {
             "name": "Anilha M8",
-            "unWeight": 0.8
+            "oneUnweight": 0.8
         },
         {
             "name": "PF 40MM M8",
-            "unWeight": 1.705
+            "oneUnweight": 1.705
         },
         {
             "name": "PF 60MM M8",
-            "unWeight": 2.48
+            "oneUnweight": 2.48
         },
         {
             "name": "PF 80MM M8",
-            "unWeight": 3.02
+            "oneUnweight": 3.02
         },
         {
             "name": "PF PLADUR 25MM",
-            "unWeight": 1.39
+            "oneUnweight": 1.39
         },
         {
             "name": "PF PLADUR 35MM",
-            "unWeight": 0.15
+            "oneUnweight": 0.15
         },
         {
             "name": "PF PLADUR 55MM",
-            "unWeight": 0.245
+            "oneUnweight": 0.245
         },
         {
             "name": "PF AUTOPERF 10MM",
-            "unWeight": 0.08
+            "oneUnweight": 0.08
         },
         {
             "name": "PF AUTOPERF 20MM",
-            "unWeight": 0.185
+            "oneUnweight": 0.185
         },
         {
             "name": "PF PVC 50MM",
-            "unWeight": 0.3
+            "oneUnweight": 0.3
         },
         {
             "name": "BUCHA LATÃO M8",
-            "unWeight": 0.8
+            "oneUnweight": 0.8
         },
         {
             "name": "BUCHA LATÃO M6",
-            "unWeight": 0.34
+            "oneUnweight": 0.34
         },
         {
             "name": "BUCHA NYLON M6",
-            "unWeight": 0.07
+            "oneUnweight": 0.07
         },
         {
             "name": "PITÕES",
-            "unWeight": 0.1921875
+            "oneUnweight": 0.1921875
         },
         {
             "name": "BUCHA AUTOROSCANTE CINZA",
-            "unWeight": 0.45
+            "oneUnweight": 0.45
         },
         {
             "name": "BUCHA AUTOROSCANTE BRANCA",
-            "unWeight": 0.08
+            "oneUnweight": 0.08
         },
         {
             "name": "PONTO SPIT",
-            "unWeight": 0.42
+            "oneUnweight": 0.42
         },
         {
             "name": "PORCA M6",
-            "unWeight": 0.213
+            "oneUnweight": 0.213
         },
         {
             "name": "PORCA M8",
-            "unWeight": 0.45
+            "oneUnweight": 0.45
         },
         {
             "name": "PORCA UNIÃO M6",
-            "unWeight": 1.1
+            "oneUnweight": 1.1
         },
         {
             "name": "PORCA UNIÃO M8",
-            "unWeight": 1.745
+            "oneUnweight": 1.745
         }
     ]
 }

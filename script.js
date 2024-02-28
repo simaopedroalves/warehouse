@@ -6,6 +6,7 @@ const prepBtn = document.getElementById('prepBtn')
 const formPrep = document.querySelector('.formPrep')
 const calcBtn = document.querySelector('#calcBtn')
 const calcDiv = document.querySelector('.calculation')
+const calcDivTwo = document.querySelector('.calcDivTwo')
 
 // COLOR BUTONS ON TOP OF THE PAGE
 prepBtn.addEventListener('click', () => {
@@ -13,6 +14,7 @@ prepBtn.addEventListener('click', () => {
   formCarga.style.display = 'none'
   formPrep.style.display = 'grid'
   calcDiv.style.display = 'none'
+  calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'none'
 
 })
@@ -22,6 +24,7 @@ descargaBtn.addEventListener('click', () => {
     formCarga.style.display = 'none'
     formPrep.style.display = 'none'
     calcDiv.style.display = 'none'
+    calcDivTwo.style.display = 'none'
     preInsSec.style.display = 'none'
 })
 
@@ -30,6 +33,7 @@ cargaBtn.addEventListener('click', () => {
     formCarga.style.display = 'grid'
     formPrep.style.display = 'none'
     calcDiv.style.display = 'none'
+    calcDivTwo.style.display = 'none'
     preInsSec.style.display = 'none'
 })
 
@@ -38,6 +42,7 @@ calcBtn.addEventListener('click', () => {
   formCarga.style.display = 'none'
   formPrep.style.display = 'none'
   calcDiv.style.display = 'grid'
+  calcDivTwo.style.display = 'grid'
   preInsSec.style.display = 'none'
 })
 
@@ -292,33 +297,53 @@ async function callData () {
 
 document.addEventListener('DOMContentLoaded', async () => {
 
-  let  object = '';
+  let objectKg = '';
 
   try {
-  object = await callData();
+  objectKg = await callData();
   } catch (error) {
   console.error('ERROR')
   console.log(error)
   }
 
   // let output = ''
+  // LOOP FOR WEIGHT TO METERS
+  for (let i = 0; i < objectKg.itemKg.length; i++) {
 
-  for (let i = 0; i < object.item.length; i++) {
-
-    let name = object.item[i].name;
-    let weight = object.item[i].oneMeterweight;
+    let name = objectKg.itemKg[i].name;
+    let weight = objectKg.itemKg[i].oneMeterweight;
 
     calcDiv.innerHTML += `
             <div class="calculation-box">
             <h2 class="productName">${name}</h2>
-            <input type="number" class="weightValue" placeholder="KG">
+            <input type="number" class="weightValueMt" placeholder="KG">
             <button type="button" class="btn btn-dark">Calcular</button>
             <h3 class="meters"></h3>
-            <h3 class="hidden">${weight}</h3><br>
+            <h3 class="hiddenKg">${weight}</h3><br>
             </div>`
+    convertionBtn()
   }
-  convertionBtn()
+  
+
+  for (let i = 0; i < objectKg.ferragens.length; i++) {
+
+    let name = objectKg.ferragens[i].name;
+    let weight = objectKg.ferragens[i].oneUnweight;
+
+    calcDivTwo.innerHTML += `
+            <div class="calculation-box">
+            <h2 class="productName">${name}</h2>
+            <input type="number" class="weightValueUn" placeholder="GR">
+            <button type="button" class="btn btn-warning calcAmount">Calcular</button>
+            <h3 class="un"></h3>
+            <h3 class="hiddenMt">${weight}</h3><br>
+            </div>`
+    convertionBtnDivTwo()
+  }
+
 })
+
+
 
 function convertionBtn () {
 
@@ -333,33 +358,69 @@ function convertionBtn () {
 
 function conversaoParaMetros(i) {
 
-  let inp = document.querySelectorAll('input')
+  let inp = document.querySelectorAll('.weightValueMt')
   let resultado = document.querySelectorAll('.meters')
-  let weight = document.querySelectorAll('.hidden')
-  // let productName = document.querySelectorAll('.productName')
+  let weight = document.querySelectorAll('.hiddenKg')
 
   let input = inp[i].value;
   let peso = Number(weight[i].innerHTML);
   let test =  resultado[i].innerHTML = input / peso  
   resultado[i].innerHTML = test.toFixed(1) + " Metros"
 
-  // if (productName[i].innerHTML = "Isolamento lã Rocha") {
-  // resultado[i].innerHTML = test.toFixed(1) + " Metros Quadrados"
-  // } 
-  // if (productName[i].innerHTML = "Vareta Cobre") {
-  //   resultado[i].innerHTML = test.toFixed(1) + " Varetas"
-  // }
-  // else {
-  //   return
-  // }
-  // if (input = ' ') {
-  //   resultado[i].textContent = "Insere um valor"
-  //   setTimeout(() => {location.reload()}, 1000)
-  //   } 
-  //  else {return}
-
-//   resultado[i].innerHTML = resultado[i]
 }
+
+// document.addEventListener('DOMContentLoaded', async () => {
+  
+//   let objectUn = '';
+
+//   try {
+//   objectUn = await callData();
+//   } catch (error) {
+//   console.error('ERROR')
+//   console.log(error)
+//   }
+
+//    // LOOP FOR WEIGHT TO UNITY
+//    for (let i = 0; i < objectUn.ferragens.length; i++) {
+
+//     let name = objectUn.ferragens[i].name;
+//     let weight = objectUn.ferragens[i].oneUnweight;
+
+//     calcDivTwo.innerHTML += `
+//             <div class="calculation-box">
+//             <h2 class="productName">${name}</h2>
+//             <input type="number" class="weightValue" placeholder="KG">
+//             <button type="button" class="btn btn-info">Calcular</button>
+//             <h3 class="meters"></h3>
+//             <h3 class="hidden">${weight}</h3><br>
+//             </div>`
+//   }
+//   convertionBtnDivTwo()
+// })
+
+  function convertionBtnDivTwo () {
+
+    let calcBtnAmount = document.querySelectorAll('.calcAmount')
+
+    calcBtnAmount.forEach((btn, i) => {
+          btn.addEventListener('click', () => {
+            conversaoParaUnidade(i)
+          })
+    })
+  }
+
+  function conversaoParaUnidade(i) {
+    let inp = document.querySelectorAll('.weightValueUn')
+    let resultado = document.querySelectorAll('.un')
+    let weight = document.querySelectorAll('.hiddenMt')
+
+    let input = inp[i].value;
+    let peso = Number(weight[i].innerHTML);
+    let test =  resultado[i].innerHTML = input / peso  
+    resultado[i].innerHTML = test.toFixed(0) + " Un"
+
+  }
+
 
 
 // ========================= PRE-INSTALAÇÃO  =========================
