@@ -78,6 +78,10 @@
             "oneMeterweight": 0.1175
         },
         {
+            "name": "Tubo Flexivel 150mm c/Isolamento",
+            "oneMeterweight": 0.54
+        },
+        {
             "name": "Isolamento Lã Rocha",
             "oneMeterweight": 0.73579,
             "un": "Metros Quadrados"
@@ -95,11 +99,11 @@
             "oneMeterweight": 0.36923
         }
     ],
-    
+
     "ferragens": [
         {
             "name": "Vareta Cobre",
-            "oneUnweight": 0.012234637
+            "oneUnweight": 1.22
         },
         {
             "name": "Anilha M4",
@@ -193,5 +197,6 @@
             "name": "PORCA UNIÃO M8",
             "oneUnweight": 1.745
         }
+
     ]
 }

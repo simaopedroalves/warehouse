@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="calculation-box">
             <h2 class="productName">${name}</h2>
             <input type="number" class="weightValueMt" placeholder="KG">
-            <button type="button" class="btn btn-dark">Calcular</button>
+            <button type="button" class="btn btn-dark">Calcular</button><br>
             <h3 class="meters"></h3>
             <h3 class="hiddenKg">${weight}</h3><br>
             </div>`
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="calculation-box">
             <h2 class="productName">${name}</h2>
             <input type="number" class="weightValueUn" placeholder="GR">
-            <button type="button" class="btn btn-warning calcAmount">Calcular</button>
+            <button type="button" class="btn btn-warning calcAmount">Calcular</button><br>
             <h3 class="un"></h3>
             <h3 class="hiddenMt">${weight}</h3><br>
             </div>`
@@ -342,8 +342,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
 })
-
-
 
 function convertionBtn () {
 
@@ -368,35 +366,6 @@ function conversaoParaMetros(i) {
   resultado[i].innerHTML = test.toFixed(1) + " Metros"
 
 }
-
-// document.addEventListener('DOMContentLoaded', async () => {
-  
-//   let objectUn = '';
-
-//   try {
-//   objectUn = await callData();
-//   } catch (error) {
-//   console.error('ERROR')
-//   console.log(error)
-//   }
-
-//    // LOOP FOR WEIGHT TO UNITY
-//    for (let i = 0; i < objectUn.ferragens.length; i++) {
-
-//     let name = objectUn.ferragens[i].name;
-//     let weight = objectUn.ferragens[i].oneUnweight;
-
-//     calcDivTwo.innerHTML += `
-//             <div class="calculation-box">
-//             <h2 class="productName">${name}</h2>
-//             <input type="number" class="weightValue" placeholder="KG">
-//             <button type="button" class="btn btn-info">Calcular</button>
-//             <h3 class="meters"></h3>
-//             <h3 class="hidden">${weight}</h3><br>
-//             </div>`
-//   }
-//   convertionBtnDivTwo()
-// })
 
   function convertionBtnDivTwo () {
 
