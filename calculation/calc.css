@@ -129,7 +129,6 @@
     }
 }
 
-
 @media screen and (min-width: 1200px){
     .calculation, .calcDivTwo {
         grid-template-columns: repeat(6,1fr);
