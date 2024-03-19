@@ -66,6 +66,10 @@
             "oneMeterweight": 0.0674
         },
         {
+            "name": "Tubo Protetor Monopex",
+            "oneMeterweight": 0.0584
+        },
+        {
             "name": "Tubo Anelado cinza 30mm",
             "oneMeterweight": 0.198
         },
@@ -85,6 +89,10 @@
             "name": "Isolamento Lã Rocha",
             "oneMeterweight": 0.73579,
             "un": "Metros Quadrados"
+        },
+        {
+            "name": "Faixa Perimetral",
+            "oneMeterweight": 0.0312
         },
         {
             "name": "Lira Inox 1/2'",
