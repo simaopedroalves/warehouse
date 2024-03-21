@@ -251,7 +251,7 @@ function deleteNumbToReturnOnPrep() {
   console.log(myreturnText)
 }
 
-// EMAIL SUBJECT AND TITLE TO PREPARAR
+// EMAIL SUBJECT AND TITLE TO PREPARAR for working on formsubmit - not valid on netlify forms
 const submitP = document.querySelector('#submitP')
 const subjectP = document.querySelector('#subjectP')
 
