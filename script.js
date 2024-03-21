@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <input type="number" class="weightValueMt" placeholder="KG">
             <button type="button" class="btn btn-dark">Calcular</button><br>
             <h3 class="meters"></h3>
-            <h3 class="hiddenKg">${weight}</h3><br>
+            <h3 class="hiddenKg">${weight}</h3>
             </div>`
     convertionBtn()
   }
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <input type="number" class="weightValueUn" placeholder="GR">
             <button type="button" class="btn btn-warning calcAmount">Calcular</button><br>
             <h3 class="un"></h3>
-            <h3 class="hiddenMt">${weight}</h3><br>
+            <h3 class="hiddenMt">${weight}</h3>
             </div>`
     convertionBtnDivTwo()
   }
