@@ -257,7 +257,7 @@ const subjectP = document.querySelector('#subjectP')
 
 submitP.addEventListener('click', () => {
   if (clientP.value !== '') {
-    subjectP.name = 'PREPARAR MATERIAL PARA ' + clientP.value;
+    subjectP.name += 'PREPARAR MATERIAL PARA ' + clientP.value;
   }
 })
 
@@ -602,7 +602,7 @@ const clientPreIns = document.querySelector('#clientPreIns')
 
 submitPreIns.addEventListener('click', () => {
   if (clientPreIns.value !== '') {
-    subjectPreIns.value = `PREPARA PRÉ-INSTALAÇÃO PARA ${clientPreIns.value}`;
+    subjectPreIns.name += `PREPARA PRÉ-INSTALAÇÃO PARA ${clientPreIns.value}`;
   }
 })
 
