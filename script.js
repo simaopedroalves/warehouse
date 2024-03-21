@@ -257,7 +257,7 @@ const subjectP = document.querySelector('#subjectP')
 
 submitP.addEventListener('click', () => {
   if (clientP.value !== '') {
-    subjectP.value = 'PREPARAR MATERIAL PARA ' + clientP.value;
+    subjectP.value = `PREPARAR MATERIAL PARA ${clientP.value}`;
   }
 })
 
