@@ -602,7 +602,7 @@ const clientPreIns = document.querySelector('#clientPreIns')
 
 submitPreIns.addEventListener('click', () => {
   if (clientPreIns.value !== '') {
-    subjectPreIns.name += `PREPARA PRÉ-INSTALAÇÃO PARA ${clientPreIns.value}`;
+    subjectPreIns.value = `PREPARA PRÉ-INSTALAÇÃO PARA ${clientPreIns.value}`;
   }
 })
 
