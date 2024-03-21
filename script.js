@@ -66,7 +66,7 @@ const clientD = document.getElementById('clientD')
 
 submitD.addEventListener('click', () => {
     if (teamD.value !== '') {
-      subjectD.value = `DESCARGA do {teamD.value} de ${clientD.value}`;
+      subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
     }
 })
 // PRINT CARGA
