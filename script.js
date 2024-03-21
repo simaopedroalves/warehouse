@@ -54,7 +54,7 @@ const clientC = document.getElementById('clientC')
 
 submitC.addEventListener('click', () => {
     if (teamC.value !== '') {
-      subjectC.value = 'CARGA do ' + teamC.value + ' para ' + clientC.value;
+      subjectC.value = `CARGA do ${teamC.value} para ${clientC.value}`;
     }
 })
 
@@ -66,7 +66,7 @@ const clientD = document.getElementById('clientD')
 
 submitD.addEventListener('click', () => {
     if (teamD.value !== '') {
-      subjectD.value = 'DESCARGA do ' + teamD.value + ' de ' + clientD.value;
+      subjectD.value = `DESCARGA do {teamD.value} de ${clientD.value}`;
     }
 })
 // PRINT CARGA
