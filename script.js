@@ -315,11 +315,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     calcDiv.innerHTML += `
             <div class="calculation-box">
-            <h2 class="productName">${name}</h2>
-            <input type="number" class="weightValueMt" placeholder="KG">
-            <button type="button" class="btn btn-dark">Calcular</button><br>
-            <h3 class="meters"></h3>
-            <h3 class="hiddenKg">${weight}</h3>
+              <h2 class="productName">${name}</h2>
+              <input type="number" class="weightValueMt" placeholder="KG">
+              <button type="button" class="btn btn-dark">Calcular</button><br>
+              <h3 class="meters"></h3>
+              <h3 class="hiddenKg">${weight}</h3>
             </div>`
     convertionBtn()
   }
@@ -332,11 +332,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     calcDivTwo.innerHTML += `
             <div class="calculation-box">
-            <h2 class="productName">${name}</h2>
-            <input type="number" class="weightValueUn" placeholder="GR">
-            <button type="button" class="btn btn-warning calcAmount">Calcular</button><br>
-            <h3 class="un"></h3>
-            <h3 class="hiddenMt">${weight}</h3>
+              <h2 class="productName">${name}</h2>
+              <input type="number" class="weightValueUn" placeholder="GR">
+              <button type="button" class="btn btn-warning calcAmount">Calcular</button><br>
+              <h3 class="un"></h3>
+              <h3 class="hiddenMt">${weight}</h3>
             </div>`
     convertionBtnDivTwo()
   }
@@ -402,6 +402,7 @@ preInsBtn.addEventListener('click', () => {
   formCarga.style.display = 'none'
   formPrep.style.display = 'none'
   calcDiv.style.display = 'none'
+  calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'grid'
 })
 

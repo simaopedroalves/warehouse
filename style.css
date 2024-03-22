@@ -11,7 +11,7 @@
     --red: rgb(255, 1, 1, 0.2);
     --white: rgb(255,255,255, 1);
     --grey: rgb(180, 180, 184, 0.5);
-    --yellow: rgb(247, 215, 22, 0.5);
+    --yellow: rgb(247, 215, 22, 1);
     --black: rgb(0,0,0)
 }
 
@@ -45,6 +45,7 @@ header {
     display: grid;
     gap: 0;
     margin: 2rem auto;
+    justify-content: center;
 }
 
 .caisBtn {
@@ -62,6 +63,7 @@ header {
     border-radius: 0.5rem;
     color: blue;
     font-weight: 600;
+
 }
 
 input:not(.cobre input, .cabo input), .select-team {
@@ -176,7 +178,7 @@ a .design {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
         min-width: 80vw;
-        max-height: 110vh;
+        max-height: 90vh;
         justify-content: center;
     }
 

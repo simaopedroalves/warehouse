@@ -5,7 +5,7 @@
 }
 
 .calcDivTwo {
-    margin-top: 3rem;
+    margin-top: 10vh;
 }
 
 .calculation, .calcDivTwo {
@@ -15,6 +15,7 @@
     justify-content: center;
     gap: 0.5rem;
     align-items: center;
+    max-height: fit-content;
 }
 
 .calculation h2, .calcDivTwo h2 {
@@ -28,29 +29,29 @@
 .calculation-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    gap: 0.2rem;
     justify-content: center;
     align-content: center;
-    padding: 1rem;
+    padding: 0.3rem;
     background-color: var(--grey);
     border-radius: 1rem;
     min-height: fit-content;
+    max-width: fit-content;
+
 }
 
 .calculation-box h2 {
     grid-column: span 3;
-    min-height: 2rem;
     margin: 0 auto;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .calculation-box h3 {
     grid-column: span 3;
     margin: 0 auto 0 auto;
     font-size: 0.9rem;
-    min-height: 1.1rem;
     padding: 0;
 }
 
@@ -70,11 +71,17 @@
 
 .hiddenKg, .hiddenMt {
     display: none;
+
 }
 
 @media screen and (max-width: 340px) {
+    .calculation {
+        justify-content: center;
+        margin: 0 auto;
+    }
     .calculation-box {
         grid-template-columns: repeat(1,1fr);
+        margin: 0 auto;
     }
     .calculation-box h3 {
         grid-column: span 1;
@@ -93,9 +100,8 @@
     }
     .calculation h2, .calcDivTwo h2 {
         grid-column: span 1;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
-   
 }
 
 
@@ -118,6 +124,10 @@
         grid-column: span 4;
         font-size: 1rem;
     }
+    .calculation-box {
+        min-height: 8rem;
+        align-content: flex-start;
+    }
 }
 
 @media screen and (min-width: 990px) {
@@ -128,15 +138,31 @@
         grid-column: span 5;
         font-size: 1rem;
     }
+    .calculation-box {
+        min-height: 8rem;
+        align-content: flex-start;
+    }
+    .calculation-box h2 {
+        font-size: 1rem;
+    }
+  
 }
 
 @media screen and (min-width: 1200px){
     .calculation, .calcDivTwo {
         grid-template-columns: repeat(6,1fr);
+
     }
     .calculation h2, .calcDivTwo h2 {
         grid-column: span 6;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+    }
+    .calculation-box h2 {
+        font-size: 0.8rem;
+    }
+    .calculation-box {
+        min-height: 7rem;
+        align-content: flex-start;
     }
 }
 
