@@ -54,7 +54,7 @@
             "oneMeterweight": 0.092
         },
         {
-            "name": "Cabo nhxh 3g1.5;",
+            "name": "Cabo nhxh 3g1.5",
             "oneMeterweight": 0.183
         },
         {
@@ -109,6 +109,10 @@
         {
             "name": "Lira Inox 1/2'",
             "oneMeterweight": 0.2389
+        },
+        {
+            "name": "Lira Inox 3/4'",
+            "oneMeterweight": 0.18
         },
         {
             "name": "Cobre 18'",
