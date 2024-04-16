@@ -98,6 +98,10 @@
             "oneMeterweight": 0.54
         },
         {
+            "name": "Tubo Flexivel 100mm",
+            "oneMeterweight": 0.0652173913
+        },
+        {
             "name": "Isolamento Lã Rocha",
             "oneMeterweight": 0.73579,
             "un": "Metros Quadrados"
