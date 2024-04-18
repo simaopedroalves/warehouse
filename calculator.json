@@ -159,7 +159,7 @@
         },
         {
             "name": "PF PLADUR 25MM",
-            "oneUnweight": 1.39
+            "oneUnweight": 0.13
         },
         {
             "name": "PF PLADUR 35MM",
@@ -192,6 +192,10 @@
         {
             "name": "BUCHA NYLON M6",
             "oneUnweight": 0.07
+        },
+        {
+            "name": "BUCHA NYLON M8",
+            "oneUnweight": 0.14782608695
         },
         {
             "name": "PITÕES",
