@@ -94,12 +94,32 @@
             "oneMeterweight": 0.1175
         },
         {
+            "name": "Tubo Flexivel 125mm c/Isolamento",
+            "oneMeterweight": 0.41647058823
+        },
+        {
             "name": "Tubo Flexivel 150mm c/Isolamento",
             "oneMeterweight": 0.54
         },
         {
+            "name": "Tubo Flexivel 200mm c/Isolamento",
+            "oneMeterweight": 0.425
+        },
+        {
+            "name": "Tubo Flexivel 250mm c/Isolamento",
+            "oneMeterweight": 0.618181818
+        },
+        {
             "name": "Tubo Flexivel 100mm",
             "oneMeterweight": 0.0652173913
+        },
+        {
+            "name": "Tubo Flexivel 200mm",
+            "oneMeterweight": 0.16741935483
+        },
+        {
+            "name": "Tubo Flexivel 250mm",
+            "oneMeterweight": 0.3
         },
         {
             "name": "Isolamento Lã Rocha",
