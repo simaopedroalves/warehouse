@@ -348,8 +348,11 @@ function convertionBtn () {
   let calcBtn = document.querySelectorAll('.btn-dark')
 
   calcBtn.forEach((btn, i) => {
+    
+    
     btn.addEventListener('click', () => {
-       conversaoParaMetros(i)
+      calcBtn[i].parentElement.style.backgroundColor = 'var(--yellow)'
+      conversaoParaMetros(i)
     })
   })
 }
@@ -372,9 +375,10 @@ function conversaoParaMetros(i) {
     let calcBtnAmount = document.querySelectorAll('.calcAmount')
 
     calcBtnAmount.forEach((btn, i) => {
-          btn.addEventListener('click', () => {
-            conversaoParaUnidade(i)
-          })
+      btn.addEventListener('click', () => {
+        calcBtnAmount[i].parentElement.style.backgroundColor = 'var(--yellow)'
+        conversaoParaUnidade(i)
+      })
     })
   }
 
