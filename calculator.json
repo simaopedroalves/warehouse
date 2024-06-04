@@ -78,6 +78,10 @@
             "oneMeterweight": 0.0674
         },
         {
+            "name": "Tubo Anti-Bacteriano 75'",
+            "oneMeterweight": 0.3
+        },
+        {
             "name": "Tubo Protetor Monopex",
             "oneMeterweight": 0.0584
         },
@@ -92,6 +96,10 @@
         {
             "name": "Tubo Gris cinza c/guia",
             "oneMeterweight": 0.1175
+        },
+        {
+            "name": "Tubo Anelado Vermelho 90'",
+            "oneMeterweight": 0.31535269709
         },
         {
             "name": "Tubo Flexivel 125mm c/Isolamento",
@@ -115,7 +123,7 @@
         },
         {
             "name": "Tubo Flexivel 150mm",
-            "oneMeterweight": 0.12173913043
+            "oneMeterweight": 0.086
         },
         {
             "name": "Tubo Flexivel 200mm",
@@ -202,8 +210,20 @@
             "oneUnweight": 0.185
         },
         {
+            "name": "PF AUTOPERF 80MM",
+            "oneUnweight": 1.58
+        },
+        {
+            "name": "PF INOX CAB. QUEIJO 20MM",
+            "oneUnweight": 0.14933333333
+        },
+        {
             "name": "PF PVC 50MM",
             "oneUnweight": 0.3
+        },
+        {
+            "name": "BUCHA METAL M8",
+            "oneUnweight": 2.15
         },
         {
             "name": "BUCHA LATÃO M8",
