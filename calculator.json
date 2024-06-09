@@ -139,8 +139,12 @@
             "un": "Metros Quadrados"
         },
         {
-            "name": "Faixa Perimetral",
+            "name": "Faixa Perimetral Daikin",
             "oneMeterweight": 0.0312
+        },
+        {
+            "name": "Faixa Perimetral Insuatherm",
+            "oneMeterweight": 0.026
         },
         {
             "name": "Lira Inox 1/2'",
@@ -157,6 +161,13 @@
         {
             "name": "Cobre 15'",
             "oneMeterweight": 0.36923
+        },
+        {
+            "name": "Cobre revestido 1/4'",
+            "oneMeterweight": 0.1128
+        },{
+            "name": "Cobre revestido 3/8'",
+            "oneMeterweight": 0.164
         }
     ],
 
