@@ -7,6 +7,8 @@ const formPrep = document.querySelector('.formPrep')
 const calcBtn = document.querySelector('#calcBtn')
 const calcDiv = document.querySelector('.calculation')
 const calcDivTwo = document.querySelector('.calcDivTwo')
+const preInsSec = document.querySelector('.pre-instalacao')
+
 
 // COLOR BUTONS ON TOP OF THE PAGE
 prepBtn.addEventListener('click', () => {
@@ -108,13 +110,13 @@ dateC.addEventListener('input', () => {
   datePrint.textContent = dateC.value
 })
 
-patC.addEventListener('input', () => {
-  patPrint.textContent = "PAT: " + patC.value
-})
+// patC.addEventListener('input', () => {
+//   patPrint.textContent = "PAT: " + patC.value
+// })
 
-guia.addEventListener('input', () => {
-  guiaPrint.textContent = "Guia n: " + guia.value
-})
+// guia.addEventListener('input', () => {
+//   guiaPrint.textContent = "Guia n: " + guia.value
+// })
 
 function deleteNumbToReturn () {
   let numbersToDelete = new RegExp(/(\d+)[.,]*(\d*)(\s+)/g)
@@ -399,7 +401,6 @@ function conversaoParaMetros(i) {
 // ========================= PRE-INSTALAÇÃO  =========================
 
 const preInsBtn = document.querySelector('#preInsBtn')
-const preInsSec = document.querySelector('.pre-instalacao')
 
 preInsBtn.addEventListener('click', () => {
   formDescarga.style.display = 'none'
