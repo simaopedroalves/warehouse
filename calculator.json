@@ -2,6 +2,10 @@
 
     "itemKg": [
         {
+            "name": "1g2.5",
+            "oneMeterweight": 0.03053435
+        },
+        {
             "name": "2g0.75",
             "oneMeterweight": 0.0465
         },
@@ -251,6 +255,10 @@
         {
             "name": "BUCHA NYLON M8",
             "oneUnweight": 0.14782608695
+        },
+        {
+            "name": "BUCHA BORBOLETA C/PARAF 6MM",
+            "oneUnweight": 1.63
         },
         {
             "name": "PITÕES",
