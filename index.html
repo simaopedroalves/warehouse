@@ -40,12 +40,13 @@
 
     <section class="box" id="box">
         
-        <div class="caisBtn" id="">
+        <div class="caisBtn">
             <button class="btn btn-warning" id="preInsBtn">Pré-instalação</button>
             <button class="calcBtn btn btn-secondary" id="calcBtn">Calculadora</button>
             <button type="button" class="btn btn-primary" id="prepBtn">Preparar</button>
             <button class="cargaBtn btn btn-success" id="cargaBtn">Carga</button>
             <button class="descargaBtn btn btn-danger" id="descargaBtn">Descarga</button>
+            <button type="button" class="btn btn-dark" id="faltasBtn">Faltas</button>
             <!-- <button></button> button to create a declaration -->
         </div>
 
@@ -305,6 +306,8 @@
                 </div>
             </div>
         </form>
+
+
         <!--  ===================== DESCARGA ========================= <input type="hidden" name="_url" value="https://yourdomain.co/contact.html"> -->
         <!-- <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST"> -->
             <form name="Descarga" action="/submittedPage.html" method="POST" data-netlify="true">
@@ -362,10 +365,82 @@
             </div>
 
         </form>
+
+          <!-- ===================================== FALTAS ============================================================ -->
+
+    <form name="Faltas" action="/submittedPage.html" method="POST" data-netlify="true">
+
+        <!-- <input type="hidden" name="_url" value="https://armazemcrisavac.netlify.app"> -->
+        <!-- <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://formsubmited.webdevsp.com">
+        <input type="hidden" name="_template" value="table"> -->
+
+        <input type="hidden" name="subject" value="" id="subjectF">
+
+        <div class="formulario formFaltas" id="formularioF">
+            
+           <div>
+                <label for="teamF">Equipa</label>
+                <select type="text" name="Team" id="teamF" class="select-team" required>
+                    <option value="">Chefe de Equipa</option>
+                    <option value="Fábio" id="opFabio">Fábio</option>
+                    <option value="Pedro" id="opPedro">Pedro</option>
+                    <option value="Ricardo" id="opRicardo">Ricardo</option>
+                    <option value="Armazém" id="opArmazem">Armazém</option>
+                    <option value="Cristiano" id="opCristiano">Cristiano</option>
+                    <option value="Indefinida" id="opIndefinidda">Indefinida</option>
+                </select>
+           </div>
+           
+            <div>
+                <label for="faturaF">Fatura para</label>
+                <input type="text" name="Nome p/Fatura" id="faturaP" required>
+            </div>
+
+            <div>
+                <label for="clientF">Cliente</label>
+                <input type="text" name="Client" id="clientP" required>
+            </div>
+
+            <div>
+                <label for="dateF">Data</label>
+                <input type="date" name="Date" id="dateP" required>
+            </div>
+
+            <!-- <div>
+                <label for="localF" class="localP">Local</label>
+                <input type="text" name="localP" id="localP">
+            </div> -->
+
+            <div>
+                <label for="obsF" class="obsP">Obs</label>
+                <input type="text" name="obsP" id="obsP">
+            </div>
+
+            <div class="textareaDiv">
+                <label for="material" class="media-test">Material</label>
+                <textarea id="materialFaltas" name="MaterialFaltas" required autocorrect></textarea>
+               </div>
+            
+         <!-- ======================= BUTTONS ==================== -->
+            <div class="buttons">
+                <button type="submit" name="q" id="submitF" class="btn btn-info">Submeter</button>
+                <button type="button" class="btn btn-warning" id="printBtnFaltas"><i class="fa-solid fa-print"></i></button>
+                <!-- <button type="button" class="btn btn-success" id="whatsappBtnFaltas"><i class="fa-brands fa-whatsapp"></i></button>     -->
+            </div>
+        </div>
+    </form>
+
     </section>
+
+
     <div class="by">
        <a href="mailto:simaaoweb@gmail.com"><span class="design">Design by</span><h6 class="byName">sp</h6></a>
     </div>
+
+
+
+  
 
 
 <!-- =========================TO PRINT CARGA==================================== -->

@@ -12,7 +12,6 @@
     --red: rgb(255, 1, 1, 0.2);
     --white: rgb(255,255,255, 1);
     --grey: rgb(180, 180, 184, 0.5);
-    --yellow: rgb(247, 215, 22, 1);
     --black: rgb(0,0,0)
 }
 
@@ -105,6 +104,13 @@ textarea {
 .formDescarga {
     background-color: var(--red);
     display: none;
+}
+
+.formFaltas {
+    background-color: var(--black);
+    color: var(--white);
+    display: none;
+
 }
 
 label {
@@ -200,7 +206,7 @@ a .design {
 
 @media screen and (min-width: 1000px){
     .caisBtn {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         max-width: 80vw;
     }
     .formulario {

@@ -2,13 +2,15 @@ const formDescarga = document.querySelector('.formDescarga')
 const descargaBtn = document.getElementById('descargaBtn')
 const formCarga = document.querySelector('.formCarga')
 const cargaBtn = document.getElementById('cargaBtn')
+const faltasBtn = document.querySelector('#faltasBtn')
+const faltasDiv = document.querySelector('.formFaltas')
 const prepBtn = document.getElementById('prepBtn')
 const formPrep = document.querySelector('.formPrep')
 const calcBtn = document.querySelector('#calcBtn')
 const calcDiv = document.querySelector('.calculation')
 const calcDivTwo = document.querySelector('.calcDivTwo')
 const preInsSec = document.querySelector('.pre-instalacao')
-
+const caisBtn = document.querySelector('.caisBtn')
 
 // COLOR BUTONS ON TOP OF THE PAGE
 prepBtn.addEventListener('click', () => {
@@ -18,25 +20,30 @@ prepBtn.addEventListener('click', () => {
   calcDiv.style.display = 'none'
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'none'
+  faltasDiv.style.display = 'none'
+
 
 })
 
 descargaBtn.addEventListener('click', () => {
-    formDescarga.style.display = 'grid'
-    formCarga.style.display = 'none'
-    formPrep.style.display = 'none'
-    calcDiv.style.display = 'none'
-    calcDivTwo.style.display = 'none'
-    preInsSec.style.display = 'none'
+  formDescarga.style.display = 'grid'
+  formCarga.style.display = 'none'
+  formPrep.style.display = 'none'
+  calcDiv.style.display = 'none'
+  calcDivTwo.style.display = 'none'
+  preInsSec.style.display = 'none'
+  faltasDiv.style.display = 'none'
+
 })
 
 cargaBtn.addEventListener('click', () => {
-    formDescarga.style.display = 'none'
-    formCarga.style.display = 'grid'
-    formPrep.style.display = 'none'
-    calcDiv.style.display = 'none'
-    calcDivTwo.style.display = 'none'
-    preInsSec.style.display = 'none'
+  formDescarga.style.display = 'none'
+  formCarga.style.display = 'grid'
+  formPrep.style.display = 'none'
+  calcDiv.style.display = 'none'
+  calcDivTwo.style.display = 'none'
+  preInsSec.style.display = 'none'
+  faltasDiv.style.display = 'none'
 })
 
 calcBtn.addEventListener('click', () => {
@@ -46,6 +53,18 @@ calcBtn.addEventListener('click', () => {
   calcDiv.style.display = 'grid'
   calcDivTwo.style.display = 'grid'
   preInsSec.style.display = 'none'
+  faltasDiv.style.display = 'none'
+
+})
+
+faltasBtn.addEventListener('click', () => {
+  formDescarga.style.display = 'none'
+  formCarga.style.display = 'none'
+  formPrep.style.display = 'none'
+  calcDiv.style.display = 'none'
+  calcDivTwo.style.display = 'none'
+  preInsSec.style.display = 'none'
+  faltasDiv.style.display = 'grid'
 })
 
 // EMAIL SUBJECT AND TITLES TO CARGA
