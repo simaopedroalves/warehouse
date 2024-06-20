@@ -13,7 +13,7 @@
     --white: rgb(255,255,255, 1);
     --grey: rgb(180, 180, 184, 0.5);
     --yellow: rgb(247, 215, 22, 1);
-    --black: rgb(0,0,0)
+    --black: rgb(0,0,0);
 }
 
 body {
