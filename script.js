@@ -428,6 +428,7 @@ preInsBtn.addEventListener('click', () => {
   calcDiv.style.display = 'none'
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'grid'
+  faltasDiv.style.display = 'none'
 })
 
 // Radio Buttons and Inputs type Number
