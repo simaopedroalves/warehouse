@@ -57,6 +57,11 @@ header {
     margin: 0 auto 3rem auto;
 }
 
+.btn-light {
+    color: var(--white);
+    background-color: var(--black);
+}
+
 .formulario {
     display: grid;
     gap: 1rem;
@@ -67,7 +72,7 @@ header {
 
 }
 
-input:not(.cobre input, .cabo input), .select-team {
+input:not(.cobre input, .cabo input, [type="radio"]), .select-team {
     border: solid 0.1rem var(--blue);
     min-height: 2rem;
     min-width: 95%;
@@ -111,10 +116,9 @@ textarea {
     background-color: var(--black);
     color: var(--white);
     display: none;
-
 }
 
-label {
+label,  .encomendado{
     font-weight: 700;
 }
 
@@ -163,9 +167,37 @@ a .design {
     text-decoration: none;
 }
 
-.printMode, .printModePrep, .printModePreIns {
+/* =========== faltas ============== */
+
+.formFaltas div:nth-child(3) {
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.formFaltas div:nth-child(3) span{
+    grid-column: span 2;
+}
+
+.formFaltas div:nth-child(3) div {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+}
+
+input[type="radio"] {
+    size: 0.7rem;
+    /* height: 0.1rem; */
+}
+
+.printMode, .printModePrep, .printModePreIns, .printModeFaltas {
     display: none;
 }
+
 
 @media screen and (min-width: 860px) {
     body {
@@ -235,13 +267,15 @@ a .design {
     header, .caisBtn, .box {
         display: none;
     }
-    .printMode, .printModePrep, .printModePreIns {
+    .printMode, .printModePrep, .printModePreIns, .printModeFaltas {
         display: grid;
+        align-items: center;
+        gap: 1rem;
         /* atributo abaixo permite que o print mode da carga fique numa pagina
         e o print mode da preparacao fique noutra */
         break-after: page; 
     }
-    .printMode h3 {
+    .printMode h3, .printModeFaltas h3 {
         text-transform: uppercase;
     }
     .list {
@@ -260,7 +294,9 @@ a .design {
     
     .clientName, .local-print, .date-print, .pat-print, .guia-print, .team-Print {
         font-size: 10pt;
+        font-weight: bold;
     }
+
     .big-container {
         display: flex;
         justify-content: space-evenly;

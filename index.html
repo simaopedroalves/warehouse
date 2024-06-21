@@ -368,43 +368,42 @@
 
           <!-- ===================================== FALTAS ============================================================ -->
 
-    <form name="Faltas" action="/submittedPage.html" method="POST" data-netlify="true">
+        <form name="Faltas" action="/submittedPage.html" method="POST" data-netlify="true">
 
         <!-- <input type="hidden" name="_url" value="https://armazemcrisavac.netlify.app"> -->
         <!-- <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://formsubmited.webdevsp.com">
         <input type="hidden" name="_template" value="table"> -->
 
-        <input type="hidden" name="subject" value="" id="subjectF">
+        <input type="hidden" name="subject" value="" id="subjectFaltas">
 
         <div class="formulario formFaltas" id="formularioF">
-            
-           <div>
-                <label for="teamF">Equipa</label>
-                <select type="text" name="Team" id="teamF" class="select-team" required>
-                    <option value="">Chefe de Equipa</option>
-                    <option value="Fábio" id="opFabio">Fábio</option>
-                    <option value="Pedro" id="opPedro">Pedro</option>
-                    <option value="Ricardo" id="opRicardo">Ricardo</option>
-                    <option value="Armazém" id="opArmazem">Armazém</option>
-                    <option value="Cristiano" id="opCristiano">Cristiano</option>
-                    <option value="Indefinida" id="opIndefinidda">Indefinida</option>
-                </select>
-           </div>
            
             <div>
-                <label for="faturaF">Fatura para</label>
-                <input type="text" name="Nome p/Fatura" id="faturaP" required>
+                <label for="clientFaltas">Cliente</label>
+                <input type="text" name="Client" id="clientFaltas" required>
             </div>
 
             <div>
-                <label for="clientF">Cliente</label>
-                <input type="text" name="Client" id="clientP" required>
+                <label for="fornecedorFaltas">Fornecedor</label>
+                <input type="text" name="Fornecedor" id="fornecedorFaltas" required>
             </div>
 
             <div>
-                <label for="dateF">Data</label>
-                <input type="date" name="Date" id="dateP" required>
+                <span for="clientFaltas" class="encomendado">Encomendado</span>
+                <div>
+                    <label for="encomendaSim">Sim</label>
+                    <input type="radio" name="encomenda" id="encomendaSim" value="Sim">
+                </div>
+                <div>
+                    <label for="encomendaNao">Não</label>
+                    <input type="radio" name="encomenda" id="encomendaNao" value="Nao">
+                </div>
+            </div>
+
+            <div>
+                <label for="dateFaltas">Disponível a</label>
+                <input type="date" name="Disponivel" id="dateFaltas" required>
             </div>
 
             <!-- <div>
@@ -413,8 +412,8 @@
             </div> -->
 
             <div>
-                <label for="obsF" class="obsP">Obs</label>
-                <input type="text" name="obsP" id="obsP">
+                <label for="obsFaltas" class="obsFaltas">Obs</label>
+                <input type="text" name="obsFaltas" id="obsFaltas">
             </div>
 
             <div class="textareaDiv">
@@ -424,7 +423,7 @@
             
          <!-- ======================= BUTTONS ==================== -->
             <div class="buttons">
-                <button type="submit" name="q" id="submitF" class="btn btn-info">Submeter</button>
+                <button type="submit" name="q" id="submitFaltas" class="btn btn-info">Submeter</button>
                 <button type="button" class="btn btn-warning" id="printBtnFaltas"><i class="fa-solid fa-print"></i></button>
                 <!-- <button type="button" class="btn btn-success" id="whatsappBtnFaltas"><i class="fa-brands fa-whatsapp"></i></button>     -->
             </div>
@@ -440,7 +439,35 @@
 
 
 
-  
+  <!-- =========================TO PRINT FALTAS==================================== -->
+  <div class="printModeFaltas" id="toPrintFaltas">
+        
+    <h3>Lista material em falta para:</h3><br>
+    <div class="nameAndDate">
+        <div id="clientFaltasPrint" class="clientName"></div>
+        <div class="guia-print" id="fornecedorFaltasPrint"></div>
+        <div class="guia-print" id="disponivel"></div>
+        <div class="date-print" id="dateFaltasPrint"></div>
+    </div> 
+
+    <div class="big-container">
+        <div class="return-data border-div-print necessary-div" id="returnData">   
+            <h5 class="underline-one">MATERIAL EM FALTA</h5>
+            <div id="faltasContainer" class="list list-return carga-list"></div>
+        </div>
+    </div>
+
+
+    <div class="print-obs-div">
+        <h6 id="obsTitle" class="obs-title">OBSERVAÇÕES:</h6>
+        <p id="printObsFaltas" class="print-obs"></p>
+        <div id="orderedDiv" class="obs-title"></div>
+    </div>
+
+    <div class="logoToPrint">
+        <img src="img/logo.png" class="logo" alt="">
+    </div>
+</div>
 
 
 <!-- =========================TO PRINT CARGA==================================== -->
@@ -547,6 +574,9 @@
             <img src="img/logo.png" class="logo" alt="">
         </div>
     </div>
+
+    
+
 
 
 

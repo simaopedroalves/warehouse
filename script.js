@@ -262,6 +262,7 @@ materialPrep.addEventListener('input', () => {
   deleteNumbToReturnOnPrep()
 })
 
+// DELETE QUANTITY FROM ITEMS AND ADD NEW LINES WITH ";"
 function deleteNumbToReturnOnPrep() {
   let numbersToDelete = new RegExp(/(\d+)[.,]*(\d*)(\s+)/g)
   let myreturnText = listPrep.innerText.replace(numbersToDelete, "")
@@ -269,7 +270,7 @@ function deleteNumbToReturnOnPrep() {
   listPrep.innerText = listPrep.innerText.replace(/;/g, "\n")
   // returnDiv.innerText = myreturnText
   cargaPrep.innerText = myreturnText.replace(/;/g, "\n")
-  console.log(myreturnText)
+ 
 }
 
 // EMAIL SUBJECT AND TITLE TO PREPARAR for working on formsubmit - not valid on netlify forms
@@ -588,38 +589,6 @@ tGris.addEventListener('click', () => {
 })
 
 
-// const allInputsWithMeters = document.querySelectorAll('.valToPrint')
-
-// function printValueOfMeters () {
-
-//  allInputsWithMeters.forEach((inp) => 
-//   inp.addEventListener('input', () => {
-//     let newP = document.createElement('p')
-//     newP.textContent = `${inp.value} metros de ${inp.name} <br>`
-//     newP = newP.textContent
-//     printListPreIns.innerHTML += newP
-//     console.log(printListPreIns.textContent)
-//   })
-
-//  )
-// }
-
-// printValueOfMeters()
-// `${inp.value} metros de ${inp.name} <br>`
-
-
-
-//    allRadioBtn.forEach((btn, i) => {
-//      btn.addEventListener('click', () => {
-
-//        if (btn[i].checked == false) {
-//          mtValue[i].removeAttribute("disabled", '')
-//        }
-//    })  
-//  })
-// printPreIns()
-
-
 // EMAIL SUBJECT AND TITLE TO PRE-INS
 
 const submitPreIns = document.querySelector('#submitPreIns')
@@ -640,5 +609,92 @@ function newFunction() {
 }
 
 
+// JAVACRIPT CODE TO FALTAS SECTION/DIV
 
 
+
+const submitFaltas = document.querySelector('#submitFaltas')
+const subjectFaltas = document.querySelector('#subjectFaltas')
+const clientFaltas = document.querySelector('#clientFaltas')
+const clientFaltasPrint = document.querySelector('#clientFaltasPrint')
+const fornecedorName = document.querySelector('#fornecedorFaltas')
+const fornecedorFaltasPrint = document.querySelector('#fornecedorFaltasPrint')
+const dateFaltas = document.querySelector('#dateFaltas')
+const dateFaltasPrint = document.querySelector('#dateFaltasPrint')
+const obsFaltas = document.querySelector('#obsFaltas')
+const materialFaltas = document.querySelector('#materialFaltas')
+const materialFaltasPrint = document.querySelector('#faltasContainer')
+const orderedYes = document.querySelector('#encomendaSim')
+const orderedNo = document.querySelector('#encomendaNao')
+
+clientFaltas.addEventListener('input', () => {
+  clientFaltasPrint.textContent = clientFaltas.value
+})
+
+fornecedorName.addEventListener('input', () => {
+  fornecedorFaltasPrint.textContent = 'Fornecedor: ' + fornecedorName.value
+})
+
+dateFaltas.addEventListener('input', () => {
+  dateFaltasPrint.textContent = 'Disponivel a: ' + dateFaltas.value
+})
+
+materialFaltas.addEventListener('input', () => {
+  materialFaltasPrint.innerText = materialFaltas.value
+  materialFaltasPrint.innerText = materialFaltasPrint.innerText.replace(/;/g, "\n")
+ 
+})
+
+// EMAIL SUBJECT AND TITLE TO FALTAS
+
+submitFaltas.addEventListener('click', () => {
+  if (clientFaltas.value !== '') {
+    subjectFaltas.value = `MATERIAL EM FALTA P/${clientFaltas.value}`;
+  }
+})
+
+function isAlreadyOrdered () {
+
+  let orderedDiv = document.querySelector('#orderedDiv')
+
+  orderedYes.addEventListener('click', () => {
+    if (orderedYes.checked) {
+      orderedDiv.textContent = 'Material em falta já está encomendado'
+    }
+  })
+
+  orderedNo.addEventListener('click', () => {
+    if (orderedNo.checked) {
+      orderedDiv.textContent = 'É necessário encomendar o material em falta'
+    }
+  })  
+}
+
+isAlreadyOrdered()
+
+
+const printBtnFaltas = document.querySelector('#printBtnFaltas')
+printBtnFaltas.addEventListener('click', () => {
+  // toPrint.style.display = 'none'
+  // printPrepDiv.style.display = 'grid'
+  window.print();
+})
+
+// ============================ OBSERVAÇÕES PRINT FALTAS==============================
+
+obsFaltas.addEventListener('input', () => {
+
+  printObsFaltas.textContent = obsFaltas.value;
+
+  function showsObs () {
+
+    if (obsFaltas.value !== "") {
+      printObsDiv.style.display = 'grid'
+    }
+    else return
+
+  }
+
+  showsObs()
+
+})
