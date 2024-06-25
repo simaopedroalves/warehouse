@@ -683,6 +683,7 @@ printBtnFaltas.addEventListener('click', () => {
 // ============================ OBSERVAÇÕES PRINT FALTAS==============================
 
 obsFaltas.addEventListener('input', () => {
+  let printObsFaltas = document.querySelector('#printObsFaltas');
 
   printObsFaltas.textContent = obsFaltas.value;
 
@@ -693,8 +694,8 @@ obsFaltas.addEventListener('input', () => {
     }
     else return
 
-  }
+  }  
 
   showsObs()
-
 })
+

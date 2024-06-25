@@ -42,6 +42,10 @@
             "oneMeterweight": 0.7
         },
         {
+            "name": "5g0.75",
+            "oneMeterweight": 0.0898
+        },
+        {
             "name": "5g1.5",
             "oneMeterweight": 0.1606
         },

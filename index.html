@@ -389,7 +389,7 @@
                 <input type="text" name="Fornecedor" id="fornecedorFaltas" required>
             </div>
 
-            <div>
+            <div class="ordered-or-not-div">
                 <span for="clientFaltas" class="encomendado">Encomendado</span>
                 <div>
                     <label for="encomendaSim">Sim</label>
@@ -403,13 +403,8 @@
 
             <div>
                 <label for="dateFaltas">Disponível a</label>
-                <input type="date" name="Disponivel" id="dateFaltas" required>
+                <input type="date" name="Disponivel" id="dateFaltas">
             </div>
-
-            <!-- <div>
-                <label for="localF" class="localP">Local</label>
-                <input type="text" name="localP" id="localP">
-            </div> -->
 
             <div>
                 <label for="obsFaltas" class="obsFaltas">Obs</label>
@@ -461,8 +456,10 @@
     <div class="print-obs-div">
         <h6 id="obsTitle" class="obs-title">OBSERVAÇÕES:</h6>
         <p id="printObsFaltas" class="print-obs"></p>
-        <div id="orderedDiv" class="obs-title"></div>
+        
     </div>
+
+    <div id="orderedDiv" class="obs-title"></div>
 
     <div class="logoToPrint">
         <img src="img/logo.png" class="logo" alt="">

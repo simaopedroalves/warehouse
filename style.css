@@ -167,6 +167,10 @@ a .design {
     text-decoration: none;
 }
 
+input[type="date"], select {
+    cursor: pointer;
+}
+
 /* =========== faltas ============== */
 
 .formFaltas div:nth-child(3) {
@@ -192,6 +196,11 @@ a .design {
 input[type="radio"] {
     size: 0.7rem;
     /* height: 0.1rem; */
+}
+
+.ordered-or-not-div label,
+.ordered-or-not-div input {
+    cursor: pointer;
 }
 
 .printMode, .printModePrep, .printModePreIns, .printModeFaltas {
@@ -308,7 +317,7 @@ input[type="radio"] {
         max-height: 8vh;
     }
     .logoToPrint {
-        position: fixed;
+      position: fixed;
         bottom: 0;
         right: 0;
     }
