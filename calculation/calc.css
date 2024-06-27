@@ -56,12 +56,6 @@
     padding: 0;
 }
 
-.calculation-box .un {
-    grid-row-start: 2;
-    grid-column: span 3;
-}
-
-
 .calculation-box input{
     font-size: 1rem;
     grid-column-start: 1;

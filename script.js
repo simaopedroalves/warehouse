@@ -307,7 +307,7 @@ function sendValuesToWhatsappPrep() {
 
 }
 
-// METERS CALCULATOR OF EACH TYPE OF CABLE OR PIPE
+// METERS CALCULATOR OF EACH TYPE OF CABLE OR PIPE 
 
 async function callData () {
   return (await fetch('calculator.json')).json();
