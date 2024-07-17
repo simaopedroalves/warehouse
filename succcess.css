@@ -22,7 +22,7 @@ body {
     justify-content: center;
     background-color: black;
     grid-template-columns: repeat(1, 1fr);
-    border: solid 0.5rem rgb(253, 237, 3);
+    border: solid 0.5rem black;
     border-radius: 10%;
     gap: 3rem;
     padding: 2rem;
@@ -31,11 +31,11 @@ body {
 .success {
     font-size: 1.5rem;
     font-weight: bold;
-    color: antiquewhite;
+    color: var(--white);
 }
 
 .back {
-    background-color: blue;
+    background-color: var(--green-two);
     padding: 0.5rem;
     font-size: 1rem;
     outline: 0;

@@ -9,7 +9,7 @@
     --blue: rgba(1, 153, 255, 1);
     --green: rgba(1, 255, 22, 0.2);
     --green-two: rgb(24, 111, 101);
-    --red: rgb(255, 1, 1, 0.2);
+    --red: rgb(255, 1, 1);
     --white: rgb(255,255,255, 1);
     --grey: rgb(180, 180, 184, 0.5);
     --yellow: rgb(247, 215, 22, 1);
@@ -150,8 +150,8 @@ label,  .encomendado{
 }
 
 .byName {
-    color: var(--red);
-    text-transform: uppercase;
+    color: var(--green-two);
+    /* text-transform: uppercase; */
 }
 
 a .design {
@@ -163,7 +163,7 @@ a .design {
     display: flex;
     gap: 0.5rem;
     justify-content: flex-end;
-    align-content: center;
+    align-items: center;
     text-decoration: none;
 }
 
