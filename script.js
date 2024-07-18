@@ -11,8 +11,29 @@ const calcDiv = document.querySelector('.calculation')
 const calcDivTwo = document.querySelector('.calcDivTwo')
 const preInsSec = document.querySelector('.pre-instalacao')
 const caisBtn = document.querySelector('.caisBtn')
+const menu = document.querySelector('.fa-warehouse')
+const titleForm = document.querySelectorAll('.form-title')
+// OPEN AND CLOSE MENU
+menu.addEventListener('click', () => {
+  caisBtn.classList.toggle('show')
+})
 
-// COLOR BUTONS ON TOP OF THE PAGE
+// CLOSE MENU WHEN THE USER CLICKS EACH BUTTON
+const allMenuBtns = document.querySelectorAll('.caisBtn .btn');
+
+allMenuBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        setTimeout(() => {
+            closeMenu()
+        }, 500);
+    })
+});
+
+function closeMenu() {
+  caisBtn.classList.remove('show')
+}
+
+// BUTONS ON MENU
 prepBtn.addEventListener('click', () => {
   formDescarga.style.display = 'none'
   formCarga.style.display = 'none'
@@ -21,7 +42,6 @@ prepBtn.addEventListener('click', () => {
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
-
 
 })
 
@@ -373,7 +393,7 @@ function convertionBtn () {
     
     
     btn.addEventListener('click', () => {
-      calcBtn[i].parentElement.style.backgroundColor = 'var(--yellow)'
+      calcBtn[i].parentElement.style.backgroundColor = 'var(--green-two)'
       conversaoParaMetros(i)
     })
   })
@@ -398,7 +418,7 @@ function conversaoParaMetros(i) {
 
     calcBtnAmount.forEach((btn, i) => {
       btn.addEventListener('click', () => {
-        calcBtnAmount[i].parentElement.style.backgroundColor = 'var(--yellow)'
+        calcBtnAmount[i].parentElement.style.backgroundColor = 'var(--green-two)'
         conversaoParaUnidade(i)
       })
     })

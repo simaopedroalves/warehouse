@@ -1,6 +1,7 @@
 .pre-instalacao {
     display: none;
-    background-color: rgba(255, 230, 0, 0.863);
+    background-color: var(--green-two);
+    color: white;
     /* border: solid purple 2px; */
     gap: 1rem;
     padding: 1rem;
@@ -47,7 +48,7 @@
     max-width: 3rem;
     font-size: 0.9rem;
     border-radius: 0.5rem;
-    padding-left: 0.2rem;
+    padding: 0.2rem;
 }
 
 .cxPreIns {
@@ -66,7 +67,7 @@
     max-height: 1rem;
     font-size: 0.9rem;
     border-radius: 0.5rem;
-    padding-left: 0.2rem;
+    padding: 0.2rem;
 }
 
 .cxPreIns h6 {
@@ -74,6 +75,11 @@
     font-size: 1rem;
     font-weight: 700;
     text-decoration: underline;
+}
+
+input::placeholder {
+    color: var(--white);
+    padding: 0.2rem;
 }
 
 @media print {

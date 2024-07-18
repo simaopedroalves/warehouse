@@ -19,11 +19,13 @@
 }
 
 .calculation h2, .calcDivTwo h2 {
-    margin: 0 auto;
+    margin: 0 auto 3vh auto;
     font-weight: 700;
-    color: black;
+    color: var(--green-two);
     grid-column: span 2;
     font-size: 1rem;
+    text-transform: uppercase;
+
 }
 
 .calculation-box {
@@ -68,6 +70,12 @@
     grid-row-start: 2;
     grid-column-start: 3;
     /* margin: auto; */
+    outline: none;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 10%;
 }
 
 .hiddenKg, .hiddenMt {
@@ -120,6 +128,7 @@
 
 @media screen and (min-width: 650px) {
     .calculation, .calcDivTwo {
+        margin: 5vh auto;
         grid-template-columns: repeat(4,1fr);
     }
     .calculation h2, .calcDivTwo h2 {

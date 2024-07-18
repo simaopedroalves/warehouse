@@ -15,10 +15,10 @@
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
         rel="stylesheet" 
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
-        crossorigin="anonymous"> 
+        crossorigin="anonymous">  -->
         <script src="https://kit.fontawesome.com/ff1abd11bd.js" 
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
@@ -37,17 +37,32 @@
         </a>
     </header> -->
 
-    <section class="box" id="box">
+    <header>
+
+        <h4 class="armazem-logo">ARMAZEM</h4>
+        <i class="fa-solid fa-warehouse"></i>
         
         <div class="caisBtn">
+            <button class="btn" id="preInsBtn">Pré-instalação</button>
+            <button class="calcBtn btn" id="calcBtn">Calculadora</button>
+            <button type="button" class="btn btn-primary" id="prepBtn">Preparar</button>
+            <button class="cargaBtn btn btn-success" id="cargaBtn">Carga</button>
+            <button class="descargaBtn btn btn-danger" id="descargaBtn">Descarga</button>
+            <button type="button" class="btn btn-light" id="faltasBtn">Faltas</button>
+        </div>
+
+    </header>
+
+    <section class="box" id="box">
+        
+        <!-- <div class="caisBtn">
             <button class="btn btn-warning" id="preInsBtn">Pré-instalação</button>
             <button class="calcBtn btn btn-secondary" id="calcBtn">Calculadora</button>
             <button type="button" class="btn btn-primary" id="prepBtn">Preparar</button>
             <button class="cargaBtn btn btn-success" id="cargaBtn">Carga</button>
             <button class="descargaBtn btn btn-danger" id="descargaBtn">Descarga</button>
             <button type="button" class="btn btn-light" id="faltasBtn">Faltas</button>
-            <!-- <button></button> button to create a declaration -->
-        </div>
+        </div> -->
 
         <!-- CALCULATOR / CONVERSOR -- KG => METERS -->
         <div class="calculation">
@@ -59,7 +74,6 @@
 
         <!-- PRÉ-INSTALAÇÃO DE AR CONDICIONADO -->
         <form name="PRÉ-INSTALAÇÃO" action="/submittedPage.html" method="POST" data-netlify="true">
-
         <!-- <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST">
 
             <input type="hidden" name="_captcha" value="false">
@@ -67,8 +81,10 @@
             <input type="hidden" name="_template" value="table"> -->
 
             <input type="hidden" name="subject" value="" id="subjectPreIns">
+            <span class="form-titles"></span>
 
-            <div class="pre-instalacao">
+            <div class="formulario pre-instalacao">
+
                 <div>
                     <label for="teamPreIns">Equipa</label>
                     <select type="text" name="Team" id="teamPreIns" class="select-team" required>
@@ -186,6 +202,7 @@
             <input type="hidden" name="_template" value="table"> -->
 
             <input type="hidden" name="subject" value="" id="subjectP">
+            <span class="form-title"></span>
 
             <div class="formulario formPrep" id="formularioP">
                 
@@ -252,6 +269,8 @@
 
             <input type="hidden" name="subject" value="" id="subjectC">
 
+            <span class="form-title"></span>
+
             <div class="formulario formCarga" id="formularioC">
                 
                <div>
@@ -317,6 +336,7 @@
             <input type="hidden" name="_template" value="table">-->
 
             <input type="hidden" name="subject" value="" id="subjectD">
+            <span class="form-title"></span>
 
             <div class="formulario formDescarga" id="formularioD"> 
                 
@@ -375,6 +395,7 @@
         <input type="hidden" name="_template" value="table"> -->
 
         <input type="hidden" name="subject" value="" id="subjectFaltas">
+        <span class="form-title"></span>
 
         <div class="formulario formFaltas" id="formularioF">
            
