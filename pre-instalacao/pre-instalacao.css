@@ -4,7 +4,7 @@
     color: white;
     /* border: solid purple 2px; */
     gap: 1rem;
-    padding: 1rem;
+    padding: 1vw;
     border-radius: 0.5rem;
 }
 
@@ -22,7 +22,7 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
     gap: 1rem;
-    border: solid var(--blue) 1px;
+    border: solid var(--white) 1px;
     border-radius: 2rem;
     font-size: 0.9rem;
 }
@@ -55,7 +55,7 @@
     display: grid;
     align-items: space-between;
     justify-content: center;
-    border: solid var(--blue) 1px;
+    border: solid var(--white) 1px;
     border-radius: 2rem;
     font-size: 0.7rem;
     padding: 1rem;
@@ -90,10 +90,22 @@ input::placeholder {
     .box {
         margin: 0 auto;
     }
+
+    form .pre-instalacao {
+    margin: 15vh auto 2vh auto;
+
+    }
+
+
     .pre-instalacao {
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
     }
+
+    .pre-instalacao .form-title {
+        grid-column: span 2;
+    }
+
     .selection-zone-pre-instalacao {
         grid-column: span 2;
         grid-template-columns: repeat(2, 1fr);
@@ -129,6 +141,10 @@ input::placeholder {
         justify-content: center;
         margin: 2rem auto;
         font-size: 1rem;
+    }
+
+    .pre-instalacao .form-title {
+        grid-column: span 5;
     }
    
     .cobre div input[type="number"] {

@@ -25,9 +25,15 @@ allMenuBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         setTimeout(() => {
             closeMenu()
-        }, 500);
+        }, 200);
     })
 });
+
+
+//ATTRIBUTE NAMES TO EACH SPECIFIC FORM
+titleForm.forEach(title => {
+  title.textContent = title.parentElement.parentElement.name
+})
 
 function closeMenu() {
   caisBtn.classList.remove('show')
@@ -42,7 +48,6 @@ prepBtn.addEventListener('click', () => {
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
-
 })
 
 descargaBtn.addEventListener('click', () => {
@@ -53,7 +58,6 @@ descargaBtn.addEventListener('click', () => {
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
-
 })
 
 cargaBtn.addEventListener('click', () => {
@@ -110,6 +114,7 @@ submitD.addEventListener('click', () => {
       subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
     }
 })
+
 // PRINT CARGA
 const printBtn = document.querySelector('#printBtn')
 const toPrint = document.querySelector('#toPrint')
@@ -390,7 +395,6 @@ function convertionBtn () {
   let calcBtn = document.querySelectorAll('.btn-dark')
 
   calcBtn.forEach((btn, i) => {
-    
     
     btn.addEventListener('click', () => {
       calcBtn[i].parentElement.style.backgroundColor = 'var(--green-two)'

@@ -150,6 +150,14 @@
             "oneMeterweight": 0.33333333
         },
         {
+            "name": "Tubo Monopex Daikin",
+            "oneMeterweight": 0.116666
+        },
+        {
+            "name": "Tubo Monopex GCM",
+            "oneMeterweight": 0.099437
+        },
+        {
             "name": "Isolamento Lã Rocha",
             "oneMeterweight": 0.73579,
             "un": "Metros Quadrados"
