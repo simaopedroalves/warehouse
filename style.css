@@ -46,7 +46,7 @@ header {
 
 .armazem-logo,
 .fa-warehouse  {
-    color: var(--green-two);
+    color: var(--white);
     max-width: min-content;
     /* border: solid red 2px; */
     font-size: 1rem;
@@ -64,7 +64,7 @@ header {
     justify-content: center;
     margin: 0 auto;
     min-width: 100%;
-    max-width: 100%;
+    max-width: 100vw;
     grid-column: span 2;
 }
 
@@ -145,7 +145,8 @@ textarea {
     height: 20vh;
     resize: vertical;
     border-radius: 0.5rem;
-    padding-left: 0.2rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .formPrep {
@@ -189,6 +190,7 @@ label,  .encomendado{
     color: var(--white);
     padding: 0.5rem;
     border-radius: 10%;
+    cursor: pointer;
 }
 
 .fa-whatsapp {
