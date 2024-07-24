@@ -397,7 +397,10 @@ function convertionBtn () {
   calcBtn.forEach((btn, i) => {
     
     btn.addEventListener('click', () => {
-      calcBtn[i].parentElement.style.backgroundColor = 'var(--green-two)'
+      calcBtn[i].parentElement.style.backgroundColor = 'var(--green-two)';
+      calcBtn[i].parentElement.querySelector('h2').style.color = 'var(--white)';
+      calcBtn[i].parentElement.querySelector('h3').style.color = 'var(--white)';
+
       conversaoParaMetros(i)
     })
   })
@@ -422,7 +425,10 @@ function conversaoParaMetros(i) {
 
     calcBtnAmount.forEach((btn, i) => {
       btn.addEventListener('click', () => {
-        calcBtnAmount[i].parentElement.style.backgroundColor = 'var(--green-two)'
+        calcBtnAmount[i].parentElement.style.backgroundColor = 'var(--green-two)';
+        calcBtnAmount[i].parentElement.querySelector('h2').style.color = 'var(--white)';
+        calcBtnAmount[i].parentElement.querySelector('h3').style.color = 'var(--white)';
+
         conversaoParaUnidade(i)
       })
     })
@@ -439,8 +445,6 @@ function conversaoParaMetros(i) {
     resultado[i].innerHTML = test.toFixed(0) + " Un"
 
   }
-
-
 
 // ========================= PRE-INSTALAÇÃO  =========================
 

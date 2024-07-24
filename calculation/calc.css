@@ -64,7 +64,20 @@
     font-size: 1rem;
     grid-column-start: 1;
     grid-column: span 2;
-    max-width: 40%;
+    min-width: 95%;
+    border: solid 0.1rem var(--black);
+    font-weight: 600;
+    min-height: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.2rem 1rem 0.2rem 35%;
+}
+
+.calculation-box input::placeholder {
+    color: var(--grey);
+}
+
+.calculation-box input::-webkit-inner-spin-button {
+    appearance: none;
 }
 
 
@@ -78,6 +91,12 @@
     color: var(--white);
     padding: 0.5rem;
     border-radius: 10%;
+}
+
+.calculation-box button:hover {
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--black);
 }
 
 .hiddenKg, .hiddenMt {
@@ -162,10 +181,13 @@
     }
     .calculation-box {
         min-height: 8rem;
-        align-content: flex-start;
+        align-content: center;
     }
     .calculation-box h2 {
         font-size: 1rem;
+    }
+    .calculation-box h3 {
+        margin: 1rem auto 0 auto;
     }
    
 }

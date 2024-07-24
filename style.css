@@ -106,7 +106,7 @@ form {
     justify-content: center;
 }
 
- .formulario .form-title {
+.formulario .form-title {
     color: var(--white);
     text-transform: uppercase;
     margin: 0 auto;
@@ -125,13 +125,13 @@ form {
     margin: 8vh auto 2vh auto;
 }
 
-input:not(.cobre input, .cabo input, [type="radio"]), 
+input:not(.calculation-box input, .cobre input, .cabo input, [type="radio"]), 
 .select-team {
     border: solid 0.1rem var(--green-two);
     min-height: 2rem;
     min-width: 95%;
     border-radius: 0.5rem;
-    padding-left: 0.2rem;
+    padding-left: 0.3rem;
 }
 
 .clientName {
