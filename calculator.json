@@ -78,12 +78,12 @@
             "oneMeterweight": 0.0713
         },
         {
-            "name": "Anelado Azul c/guia",
+            "name": "Tubo anelado Azul c/guia",
             "oneMeterweight": 0.0416
         },
         {
             "name": "Mangueira Condensados 6mm",
-            "oneMeterweight": 0.0444
+            "oneMeterweight": 0.040609
         },
         {
             "name": "Mangueira Condensados 8mm",
@@ -160,6 +160,10 @@
         {
             "name": "Tubo Monopex GCM",
             "oneMeterweight": 0.099437
+        },
+        {
+            "name": "Clip fixação tubo monopex",
+            "oneMeterweight": 0.453
         },
         {
             "name": "Isolamento Lã Rocha",

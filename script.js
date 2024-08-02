@@ -103,11 +103,106 @@ submitC.addEventListener('click', () => {
     }
 })
 
+// ========================= DESCARGA =====================================
+const subjectD = document.getElementById('subjectD');
+const teamD = document.getElementById('teamD');
+const submitD = document.getElementById('submitD');
+const clientD = document.getElementById('clientD');
+const obsD = document.getElementById('obsD');
+const materialD = document.getElementById('materialD');
+const dateD = document.getElementById('dateD')
+
+// GET DATA FROM LOCALSTORAGE
+document.addEventListener('DOMContentLoaded', () => {
+  teamD.value = JSON.parse(localStorage.getItem('teamD'));
+  clientD.value = JSON.parse(localStorage.getItem('clientD'));
+  obsD.value = JSON.parse(localStorage.getItem('obsD'));
+  materialD.value = JSON.parse(localStorage.getItem('materialD'));
+  dateD.value = JSON.parse(localStorage.getItem('dateD'));
+})
+
+teamD.addEventListener('input', () => {
+
+  let arrTeamD = [];
+
+    arrTeamD.push(teamD.value)
+   
+   if (arrTeamD.length > 1) {
+      arrTeamD = arrTeamD.slice(-1)
+    }
+
+  localStorage.setItem('teamD', JSON.stringify(arrTeamD));
+
+});
+
+clientD.addEventListener('input', () => {
+
+  let arrClientD = [];
+
+    arrClientD.push(clientD.value)
+   
+   if (arrClientD.length > 1) {
+      arrClientD = arrClientD.slice(-1)
+    }
+
+  localStorage.setItem('clientD', JSON.stringify(arrClientD));
+
+});
+
+dateD.addEventListener('input', () => {
+
+  let arrDateD = [];
+
+    arrDateD.push(dateD.value)
+   
+   if (arrDateD.length > 1) {
+      arrDateD = arrDateD.slice(-1)
+    }
+
+  localStorage.setItem('dateD', JSON.stringify(arrDateD));
+
+})
+
+obsD.addEventListener('input', () => {
+
+  let arrObsD = [];
+
+    arrObsD.push(obsD.value)
+   
+   if (arrObsD.length > 1) {
+      arrTeamD = arrObsD.slice(-1)
+    }
+
+  localStorage.setItem('obsD', JSON.stringify(arrObsD));
+
+});
+
+materialD.addEventListener('input', () => {
+
+  let arrMaterialD = [];
+
+    arrMaterialD.push(materialD.value)
+   
+   if (arrMaterialD.length > 1) {
+      arrMaterialD = arrMaterialD.slice(-1)
+    }
+
+  localStorage.setItem('materialD', JSON.stringify(arrMaterialD));
+
+})
+// CLEAR ALL PREPARAR FORM
+const deleteDescarga = document.querySelector('.btn-clear-descarga');
+
+deleteDescarga.addEventListener('click', () => {
+  localStorage.removeItem('clientD');
+  localStorage.removeItem('teamD');
+  localStorage.removeItem('obsD');
+  localStorage.removeItem('materialD');
+  localStorage.removeItem('dateD');
+  window.location.reload()
+})
+
 // EMAIL SUBJECT AND TITLES TO DESCARGA
-const subjectD = document.getElementById('subjectD')
-const teamD = document.getElementById('teamD')
-const submitD = document.getElementById('submitD')
-const clientD = document.getElementById('clientD')
 
 submitD.addEventListener('click', () => {
     if (teamD.value !== '') {
@@ -251,6 +346,19 @@ obsP.addEventListener('input', () => {
 
 })
 
+// PREPARAR MATERIAL
+// load inputs from localStorage
+document.addEventListener('DOMContentLoaded', () => {
+  clientP.value = JSON.parse(localStorage.getItem('clientP'));
+  faturaP.value = JSON.parse(localStorage.getItem('faturaP'));
+  localP.value =  JSON.parse(localStorage.getItem('localP'));
+  obsP.value = JSON.parse(localStorage.getItem('obsP'));
+  teamP.value = JSON.parse(localStorage.getItem('teamP'));
+  materialPrep.value = JSON.parse(localStorage.getItem('materialP'));
+  
+})
+
+
 printBtnPrep.addEventListener('click', () => {
   // toPrint.style.display = 'none'
   // printPrepDiv.style.display = 'grid'
@@ -259,11 +367,33 @@ printBtnPrep.addEventListener('click', () => {
 
 faturaP.addEventListener('input', () => {
   faturaPrintPrep.textContent = faturaP.value;
+
+  let arrFaturaP = [];
+
+    arrFaturaP.push(faturaP.value)
+   
+   if (arrFaturaP.length > 1) {
+      arrFaturaP = arrFaturaP.slice(-1)
+    }
+
+  localStorage.setItem('faturaP', JSON.stringify(arrFaturaP));
+
 })
 
 clientP.addEventListener('input', () => {
   clientNamePrep.textContent = "Cliente: " + clientP.value;
+  let arrClientP = [];
+
+    arrClientP.push(clientP.value)
+   
+   if (arrClientP.length > 1) {
+      arrClientP = arrClientP.slice(-1)
+    }
+
+  localStorage.setItem('clientP', JSON.stringify(arrClientP));
+
 })
+// localStorage.clear()
 
 dateP.addEventListener('input', () => {
   datePrintPrep.textContent = dateP.value;
@@ -271,19 +401,62 @@ dateP.addEventListener('input', () => {
 
 localP.addEventListener('input', () => {
   localPrint.textContent = "Local: " + localP.value;
+
+  let arrLocalP = [];
+
+    arrLocalP.push(localP.value)
+   
+   if (arrLocalP.length > 1) {
+      arrLocalP = arrLocalP.slice(-1)
+    }
+
+  localStorage.setItem('localP', JSON.stringify(arrLocalP));
+
 })
 
 obsP.addEventListener('input', () => {
-  obsPrintPrep.textContent = obsP.value
+  obsPrintPrep.textContent = obsP.value;
+
+  let arrObsP = [];
+
+    arrObsP.push(obsP.value)
+   
+   if (arrObsP.length > 1) {
+      arrObsP = arrObsP.slice(-1)
+    }
+
+  localStorage.setItem('obsP', JSON.stringify(arrObsP));
 })
 
 teamP.addEventListener('input', () => {
   teamPrint.textContent = teamP.value
+
+  let arrTeamP = [];
+
+    arrTeamP.push(teamP.value)
+   
+   if (arrTeamP.length > 1) {
+      arrTeamP = arrTeamP.slice(-1)
+    }
+
+  localStorage.setItem('teamP', JSON.stringify(arrTeamP));
+
 })
 
 materialPrep.addEventListener('input', () => {
   listPrep.innerText = materialPrep.value
   cargaPrep.innerText = materialPrep.value
+
+  let arrMaterialP = [];
+
+  arrMaterialP.push(materialPrep.value)
+ 
+ if (arrMaterialP.length > 1) {
+    arrMaterialP = arrMaterialP.slice(-1)
+  }
+
+localStorage.setItem('materialP', JSON.stringify(arrMaterialP));
+
   deleteNumbToReturnOnPrep()
 })
 
@@ -305,7 +478,21 @@ const subjectP = document.querySelector('#subjectP')
 submitP.addEventListener('click', () => {
   if (clientP.value !== '') {
     subjectP.value = `PREPARAR MATERIAL PARA ${clientP.value}`;
-  }
+    // localStorage.removeItem('faturaP');
+  } 
+})
+
+// CLEAR ALL PREPARAR FORM
+const deleteFormPrep = document.querySelector('.btn-clear-preparacao');
+
+deleteFormPrep.addEventListener('click', () => {
+  localStorage.removeItem('clientP');
+  localStorage.removeItem('faturaP');
+  localStorage.removeItem('teamP');
+  localStorage.removeItem('obsP');
+  localStorage.removeItem('materialP');
+  localStorage.removeItem('localP');
+  window.location.reload()
 })
 
 // ===================== Click the Whatsapp Button - PREPARAÇÃO =========================
