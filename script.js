@@ -310,6 +310,7 @@ function sendValuesToWhatsapp() {
   window.open(url, '_blank');
 }
 
+// ============================ PREPARAR ========================================
 //  PRINT PREPARAÇÃO
 const printPrepDiv = document.querySelector('.printModePrep')
 const printBtnPrep = document.querySelector('#printBtnPrep')
@@ -357,7 +358,6 @@ document.addEventListener('DOMContentLoaded', () => {
   materialPrep.value = JSON.parse(localStorage.getItem('materialP'));
   
 })
-
 
 printBtnPrep.addEventListener('click', () => {
   // toPrint.style.display = 'none'

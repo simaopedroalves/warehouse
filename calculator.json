@@ -251,7 +251,7 @@
         },
         {
             "name": "PF AUTOPERF 10MM",
-            "oneUnweight": 0.08
+            "oneUnweight": 0.227
         },
         {
             "name": "PF AUTOPERF 20MM",
@@ -267,7 +267,11 @@
         },
         {
             "name": "PF PVC 50MM",
-            "oneUnweight": 0.3
+            "oneUnweight": 0.3282
+        },
+        {
+            "name": "BUCHA P/FIVELA M8",
+            "oneUnweight": 0.16296
         },
         {
             "name": "BUCHA METAL M8",
@@ -283,7 +287,7 @@
         },
         {
             "name": "BUCHA NYLON M6",
-            "oneUnweight": 0.07
+            "oneUnweight": 0.05869565
         },
         {
             "name": "BUCHA NYLON M8",
