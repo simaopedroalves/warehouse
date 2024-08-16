@@ -824,6 +824,18 @@ function newFunction() {
 }
 
 
+// delete button
+
+let deletePreIns = document.querySelector('.btn-clear-pre-instalacao');
+
+deletePreIns.addEventListener('click', () => {
+  let allInputsPreIns = document.querySelectorAll('input')
+  allInputsPreIns.forEach(el => {
+    el.value = ''
+  })
+  location.reload()
+})
+
 // JAVACRIPT CODE TO FALTAS SECTION/DIV
 
 

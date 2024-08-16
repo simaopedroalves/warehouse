@@ -300,13 +300,15 @@ input[type="radio"] {
         position: fixed;
         top: 1vh;
         left: 1vw;
+        margin: 3vh auto 3vh auto;
+
     }
 
     .caisBtn {
         /* grid-template-columns: repeat(4, 1fr); */
         display: flex;
         gap: 2vw;
-        margin: 0 auto 3vh auto;
+        margin: 3vh auto 3vh auto;
         min-width: min-content;
         background-color: transparent;
         right: 5vw;
