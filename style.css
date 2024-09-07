@@ -116,7 +116,8 @@ form {
 .formulario {
     display: grid;
     gap: 1rem;
-    padding: 1rem;
+    /* justify-content: center; */
+    padding: 0.5rem;
     border-radius: 0.5rem;
     color: var(--white);
     font-weight: 600;
@@ -129,9 +130,11 @@ input:not(.calculation-box input, .cobre input, .cabo input, [type="radio"]),
 .select-team {
     border: solid 0.1rem var(--green-two);
     min-height: 2rem;
-    min-width: 95%;
+    min-width: 100%;
+    max-width: 100%;
     border-radius: 0.5rem;
     padding-left: 0.3rem;
+    margin: 0;
 }
 
 .clientName {
@@ -141,7 +144,9 @@ input:not(.calculation-box input, .cobre input, .cabo input, [type="radio"]),
 
 textarea {
     border: solid 0.1rem var(--green-two);
-    min-width: 95%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
     height: 20vh;
     resize: vertical;
     border-radius: 0.5rem;

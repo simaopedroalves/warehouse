@@ -264,7 +264,7 @@ function deleteNumbToReturn () {
   list.innerText = list.innerText.replace(/;/g, "\n")
   // returnDiv.innerText = myreturnText
   returnDiv.innerText = myreturnText.replace(/;/g, "\n")
-  console.log(myreturnText)
+  // console.log(myreturnText)
 }
 
 // ============================ OBSERVAÇÕES PRINT CARGA==============================
