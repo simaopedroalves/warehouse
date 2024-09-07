@@ -151,7 +151,7 @@
 
 @media screen and (min-width: 650px) {
     .calculation, .calcDivTwo {
-        margin: 10vh 5vw;
+        margin: 15vh 5vw;
         grid-template-columns: repeat(4,1fr);
 
     }
