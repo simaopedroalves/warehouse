@@ -193,14 +193,18 @@ materialD.addEventListener('input', () => {
 // CLEAR ALL PREPARAR FORM
 const deleteDescarga = document.querySelector('.btn-clear-descarga');
 
-deleteDescarga.addEventListener('click', () => {
+const deleteDescargaFunction = () =>
+  deleteDescarga.addEventListener('click', () => {
   localStorage.removeItem('clientD');
   localStorage.removeItem('teamD');
   localStorage.removeItem('obsD');
   localStorage.removeItem('materialD');
   localStorage.removeItem('dateD');
   window.location.reload()
-})
+});
+deleteDescargaFunction()
+
+
 
 // EMAIL SUBJECT AND TITLES TO DESCARGA
 
@@ -208,11 +212,8 @@ submitD.addEventListener('click', () => {
     if (teamD.value !== '') {
       subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
     }
-  localStorage.removeItem('clientD');
-  localStorage.removeItem('teamD');
-  localStorage.removeItem('obsD');
-  localStorage.removeItem('materialD');
-  localStorage.removeItem('dateD');
+  deleteDescargaFunction()
+
 })
 
 // PRINT CARGA
@@ -664,12 +665,6 @@ printBtnPreIns.addEventListener('click', () => {
   funcAddInputValue()
   window.print()
 })
-
-// ADD PRINT CONTENT TO PRINT BUTTON =================
-  
-    //  printListPreIns.innerHTML += `${inp.value} metros de ${inp.name} <br>`
-
-
 
 // INPUT EVENTS
 
