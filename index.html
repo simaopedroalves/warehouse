@@ -54,15 +54,6 @@
     </header>
 
     <section class="box" id="box">
-        
-        <!-- <div class="caisBtn">
-            <button class="btn btn-warning" id="preInsBtn">Pré-instalação</button>
-            <button class="calcBtn btn btn-secondary" id="calcBtn">Calculadora</button>
-            <button type="button" class="btn btn-primary" id="prepBtn">Preparar</button>
-            <button class="cargaBtn btn btn-success" id="cargaBtn">Carga</button>
-            <button class="descargaBtn btn btn-danger" id="descargaBtn">Descarga</button>
-            <button type="button" class="btn btn-light" id="faltasBtn">Faltas</button>
-        </div> -->
 
         <!-- CALCULATOR / CONVERSOR -- KG => METERS -->
         <div class="calculation">
@@ -74,12 +65,7 @@
 
         <!-- PRÉ-INSTALAÇÃO DE AR CONDICIONADO -->
         <form name="PRÉ-INSTALAÇÃO" action="/submittedPage.html" method="POST" data-netlify="true">
-        <!-- <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST">
-
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://formsubmited.webdevsp.com">
-            <input type="hidden" name="_template" value="table"> -->
-
+   
             <input type="hidden" name="subject" value="" id="subjectPreIns">
 
             <div class="formulario pre-instalacao">
@@ -184,7 +170,6 @@
                     <button type="submit" name="q" id="submitPreIns" class="btn btn-info">Submeter</button>
                     <button type="button" class="btn btn-warning" id="printBtnPreIns"><i class="fa-solid fa-print"></i></button>
                     <button type="button" name="" id="" class="btn btn-info btn-clear-pre-instalacao">Apagar</button>
-                    <!-- <button type="button" class="btn btn-success" id="whatsappBtnPreIns"><i class="fa-brands fa-whatsapp"></i></button>     -->
                 </div>
                 
             </div>
@@ -194,13 +179,7 @@
 
         <!-- PREPARAR MATERIAL PARA A OBRA OU INSTALAÇÃO -->
 
-        <!-- <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST"> -->
         <form name="Preparar" action="/submittedPage.html" method="POST" data-netlify="true">
-
-            <!-- <input type="hidden" name="_url" value="https://armazemcrisavac.netlify.app"> -->
-            <!-- <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://formsubmited.webdevsp.com">
-            <input type="hidden" name="_template" value="table"> -->
 
             <input type="hidden" name="subject" value="" id="subjectP">
 
@@ -261,16 +240,10 @@
             </div>
         </form>
 
-              <!-- ============================ CARGA ======================= <input type="hidden" name="_url" value="https://yourdomain.co/contact.html"> -->
-              <form name="Carga" action="/submittedPage.html" method="POST" data-netlify="true">
+              <!-- ============================ CARGA ======================= -->
+        <form name="Carga" action="/submittedPage.html" method="POST" data-netlify="true">
 
-              <!-- <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST"> -->
-            <!-- <input type="hidden" name="_url" value="https://armazemcrisavac.netlify.app"> -->
-            <!-- <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://formsubmited.webdevsp.com">
-            <input type="hidden" name="_template" value="table"> -->
-
-            <input type="hidden" name="subject" value="" id="subjectC">
+                <input type="hidden" name="subject" value="" id="subjectC">
 
 
             <div class="formulario formCarga" id="formularioC">
@@ -290,16 +263,6 @@
                     </select>
                </div>
                
-                <!-- <div>
-                    <label for="pat">PAT</label>
-                    <input type="number" name="PAT" id="patC">
-                </div>
-
-                <div>
-                    <label for="pat">Guia</label>
-                    <input type="number" name="Guia" id="guia" required>
-                </div>     -->
-                 
                 <div>
                     <label for="dateC">Data</label>
                     <input type="date" name="Date" id="dateC" required>
@@ -330,14 +293,8 @@
         </form>
 
 
-        <!--  ===================== DESCARGA ========================= <input type="hidden" name="_url" value="https://yourdomain.co/contact.html"> -->
-        <!-- <form action="https://formsubmit.co/armazemcrisavac@gmail.com" method="POST"> -->
+        <!--  ===================== DESCARGA ========================= -->
             <form name="Descarga" action="/submittedPage.html" method="POST" data-netlify="true">
-
-            <!-- <input type="hidden" name="_url" value="https://armazemcrisavac.netlify.app"> -->
-            <!-- <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://formsubmited.webdevsp.com">
-            <input type="hidden" name="_template" value="table">-->
 
             <input type="hidden" name="subject" value="" id="subjectD">
 
@@ -357,11 +314,6 @@
                         <option value="Indefinida" id="opIndefinida">Indefinida</option>
                     </select>
                 </div>
-
-               <!-- <div>
-                <label for="pat">PAT</label>
-                <input type="number" name="PAT" id="pat">
-               </div> -->
 
                 <div>
                  <label for="dateD">Data</label>
@@ -395,11 +347,6 @@
           <!-- ===================================== FALTAS ============================================================ -->
 
         <form name="Faltas" action="/submittedPage.html" method="POST" data-netlify="true">
-
-        <!-- <input type="hidden" name="_url" value="https://armazemcrisavac.netlify.app"> -->
-        <!-- <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://formsubmited.webdevsp.com">
-        <input type="hidden" name="_template" value="table"> -->
 
         <input type="hidden" name="subject" value="" id="subjectFaltas">
 
@@ -449,7 +396,6 @@
             <div class="buttons">
                 <button type="submit" name="q" id="submitFaltas" class="btn btn-info">Submeter</button>
                 <button type="button" class="btn btn-warning" id="printBtnFaltas"><i class="fa-solid fa-print"></i></button>
-                <!-- <button type="button" class="btn btn-success" id="whatsappBtnFaltas"><i class="fa-brands fa-whatsapp"></i></button>     -->
             </div>
         </div>
     </form>
@@ -537,7 +483,6 @@
         <h3>Material para <span id="faturaPrintPrep"></span></h3>
 
         <div class="nameAndDate">
-            <!-- <h5 class="underline">Cliente:</h5> -->
             <div id="clientNamePrep" class="clientName"></div>
             <div class="local-print" id="localPrint"></div>
             <div class="team-Print" id="teamPrint"></div>
@@ -600,12 +545,6 @@
             <img src="img/logo.png" class="logo" alt="">
         </div>
     </div>
-
-    
-
-
-
-
 
 </body>
 </html>

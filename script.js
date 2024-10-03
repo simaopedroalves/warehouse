@@ -208,6 +208,11 @@ submitD.addEventListener('click', () => {
     if (teamD.value !== '') {
       subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
     }
+  localStorage.removeItem('clientD');
+  localStorage.removeItem('teamD');
+  localStorage.removeItem('obsD');
+  localStorage.removeItem('materialD');
+  localStorage.removeItem('dateD');
 })
 
 // PRINT CARGA
@@ -229,8 +234,6 @@ const printObsDiv = document.querySelector('.print-obs-div')
 const printObsCarga = document.querySelector('#printObs')
 
 printBtn.addEventListener('click', () => {
-  // printPrepDiv.style.display = 'none'
-  // toPrint.style.display = 'grid'
   window.print()
 })
 
@@ -242,29 +245,18 @@ material.addEventListener('input', () => {
   list.innerText = material.value
   returnDiv.innerText = material.value
   deleteNumbToReturn()
-  // emptyValueToPrint()
 })
 
 dateC.addEventListener('input', () => {
   datePrint.textContent = dateC.value
 })
 
-// patC.addEventListener('input', () => {
-//   patPrint.textContent = "PAT: " + patC.value
-// })
-
-// guia.addEventListener('input', () => {
-//   guiaPrint.textContent = "Guia n: " + guia.value
-// })
-
 function deleteNumbToReturn () {
   let numbersToDelete = new RegExp(/(\d+)[.,]*(\d*)(\s+)/g)
   let myreturnText = list.innerText.replace(numbersToDelete, "")
 
   list.innerText = list.innerText.replace(/;/g, "\n")
-  // returnDiv.innerText = myreturnText
   returnDiv.innerText = myreturnText.replace(/;/g, "\n")
-  // console.log(myreturnText)
 }
 
 // ============================ OBSERVAÇÕES PRINT CARGA==============================
@@ -285,30 +277,6 @@ obsC.addEventListener('input', () => {
   showsObs()
 
 })
-
-// ===================== Click the Whatsapp Button - CARGA =========================
-
-const whatsappBtn = document.querySelector('#whatsappBtn');
-
-whatsappBtn.addEventListener('click', () => {
-  sendValuesToWhatsapp()
-  // chooseNumberToSend()
-})
-
-function sendValuesToWhatsapp() {
-  let wtMessage = material.value.replace(/;/g, "%0a")
-  let sendMaterialWt = "Carga para: " + "%0a" +
-                       clientC.value + "%0a" +
-                       "PAT: " + patC.value + "%0a" +
-                       "Guia nº: " + guia.value + "%0a" + "%0a" +
-                       "MATERIAL:" + "%0a" + wtMessage;
-
-  let number = +351963120728;
-
-  let url = "https://wa.me/" + number + "?text=" + sendMaterialWt;
-
-  window.open(url, '_blank');
-}
 
 // ============================ PREPARAR ========================================
 //  PRINT PREPARAÇÃO
@@ -348,7 +316,6 @@ obsP.addEventListener('input', () => {
 })
 
 // PREPARAR MATERIAL
-// load inputs from localStorage
 document.addEventListener('DOMContentLoaded', () => {
   clientP.value = JSON.parse(localStorage.getItem('clientP'));
   faturaP.value = JSON.parse(localStorage.getItem('faturaP'));
@@ -360,8 +327,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 printBtnPrep.addEventListener('click', () => {
-  // toPrint.style.display = 'none'
-  // printPrepDiv.style.display = 'grid'
   window.print();
 })
 
@@ -393,7 +358,6 @@ clientP.addEventListener('input', () => {
   localStorage.setItem('clientP', JSON.stringify(arrClientP));
 
 })
-// localStorage.clear()
 
 dateP.addEventListener('input', () => {
   datePrintPrep.textContent = dateP.value;
@@ -466,7 +430,6 @@ function deleteNumbToReturnOnPrep() {
   let myreturnText = listPrep.innerText.replace(numbersToDelete, "")
 
   listPrep.innerText = listPrep.innerText.replace(/;/g, "\n")
-  // returnDiv.innerText = myreturnText
   cargaPrep.innerText = myreturnText.replace(/;/g, "\n")
  
 }
@@ -478,7 +441,6 @@ const subjectP = document.querySelector('#subjectP')
 submitP.addEventListener('click', () => {
   if (clientP.value !== '') {
     subjectP.value = `PREPARAR MATERIAL PARA ${clientP.value}`;
-    // localStorage.removeItem('faturaP');
   } 
 })
 
