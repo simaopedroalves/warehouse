@@ -190,29 +190,34 @@ materialD.addEventListener('input', () => {
   localStorage.setItem('materialD', JSON.stringify(arrMaterialD));
 
 })
-// CLEAR ALL PREPARAR FORM
+
+
 const deleteDescarga = document.querySelector('.btn-clear-descarga');
 
-const deleteDescargaFunction = () =>
-  deleteDescarga.addEventListener('click', () => {
+function deleteDescargaFunction () {
+
   localStorage.removeItem('clientD');
   localStorage.removeItem('teamD');
   localStorage.removeItem('obsD');
   localStorage.removeItem('materialD');
   localStorage.removeItem('dateD');
-  window.location.reload()
+
+}
+
+deleteDescarga.addEventListener('click', () => {
+  deleteDescargaFunction()    
 });
-deleteDescargaFunction()
-
-
 
 // EMAIL SUBJECT AND TITLES TO DESCARGA
 
 submitD.addEventListener('click', () => {
-    if (teamD.value !== '') {
+
+  if (teamD.value !== '') {
       subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
-    }
+  }
+  
   deleteDescargaFunction()
+  window.location.reload();
 
 })
 
