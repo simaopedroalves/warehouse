@@ -62,6 +62,10 @@
             "oneMeterweight": 0.2389
         },
         {
+            "name": "5g4",
+            "oneMeterweight": 0.3434
+        },
+        {
             "name": "Cabo Rede",
             "oneMeterweight": 0.0365
         },
@@ -74,8 +78,16 @@
             "oneMeterweight": 0.183
         },
         {
+            "name": "Cabo nhxh 3g2.5",
+            "oneMeterweight": 0.1814
+        },
+        {
             "name": "Cabo nhxh 2g2.5",
             "oneMeterweight": 0.1327
+        },
+        {
+            "name": "Cabo nhxh 5g2.5",
+            "oneMeterweight": 0.0.3044
         },
         {
             "name": "Tubo Condensados 16'",
@@ -230,15 +242,15 @@
             "oneUnweight": 0.8
         },
         {
-            "name": "PF 40MM M8",
+            "name": "PF SEXTAVADO 40MM M8",
             "oneUnweight": 1.705
         },
         {
-            "name": "PF 60MM M8",
+            "name": "PF SEXTAVADO 60MM M8",
             "oneUnweight": 2.48
         },
         {
-            "name": "PF 80MM M8",
+            "name": "PF SEXTAVADO 80MM M8",
             "oneUnweight": 3.02
         },
         {
