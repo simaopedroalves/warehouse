@@ -65,13 +65,16 @@ header {
     margin: 0 auto;
     min-width: 100%;
     max-width: 100vw;
+    min-height: 80vh;
     grid-column: span 2;
 }
 
 .caisBtn .btn {
     background-color: var(--green-two);
     padding: 1rem;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
     border: none;
     outline: none;
     color: var(--white);
@@ -318,12 +321,16 @@ input[type="radio"] {
         background-color: transparent;
         right: 5vw;
         top: 0;
+        min-height: fit-content;
     }
 
     .caisBtn .btn {
         background-color: var(--black);
         border: solid 2px var(--green-two);
         border-radius: 1rem;
+        font-weight: 200;
+        text-transform: none;
+        font-size: 1rem;
     }
 
     .caisBtn .btn:hover {
