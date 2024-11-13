@@ -86,16 +86,24 @@
             "oneMeterweight": 0.1327
         },
         {
-            "name": "Cabo nhxh 5g2.5",
+            "name": "Cabo nhxh 5g2.5 laranja",
             "oneMeterweight": 0.3044
+        },
+        {
+            "name": "Cabo fxh 5g2.5 verde",
+            "oneMeterweight": 0.2946
         },
         {
             "name": "Tubo Condensados 16'",
             "oneMeterweight": 0.0713
         },
         {
-            "name": "Tubo anelado Azul c/guia",
+            "name": "Tubo anelado Azul 20'",
             "oneMeterweight": 0.0416
+        },
+        {
+            "name": "Tubo anelado Azul 25'",
+            "oneMeterweight": 0.0516
         },
         {
             "name": "Mangueira Condensados 6mm",
