@@ -13,6 +13,8 @@ const preInsSec = document.querySelector('.pre-instalacao')
 const caisBtn = document.querySelector('.caisBtn')
 const menu = document.querySelector('.fa-warehouse')
 const titleForm = document.querySelectorAll('.form-title')
+const printFaltasDiv = document.querySelector('#toPrintFaltas');
+
 // OPEN AND CLOSE MENU
 menu.addEventListener('click', () => {
   caisBtn.classList.toggle('show')
@@ -222,7 +224,7 @@ submitD.addEventListener('click', () => {
 })
 
 // PRINT CARGA
-const printBtn = document.querySelector('#printBtn')
+const printBtnCarga = document.querySelector('#printBtnCarga')
 const toPrint = document.querySelector('#toPrint')
 const list = document.querySelector('#list')
 const material = document.querySelector('#material')
@@ -238,8 +240,13 @@ const guiaPrint = document.querySelector('#guiaPrint')
 const obsC = document.querySelector('#obsC')
 const printObsDiv = document.querySelector('.print-obs-div')
 const printObsCarga = document.querySelector('#printObs')
+const printCargaDiv = document.querySelector('#toPrint') // CARGA DIV to print
 
-printBtn.addEventListener('click', () => {
+printBtnCarga.addEventListener('click', () => {
+  printCargaDiv.style.display = 'grid'
+  printPreInsDiv.style.display = 'none'
+  printPrepDiv.style.display = 'none'
+  printFaltasDiv.style.display = 'none'
   window.print()
 })
 
@@ -333,6 +340,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 printBtnPrep.addEventListener('click', () => {
+  printPrepDiv.style.display = 'grid'
+  printPreInsDiv.style.display = 'none'
+  printCargaDiv.style.display = 'none'
+  printFaltasDiv.style.display = 'none'
   window.print();
 })
 
@@ -663,10 +674,19 @@ const allInputsWithMeters = document.querySelectorAll('.valToPrint')
 
 // AddEventListener's for Each input
 function funcAddInputValue() {
-  allInputsWithMeters.forEach((inp) => printListPreIns.innerHTML += (inp.value + ' metros de ' + inp.name + `<br>`)
-)}
+  allInputsWithMeters.forEach((inp) => {
+  
+  
+      printListPreIns.innerHTML += (inp.value + ' metros de ' + inp.name + `<br>`)
+
+  })
+}
 
 printBtnPreIns.addEventListener('click', () => {
+  printPreInsDiv.style.display = 'grid'
+  printPrepDiv.style.display = 'none'
+  printCargaDiv.style.display = 'none'
+  printFaltasDiv.style.display = 'none'
   funcAddInputValue()
   window.print()
 })
@@ -861,11 +881,12 @@ function isAlreadyOrdered () {
 
 isAlreadyOrdered()
 
-
 const printBtnFaltas = document.querySelector('#printBtnFaltas')
 printBtnFaltas.addEventListener('click', () => {
-  // toPrint.style.display = 'none'
-  // printPrepDiv.style.display = 'grid'
+  printFaltasDiv.style.display = 'grid'
+  printPreInsDiv.style.display = 'none'
+  printCargaDiv.style.display = 'none'
+  printPrepDiv.style.display = 'none'
   window.print();
 })
 

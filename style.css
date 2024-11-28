@@ -67,6 +67,7 @@ header {
     max-width: 100vw;
     min-height: 80vh;
     grid-column: span 2;
+    
 }
 
 .caisBtn .btn {
