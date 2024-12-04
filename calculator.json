@@ -66,6 +66,14 @@
             "oneMeterweight": 0.3434
         },
         {
+            "name": "5g16",
+            "oneMeterweight": 1.1
+        },
+        {
+            "name": "8g1",
+            "oneMeterweight": 0.15133
+        },
+        {
             "name": "Cabo Rede",
             "oneMeterweight": 0.0365
         },
