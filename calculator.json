@@ -245,6 +245,10 @@
         {
             "name": "Cobre revestido 3/8'",
             "oneMeterweight": 0.164
+        },
+        {
+            "name": "Pirallu p3",
+            "oneMeterweight": 1.28688524
         }
     ],
 
