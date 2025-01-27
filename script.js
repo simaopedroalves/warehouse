@@ -14,6 +14,7 @@ const caisBtn = document.querySelector('.caisBtn')
 const menu = document.querySelector('.fa-warehouse')
 const titleForm = document.querySelectorAll('.form-title')
 const printFaltasDiv = document.querySelector('#toPrintFaltas');
+const searchBar = document.querySelector('.search-bar-section');
 
 // OPEN AND CLOSE MENU
 menu.addEventListener('click', () => {
@@ -50,6 +51,7 @@ prepBtn.addEventListener('click', () => {
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
+  searchBar.style.display = 'none'
 })
 
 descargaBtn.addEventListener('click', () => {
@@ -60,6 +62,7 @@ descargaBtn.addEventListener('click', () => {
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
+  searchBar.style.display = 'none'
 })
 
 cargaBtn.addEventListener('click', () => {
@@ -70,6 +73,7 @@ cargaBtn.addEventListener('click', () => {
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
+  searchBar.style.display = 'none'
 })
 
 calcBtn.addEventListener('click', () => {
@@ -80,7 +84,7 @@ calcBtn.addEventListener('click', () => {
   calcDivTwo.style.display = 'grid'
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
-
+  searchBar.style.display = 'grid'
 })
 
 faltasBtn.addEventListener('click', () => {
@@ -91,6 +95,7 @@ faltasBtn.addEventListener('click', () => {
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'grid'
+  searchBar.style.display = 'none'
 })
 
 // EMAIL SUBJECT AND TITLES TO CARGA
@@ -624,6 +629,7 @@ preInsBtn.addEventListener('click', () => {
   calcDivTwo.style.display = 'none'
   preInsSec.style.display = 'grid'
   faltasDiv.style.display = 'none'
+  searchBar.style.display = 'none'
 })
 
 // Radio Buttons and Inputs type Number

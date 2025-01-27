@@ -17,6 +17,7 @@
     gap: 0.5rem;
     align-items: center;
     max-height: fit-content;
+    position: relative;
 }
 
 .calculation h2, .calcDivTwo h2 {
