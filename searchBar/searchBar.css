@@ -27,8 +27,8 @@
 
 .disappear {
     position: absolute;
-    top: -100vh;
-    left: -100vw;
+    top: -200lvh;
+    left: -200lvw;
 }
 
 .redColor{
