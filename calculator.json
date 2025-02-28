@@ -186,6 +186,10 @@
             "oneMeterweight": 0.238095238
         },
         {
+            "name": "Tubo Flexivel 229mm",
+            "oneMeterweight": 0.14
+        },
+        {
             "name": "Tubo Flexivel 260mm",
             "oneMeterweight": 0.26
         },
@@ -280,6 +284,10 @@
         {
             "name": "Anilha M8",
             "oneUnweight": 8
+        },
+        {
+            "name": "PF SEXTAVADO 20MM M8",
+            "oneUnweight": 117
         },
         {
             "name": "PF SEXTAVADO 40MM M8",
@@ -392,6 +400,10 @@
         {
             "name": "PORCA UNIÃO M8",
             "oneUnweight": 17.45
+        },
+        {
+            "name": "UNIÃO ESTEIRA",
+            "oneUnweight": 16.8
         }
 
     ]
