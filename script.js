@@ -676,24 +676,71 @@ const mtGris = document.querySelector('#mtGris')
 const cxName = document.querySelector('#cxPreInsName')
 const numbCxPreIns = document.querySelector('#cxPreIns')
 const allInputsWithMeters = document.querySelectorAll('.valToPrint')
+const allInputsFromPvc = document.querySelectorAll('.radioButton');
 
 
 // AddEventListener's for Each input
-function funcAddInputValue() {
-  allInputsWithMeters.forEach((inp) => {
-  
-  
-      printListPreIns.innerHTML += (inp.value + ' metros de ' + inp.name + `<br>`)
 
+
+allInputsFromPvc.forEach(radioButton => {
+
+  radioButton.addEventListener('click', () => {
+
+    let radioButtonValue = radioButton.parentElement.querySelector('.mtValue');
+    
+    radioButtonValue.removeAttribute("disabled", '');
   })
+
+})
+
+allInputsWithMeters.forEach(input => {
+
+  input.addEventListener('change', () => {
+    
+    let inputName = input.parentElement.querySelector('label').textContent;
+    let inputValue = input.value;
+    
+    saveInputValue(inputValue, inputName);
+    
+  
+  });
+  
+});
+
+
+function saveInputValue(inputValue, inputName) {
+  let newItem = '';
+  
+console.log(typeof(inputName));
+
+  let inputType = inputName.split('')[1]
+
+  console.log(inputType);
+  
+
+  if (inputType === '/') {
+    newItem = inputValue + ' Metros de Cobre de ' + inputName + `<br>`;
+  }
+  else if (inputType === 'G') {
+    newItem = inputValue + ' Metros de Cabo ' + inputName + `<br>`;
+  }
+  else if (inputType === 'u') {
+    newItem = inputValue + ' Metros de ' + inputName + `<br>`;
+  }
+  else {
+    newItem =  inputValue + ' Unidades de ' + inputName + `<br>`;
+  }
+
+  printListPreIns.innerHTML += newItem
 }
+
+
 
 printBtnPreIns.addEventListener('click', () => {
   printPreInsDiv.style.display = 'grid'
   printPrepDiv.style.display = 'none'
   printCargaDiv.style.display = 'none'
   printFaltasDiv.style.display = 'none'
-  funcAddInputValue()
   window.print()
 })
 
@@ -823,6 +870,12 @@ deletePreIns.addEventListener('click', () => {
   })
   location.reload()
 })
+
+
+
+
+
+
 
 // JAVACRIPT CODE TO FALTAS SECTION/DIV
 

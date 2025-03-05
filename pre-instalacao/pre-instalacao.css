@@ -27,6 +27,7 @@
     font-size: 0.9rem;
 }
 
+
 .cobre h6 {
     grid-column: span 2;
     margin: 0 auto;
@@ -76,6 +77,14 @@
     font-weight: 700;
     text-decoration: underline;
 }
+
+.pvc div{
+   grid-column: span 2;
+   justify-content: space-between;
+
+
+}
+
 
 input::placeholder {
     color: var(--white);
