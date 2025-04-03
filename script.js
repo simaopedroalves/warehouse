@@ -17,81 +17,81 @@ const printFaltasDiv = document.querySelector('#toPrintFaltas');
 const searchBar = document.querySelector('.search-bar-section');
 
 // test scanner
-const scannerMenuBtn = document.querySelector('#scannerMenuBtn');
-const scannerSection = document.querySelector('.scanner-container');
+// const scannerMenuBtn = document.querySelector('#scannerMenuBtn');
+// const scannerSection = document.querySelector('.scanner-container');
 
-const video = document.getElementById('video');
-const result = document.getElementById('result');
-const error = document.getElementById('error');
-const startButton = document.getElementById('startButton');
-const stopButton = document.getElementById('stopButton');
+// const video = document.getElementById('video');
+// const result = document.getElementById('result');
+// const error = document.getElementById('error');
+// const startButton = document.getElementById('startButton');
+// const stopButton = document.getElementById('stopButton');
 
-let codeReader;
-let scanning = false;
+// let codeReader;
+// let scanning = false;
 
-// Initialize the barcode scanner
-function initScanner() {
-    codeReader = new ZXing.BrowserMultiFormatReader();
-    error.textContent = '';
-}
+// // Initialize the barcode scanner
+// function initScanner() {
+//     codeReader = new ZXing.BrowserMultiFormatReader();
+//     error.textContent = '';
+// }
 
-// Start scanning
-async function startScanning() {
-    try {
-        initScanner();
+// // Start scanning
+// async function startScanning() {
+//     try {
+//         initScanner();
         
-        const devices = await codeReader.listVideoInputDevices();
-        const deviceId = devices.length > 0 ? devices[0].deviceId : undefined;
+//         const devices = await codeReader.listVideoInputDevices();
+//         const deviceId = devices.length > 0 ? devices[0].deviceId : undefined;
         
-        await codeReader.decodeFromVideoDevice(deviceId, video, (result, err) => {
-            if (result) {
-                handleScanResult(result.text);
-            }
-            if (err && !(err instanceof ZXing.NotFoundException)) {
-                error.textContent = err.message;
-                console.error(err);
-            }
-        });
+//         await codeReader.decodeFromVideoDevice(deviceId, video, (result, err) => {
+//             if (result) {
+//                 handleScanResult(result.text);
+//             }
+//             if (err && !(err instanceof ZXing.NotFoundException)) {
+//                 error.textContent = err.message;
+//                 console.error(err);
+//             }
+//         });
         
-        scanning = true;
-        startButton.disabled = true;
-        stopButton.disabled = false;
-    } catch (e) {
-        error.textContent = e.message;
-        console.error(e);
-    }
-}
+//         scanning = true;
+//         startButton.disabled = true;
+//         stopButton.disabled = false;
+//     } catch (e) {
+//         error.textContent = e.message;
+//         console.error(e);
+//     }
+// }
 
-// Stop scanning
-function stopScanning() {
-    if (codeReader && scanning) {
-        codeReader.reset();
-        scanning = false;
-        startButton.disabled = false;
-        stopButton.disabled = true;
-        result.textContent = 'Scanner stopped';
-    }
-}
+// // Stop scanning
+// function stopScanning() {
+//     if (codeReader && scanning) {
+//         codeReader.reset();
+//         scanning = false;
+//         startButton.disabled = false;
+//         stopButton.disabled = true;
+//         result.textContent = 'Scanner stopped';
+//     }
+// }
 
-// Handle scan results
-function handleScanResult(scanResult) {
-    result.textContent = scanResult;
-    console.log('Barcode detected:', scanResult);
+// // Handle scan results
+// function handleScanResult(scanResult) {
+//     result.textContent = scanResult;
+//     console.log('Barcode detected:', scanResult);
     
-    // Optional: Add a beep sound or vibration
-    try {
-        navigator.vibrate(200); // Vibrate for 200ms if supported
-    } catch (e) {
-        // Vibration not supported
-    }
-}
+//     // Optional: Add a beep sound or vibration
+//     try {
+//         navigator.vibrate(200); // Vibrate for 200ms if supported
+//     } catch (e) {
+//         // Vibration not supported
+//     }
+// }
 
-// Event listeners
-startButton.addEventListener('click', startScanning);
-stopButton.addEventListener('click', stopScanning);
+// // Event listeners
+// startButton.addEventListener('click', startScanning);
+// stopButton.addEventListener('click', stopScanning);
 
-// Initialize on page load
-window.addEventListener('load', initScanner);
+// // Initialize on page load
+// window.addEventListener('load', initScanner);
 // =======================================================================================================
 
 // OPEN AND CLOSE MENU
@@ -124,17 +124,17 @@ function closeMenu() {
 
 //scanner
 
-scannerMenuBtn.addEventListener('click', () => {
-  formDescarga.style.display = 'none'
-  formCarga.style.display = 'none'
-  formPrep.style.display = 'none'
-  calcDiv.style.display = 'none'
-  calcDivTwo.style.display = 'none'
-  preInsSec.style.display = 'none'
-  faltasDiv.style.display = 'none'
-  searchBar.style.display = 'none'
-  scannerSection.style.display = 'grid'
-})
+// scannerMenuBtn.addEventListener('click', () => {
+//   formDescarga.style.display = 'none'
+//   formCarga.style.display = 'none'
+//   formPrep.style.display = 'none'
+//   calcDiv.style.display = 'none'
+//   calcDivTwo.style.display = 'none'
+//   preInsSec.style.display = 'none'
+//   faltasDiv.style.display = 'none'
+//   searchBar.style.display = 'none'
+//   scannerSection.style.display = 'grid'
+// })
 
 prepBtn.addEventListener('click', () => {
   formDescarga.style.display = 'none'
@@ -146,7 +146,7 @@ prepBtn.addEventListener('click', () => {
   faltasDiv.style.display = 'none'
   searchBar.style.display = 'none'
 
-  scannerSection.style.display = 'none'
+  // scannerSection.style.display = 'none'
 
 })
 
@@ -159,7 +159,7 @@ descargaBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
   searchBar.style.display = 'none'
-  scannerSection.style.display = 'none'
+  // scannerSection.style.display = 'none'
 
 
 })
@@ -173,7 +173,7 @@ cargaBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
   searchBar.style.display = 'none'
-  scannerSection.style.display = 'none'
+  // scannerSection.style.display = 'none'
 
 })
 
@@ -186,7 +186,7 @@ calcBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
   searchBar.style.display = 'grid'
-  scannerSection.style.display = 'none'
+  // scannerSection.style.display = 'none'
 
 
 })
@@ -200,7 +200,7 @@ faltasBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'grid'
   searchBar.style.display = 'none'
-  scannerSection.style.display = 'none'
+  // scannerSection.style.display = 'none'
 
 
 })
@@ -680,8 +680,23 @@ function convertionBtn () {
       calcBtn[i].parentElement.querySelector('h3').style.color = 'var(--white)';
 
       conversaoParaMetros(i)
-    })
+    });
+
+   
   })
+  let input = document.querySelectorAll('.weightValueMt');
+    input.forEach((el,i) => {
+      el.addEventListener('keydown' , (event) => {
+        if (event.key === 'Enter') {
+          el.parentElement.style.backgroundColor = 'var(--green-two)';
+          el.parentElement.querySelector('h2').style.color = 'var(--white)';
+          el.parentElement.querySelector('h3').style.color = 'var(--white)';
+
+      conversaoParaMetros(i)
+          
+        }
+      })
+    })
 }
 
 function conversaoParaMetros(i) {
