@@ -177,6 +177,10 @@ textarea {
     display: none;
 }
 
+#scanner-container {
+    display: none;
+}
+
 
 label,  .encomendado{
     font-weight: 700;
