@@ -31,15 +31,22 @@
 
         <div class="caisBtn">
             <button class="calcBtn btn" id="calcBtn">Calculadora</button>
+            <button type="button" class="btn btn-light" id="intervencaoBtn">Intervenção</button>
             <button class="btn" id="preInsBtn">Pré-instalação</button>
             <button type="button" class="btn btn-primary" id="prepBtn">Preparar</button>
             <button class="cargaBtn btn btn-success" id="cargaBtn">Carga</button>
             <button class="descargaBtn btn btn-danger" id="descargaBtn">Descarga</button>
             <button type="button" class="btn btn-light" id="faltasBtn">Faltas</button>
+
             <!-- <button type="button" class="btn btn-light" id="scannerMenuBtn">Scanner</button> -->
         </div>
 
     </header>
+
+
+
+
+    <!-- ========================================================================= -->
 
     <!-- test scanner -->
 
@@ -419,14 +426,114 @@
         </div>
     </form>
 
+    
+    <!-- =============================INTERVENÇÃO================================= -->
+
+    <form name="Intervenção" action="/submittedPage.html" method="POST" data-netlify="true">
+
+        <input type="hidden" name="subject" value="" id="subjectIntervencao">
+
+        <div class="formIntervencao formulario" id="formularioIntervencao">
+        <span class="form-title"></span>
+
+            
+           <div>
+                <label for="teamIntervencao">Equipa</label>
+                <input type="text" name="Team" id="teamIntervencao" class="select-team" required>
+           </div>
+           
+            <div>
+                <label for="addressIntervencao">Morada</label>
+                <input type="text" name="morada" id="addressIntervencao" required>
+            </div>
+
+            <div>
+                <label for="clientIntervencao">Cliente</label>
+                <input type="text" name="Client" id="clientIntervencao" required>
+            </div>
+
+            <div>
+                <label for="dateIntervencao">Data</label>
+                <input type="date" name="Date" id="dateIntervencao" required>
+            </div>
+
+            <div class="textareaDiv">
+                <label for="tasksIntervencao" class="media-test">Tarefas</label>
+                <textarea id="tasksIntervencao" name="tasksIntervencao" required autocorrect></textarea>
+            </div>
+            
+         <!-- ======================= BUTTONS ==================== -->
+            <div class="buttons">
+                <button type="submit" name="q" id="submitIntervencao" class="btn btn-info">Submeter</button>
+                <button type="button" class="btn btn-warning" id="printBtnIntervencao"><i class="fa-solid fa-print"></i></button>
+                <button type="button" name="" id="" class="btn btn-info btn-clear-intervencao">Apagar</button>
+                <button type="button" class="btn btn-success" id="whatsappBtnPrep"><i class="fa-brands fa-whatsapp"></i></button>    
+            </div>
+        </div>
+    </form>
+
     </section>
 
 
     <div class="by">
-       <a href="https://portfoliosimaopedro.webdevsp.com/"><span class="design">Developed by</span><h6 class="byName">simaoPedro</h6></a>
+       <a href="https://portfoliosimaopedro.webdevsp.com/"><span class="design">Desenvolvido por </span><h6 class="byName">Simão Pedro</h6></a>
     </div>
 
+ <!-- ==================================TO PRINT INTERVENÇÃO ================================== -->
 
+ <div class="printModeIntervencao" id="toPrintIntervencao">
+        
+    <h3>INTERVENÇÃO TÉCNICA </h3>
+
+    <div class="dayly-info">
+        <div class="clientInformation">
+            <p id="printClientIntervencao"></p>
+            <p id="printAddressIntervencao"></p>
+            <p id="printTeamIntervencao"></p>
+        </div>
+        <div id="dateAndHourIntervencao">
+            <p id="printDateIntervencao"></p>
+            <p>Hora Início: ____ : ____</p>
+            <p>Hora Fim: ____ : ____</p>
+        </div>
+    </div>
+    <div id="tasksTitle">TAREFAS:
+        <p id="printTasksIntervencao"></p>
+    </div>
+    <div id="report">RELATÓRIO:
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <div id="toDoNext">PENDENTES P/PRÓXIMA INTERVENÇÃO:
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <div id="necessaryMaterial">MATERIAL P/PRÓXIMA INTERVENÇÃO:
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <img src="/img/logo.png" alt="logo" class="logoCrisavacPrint">
+ 
+</div>
 
   <!-- =========================TO PRINT FALTAS==================================== -->
   <div class="printModeFaltas" id="toPrintFaltas">

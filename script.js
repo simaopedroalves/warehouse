@@ -15,6 +15,8 @@ const menu = document.querySelector('.fa-warehouse')
 const titleForm = document.querySelectorAll('.form-title')
 const printFaltasDiv = document.querySelector('#toPrintFaltas');
 const searchBar = document.querySelector('.search-bar-section');
+const intervencaoBtn = document.querySelector('#intervencaoBtn');
+const intervencaoDiv = document.querySelector('.formIntervencao');
 
 // test scanner
 // const scannerMenuBtn = document.querySelector('#scannerMenuBtn');
@@ -145,6 +147,8 @@ prepBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
   searchBar.style.display = 'none'
+  intervencaoDiv.style.display = 'none'
+
 
   // scannerSection.style.display = 'none'
 
@@ -159,6 +163,8 @@ descargaBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
   searchBar.style.display = 'none'
+  intervencaoDiv.style.display = 'none'
+
   // scannerSection.style.display = 'none'
 
 
@@ -173,6 +179,8 @@ cargaBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
   searchBar.style.display = 'none'
+  intervencaoDiv.style.display = 'none'
+
   // scannerSection.style.display = 'none'
 
 })
@@ -186,6 +194,8 @@ calcBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'none'
   searchBar.style.display = 'grid'
+  intervencaoDiv.style.display = 'none'
+
   // scannerSection.style.display = 'none'
 
 
@@ -200,8 +210,24 @@ faltasBtn.addEventListener('click', () => {
   preInsSec.style.display = 'none'
   faltasDiv.style.display = 'grid'
   searchBar.style.display = 'none'
+  intervencaoDiv.style.display = 'none'
+
   // scannerSection.style.display = 'none'
 
+
+})
+
+intervencaoBtn.addEventListener('click', () => {
+  formDescarga.style.display = 'none'
+  formCarga.style.display = 'none'
+  formPrep.style.display = 'none'
+  calcDiv.style.display = 'none'
+  calcDivTwo.style.display = 'none'
+  preInsSec.style.display = 'none'
+  faltasDiv.style.display = 'none'
+  searchBar.style.display = 'none'
+  intervencaoDiv.style.display = 'grid'
+  // scannerSection.style.display = 'none'
 
 })
 
@@ -335,6 +361,81 @@ submitD.addEventListener('click', () => {
 
 })
 
+// PRINT INTERVENÇÃO
+
+const printBtnIntervencao = document.querySelector('#printBtnIntervencao');
+const deleteBtnIntervencao = document.querySelector('.btn-clear-intervencao');
+const submitBtnIntervencao = document.querySelector('#submitIntervencao');
+const printIntervencaoDiv = document.querySelector('.printModeIntervencao');
+const teamNamesToPrint = document.querySelector('#printTeamIntervencao');
+const teamNames = document.querySelector('#teamIntervencao');
+const addressIntervencao = document.querySelector('#addressIntervencao');
+const printAddressIntervencao = document.querySelector('#printAddressIntervencao');
+const clientIntervencao = document.querySelector('#clientIntervencao');
+const printClientIntervencao = document.querySelector('#printClientIntervencao');
+const dateIntervencao = document.querySelector('#dateIntervencao');
+const printDateIntervencao = document.querySelector('#printDateIntervencao');
+const tasksIntervencao = document.querySelector('#tasksIntervencao');
+const printTasksIntervencao = document.querySelector('#printTasksIntervencao');
+const logo = document.querySelector('.logoCrisavacPrint');
+
+deleteBtnIntervencao.addEventListener('click', () => {
+    localStorage.removeItem('CLIENTE: ');
+    localStorage.removeItem('MORADA: ');
+    localStorage.removeItem('TÉCNICOS: ');
+    localStorage.removeItem('DATA: ');
+    localStorage.removeItem('tasksIntervencao');
+    window.location.reload();
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+  clientIntervencao.value = JSON.parse(localStorage.getItem('CLIENTE: '));
+  addressIntervencao.value = JSON.parse(localStorage.getItem('MORADA: '));
+  teamNames.value = JSON.parse(localStorage.getItem('TÉCNICOS: '));
+  dateIntervencao.value = JSON.parse(localStorage.getItem('DATA: '));
+  tasksIntervencao.value = JSON.parse(localStorage.getItem('tasksIntervencao'));
+})
+
+printBtnIntervencao.addEventListener('click', () => {
+  printCargaDiv.style.display = 'none'
+  printPreInsDiv.style.display = 'none'
+  printPrepDiv.style.display = 'none'
+  printFaltasDiv.style.display = 'none'
+  printIntervencaoDiv.style.display = 'grid'
+  logo.classList.remove('displayNone')
+  window.print()
+});
+
+const allIntervencaoInputs = intervencaoDiv.querySelectorAll('div input');
+
+allIntervencaoInputs.forEach(input => {
+
+  input.addEventListener('input', () => {
+    addInputsValuesToPrint('CLIENTE: ', clientIntervencao, printClientIntervencao);
+    addInputsValuesToPrint('MORADA: ', addressIntervencao, printAddressIntervencao);
+    addInputsValuesToPrint('TÉCNICOS: ', teamNames, teamNamesToPrint);
+    addInputsValuesToPrint('DATA: ', dateIntervencao, printDateIntervencao);
+  })
+
+
+})
+
+tasksIntervencao.addEventListener('input', () => {
+  printTasksIntervencao.innerText = `${tasksIntervencao.value}`;
+
+  localStorage.setItem('tasksIntervencao', JSON.stringify(tasksIntervencao.value));
+
+})
+
+function addInputsValuesToPrint(description, inputId, idToPrint) {
+  
+  idToPrint.textContent = `${description} ${inputId.value}`;
+
+  localStorage.setItem(`${description}`, JSON.stringify(inputId.value));
+}
+
+
+
 // PRINT CARGA
 const printBtnCarga = document.querySelector('#printBtnCarga')
 const toPrint = document.querySelector('#toPrint')
@@ -359,6 +460,7 @@ printBtnCarga.addEventListener('click', () => {
   printPreInsDiv.style.display = 'none'
   printPrepDiv.style.display = 'none'
   printFaltasDiv.style.display = 'none'
+  printIntervencaoDiv.style.display = 'none'
   window.print()
 })
 
@@ -456,6 +558,7 @@ printBtnPrep.addEventListener('click', () => {
   printPreInsDiv.style.display = 'none'
   printCargaDiv.style.display = 'none'
   printFaltasDiv.style.display = 'none'
+  printIntervencaoDiv.style.display = 'none'
   window.print();
 })
 
@@ -863,6 +966,7 @@ printBtnPreIns.addEventListener('click', () => {
   printPrepDiv.style.display = 'none'
   printCargaDiv.style.display = 'none'
   printFaltasDiv.style.display = 'none'
+  printIntervencaoDiv.style.display = 'none'
   window.print()
 })
 
@@ -1068,6 +1172,8 @@ printBtnFaltas.addEventListener('click', () => {
   printPreInsDiv.style.display = 'none'
   printCargaDiv.style.display = 'none'
   printPrepDiv.style.display = 'none'
+  printIntervencaoDiv.style.display = 'none'
+
   window.print();
 })
 
