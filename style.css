@@ -554,7 +554,7 @@ input[type="radio"] {
         border-radius: 1rem;
     }
 
-    #report, #toDoNext, #necessaryMaterial{
+    #report, #toDoNext, #necessaryMaterial, #itemsRemovedFromCar{
         display: grid;
         gap: 1.2rem;
         width: 100%;
@@ -562,11 +562,11 @@ input[type="radio"] {
         font-weight: bold;
     }
 
-    #necessaryMaterial {
+    #necessaryMaterial, #itemsRemovedFromCar {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    #report p, #toDoNext p, #necessaryMaterial p {
+    #report p, #toDoNext p, #necessaryMaterial p, #itemsRemovedFromCar p{
         width: 100%;
         margin: 0 auto;
         border-bottom: solid 1px black;
