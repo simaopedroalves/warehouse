@@ -342,6 +342,8 @@ function deleteDescargaFunction () {
   localStorage.removeItem('materialD');
   localStorage.removeItem('dateD');
 
+  window.location.reload();
+
 }
 
 deleteDescarga.addEventListener('click', () => {
@@ -350,16 +352,16 @@ deleteDescarga.addEventListener('click', () => {
 
 // EMAIL SUBJECT AND TITLES TO DESCARGA
 
-submitD.addEventListener('click', () => {
+// submitD.addEventListener('click', (event) => {
+//   event.preventDefault()
 
-  if (teamD.value !== '') {
-      subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
-  }
+//   if (teamD.value !== '') {
+//       subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
+//   }
   
-  deleteDescargaFunction()
-  window.location.reload();
+//   // deleteDescargaFunction()
 
-})
+// })
 
 // PRINT INTERVENÇÃO
 
@@ -378,6 +380,8 @@ const printDateIntervencao = document.querySelector('#printDateIntervencao');
 const tasksIntervencao = document.querySelector('#tasksIntervencao');
 const printTasksIntervencao = document.querySelector('#printTasksIntervencao');
 const logo = document.querySelector('.logoCrisavacPrint');
+const obsIntervencao = document.querySelector('#obsIntervencao');
+const printObsIntervencao = document.querySelector('#printObsIntervencao');
 
 deleteBtnIntervencao.addEventListener('click', () => {
     localStorage.removeItem('CLIENTE: ');
@@ -385,6 +389,7 @@ deleteBtnIntervencao.addEventListener('click', () => {
     localStorage.removeItem('TÉCNICOS: ');
     localStorage.removeItem('DATA: ');
     localStorage.removeItem('tasksIntervencao');
+    localStorage.removeItem('OBSERVAÇÕES: ');
     window.location.reload();
 })
 
@@ -394,6 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
   teamNames.value = JSON.parse(localStorage.getItem('TÉCNICOS: '));
   dateIntervencao.value = JSON.parse(localStorage.getItem('DATA: '));
   tasksIntervencao.value = JSON.parse(localStorage.getItem('tasksIntervencao'));
+  obsIntervencao.value = JSON.parse(localStorage.getItem('OBSERVAÇÕES: '));
 })
 
 printBtnIntervencao.addEventListener('click', () => {
@@ -415,6 +421,7 @@ allIntervencaoInputs.forEach(input => {
     addInputsValuesToPrint('MORADA: ', addressIntervencao, printAddressIntervencao);
     addInputsValuesToPrint('TÉCNICOS: ', teamNames, teamNamesToPrint);
     addInputsValuesToPrint('DATA: ', dateIntervencao, printDateIntervencao);
+    addInputsValuesToPrint('OBSERVAÇÕES: ', obsIntervencao, printObsIntervencao);
   })
 
 

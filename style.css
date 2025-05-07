@@ -580,10 +580,12 @@ input[type="radio"] {
         font-weight: bold;
     }
 
-    #printTasksIntervencao {
-        font-size: 10pt;
-        font-weight: 200;
-        line-height: 1.6;
+    #printObsIntervencao {
+        word-wrap: break-all;
+        overflow-wrap: anywhere;
+        hyphens: auto;
+        max-width: 100%;
+        white-space: pre-wrap;
     }
 
     .logoCrisavacPrint {
