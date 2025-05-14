@@ -359,7 +359,7 @@ submitD.addEventListener('click', (event) => {
        subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
    }
   
-deleteDescargaFunction()
+// deleteDescargaFunction()
 
 })
 
