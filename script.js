@@ -353,14 +353,9 @@ deleteDescarga.addEventListener('click', () => {
 // EMAIL SUBJECT AND TITLES TO DESCARGA
 
 submitD.addEventListener('click', (event) => {
-        //event.preventDefault()
-
         if (teamD.value !== '') {
        subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
    }
-  
- deleteDescargaFunction()
-
 })
 
 // PRINT INTERVENÇÃO
