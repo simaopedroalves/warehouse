@@ -138,8 +138,16 @@
             "oneMeterweight": 0.0516
         },
         {
-            "name": "Tubo anelado 32'",
+            "name": "Tubo anelado 32' Cinza",
             "oneMeterweight": 0.21
+        },
+        {
+            "name": "Tubo anelado 32' Preto",
+            "oneMeterweight": 0.416
+        },
+        {
+            "name": "Tubo anelado 32' Vermelho",
+            "oneMeterweight": 0.10
         },
         {
             "name": "Mangueira Condensados 6mm",
