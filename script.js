@@ -356,6 +356,7 @@ submitD.addEventListener('click', (event) => {
         if (teamD.value !== '') {
        subjectD.value = `DESCARGA do ${teamD.value} de ${clientD.value}`;
    }
+        deleteDescargaFunction() 
 })
 
 // PRINT INTERVENÇÃO
