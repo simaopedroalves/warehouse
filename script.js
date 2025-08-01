@@ -858,6 +858,7 @@ preInsBtn.addEventListener('click', () => {
   preInsSec.style.display = 'grid'
   faltasDiv.style.display = 'none'
   searchBar.style.display = 'none'
+  intervencaoDiv.style.display = 'none'
 })
 
 // Radio Buttons and Inputs type Number
