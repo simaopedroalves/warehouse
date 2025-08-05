@@ -303,6 +303,14 @@
             "oneMeterweight": 0.164
         },
         {
+            "name": "Cobre nu 1/4'",
+            "oneMeterweight": 0.1
+        },
+        {
+            "name": "Cobre nu 3/8'",
+            "oneMeterweight": 0.16
+        },
+        {
             "name": "Pirallu p3",
             "oneMeterweight": 1.28688524
         }
