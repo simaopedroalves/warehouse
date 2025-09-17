@@ -322,6 +322,10 @@
 
     "ferragens": [
         {
+            "name": "Placa piso Daikin",
+            "oneUnweight": 1620
+        },
+        {
             "name": "Vareta Cobre",
             "oneUnweight": 0.122
         },
