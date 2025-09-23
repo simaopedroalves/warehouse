@@ -2,6 +2,10 @@
 
     "itemKg": [
         {
+            "name": "Cabo 1g1.5",
+            "oneMeterweight": 0.018
+        },
+        {
             "name": "Cabo 1g2.5",
             "oneMeterweight": 0.03053435
         },
