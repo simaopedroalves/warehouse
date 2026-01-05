@@ -833,6 +833,21 @@ function conversaoParaMetros(i) {
     })
   }
 
+// enter key to calc units
+let input = document.querySelectorAll('.calcAmount');
+    input.forEach((el,i) => {
+      el.addEventListener('keydown' , (event) => {
+        if (event.key === 'Enter') {
+          el.parentElement.style.backgroundColor = 'var(--green-two)';
+          el.parentElement.querySelector('h2').style.color = 'var(--white)';
+          el.parentElement.querySelector('h3').style.color = 'var(--white)';
+
+      conversaoParaUnidade(i)
+          
+        }
+      })
+    })
+
   function conversaoParaUnidade(i) {
     let inp = document.querySelectorAll('.weightValueUn')
     let resultado = document.querySelectorAll('.un')
