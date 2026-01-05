@@ -831,7 +831,6 @@ function conversaoParaMetros(i) {
         conversaoParaUnidade(i)
       })
     })
-  }
 
 // enter key to calc units
 let input = document.querySelectorAll('.calcAmount');
@@ -847,6 +846,9 @@ let input = document.querySelectorAll('.calcAmount');
         }
       })
     })
+  }
+
+
 
   function conversaoParaUnidade(i) {
     let inp = document.querySelectorAll('.weightValueUn')
