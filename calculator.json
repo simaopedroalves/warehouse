@@ -290,10 +290,6 @@
             "oneMeterweight": 0.1
         },
         {
-            "name": "Clip fixação tubo monopex",
-            "oneMeterweight": 0.453
-        },
-        {
             "name": "Isolamento Lã Rocha",
             "oneMeterweight": 0.73579,
             "un": "Metros Quadrados"
@@ -352,6 +348,14 @@
         {
             "name": "Placa piso Daikin",
             "oneUnweight": 1620
+        },
+        {
+            "name": "Clip fixação p/tubo monopex",
+            "oneUnweight": 0.453
+        },
+        {
+            "name": "Clip fixação tacker p/tubo monopex",
+            "oneUnweight": 1.9
         },
         {
             "name": "Vareta Cobre",
