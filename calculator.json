@@ -274,12 +274,16 @@
             "oneMeterweight": 0.172
         },
         {
-            "name": "Tubo Monopex Daikin",
+            "name": "Tubo Monopex Daikin 17x2mm",
             "oneMeterweight": 0.094035
         },
         {
-            "name": "Tubo Monopex GCM",
+            "name": "Tubo Monopex GCM 17x2mm",
             "oneMeterweight": 0.099437
+        },
+        {
+            "name": "Tubo Monopex 16x2mm Insuatherm",
+            "oneMeterweight": 0.0961
         },
         {
             "name": "Tubo VD 16'",
