@@ -87,6 +87,8 @@ header {
     right: 0;
 }
 
+/* ==================== ARTICLE PICKER (AUTOCOMPLETE DE ARTIGOS) ==================== */
+
 .article-picker {
     display: flex;
     flex-direction: column;
@@ -112,45 +114,53 @@ header {
     box-sizing: border-box;
 }
 
-.article-picker-row .articleQtyInput {
+.articleQtyInput {
+    min-width: 70px !important;
+    max-width: 70px !important;
     width: 70px !important;
     flex: 0 0 70px !important;
-    box-sizing: border-box !important;
+    min-height: 2rem !important;
 }
 
-.article-picker-row .addArticleBtn {
-    flex: 1 !important;
+.addArticleBtn {
+    min-width: 0 !important;
+    max-width: 100% !important;
     width: auto !important;
+    flex: 1 1 auto !important;
+    white-space: nowrap;
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
-.articleSuggestions {
+/* Lista de sugestões flutuante - criada via JS e anexada ao <body> */
+.articleSuggestionsFloating {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    position: fixed;
+    z-index: 99999;
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     max-height: 220px;
     overflow-y: auto;
     list-style: none;
-    margin: 2px 0 0 0;
+    margin: 0;
     padding: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.articleSuggestions li {
+.articleSuggestionsFloating li {
     padding: 10px 12px;
     cursor: pointer;
     color: #000;
     background: #fff;
     text-align: left;
+    font-size: 1rem;
 }
 
-.articleSuggestions li:hover,
-.articleSuggestions li.active {
+.articleSuggestionsFloating li:hover,
+.articleSuggestionsFloating li.active {
     background: #e9ecef;
 }
 
@@ -160,6 +170,8 @@ header {
     margin-top: 6px;
     font-size: 0.85rem;
     padding: 6px 12px;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 textarea[readonly] {
@@ -167,21 +179,7 @@ textarea[readonly] {
     opacity: 1;
 }
 
-.article-picker-row input.articleQtyInput {
-    flex: 0 0 70px !important;
-    max-width: 70px !important;
-    min-width: 70px !important;
-    width: 70px !important;
-    box-sizing: border-box !important;
-}
-
-.article-picker-row button.addArticleBtn {
-    flex: 1 1 auto !important;
-    width: auto !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    white-space: nowrap;
-}
+/* ==================== FIM ARTICLE PICKER ==================== */
 
 /* .btn-light {
     color: var(--white);
@@ -227,7 +225,7 @@ form {
     margin: 8vh auto 2vh auto;
 }
 
-input:not(.calculation-box input, .cobre input, .cabo input, [type="radio"]), 
+input:not(.calculation-box input, .cobre input, .cabo input, [type="radio"], .articleQtyInput), 
 .select-team {
     border: solid 0.1rem var(--green-two);
     min-height: 2rem;
@@ -693,3 +691,4 @@ input[type="radio"] {
         right: 0;
     }
 }
+
