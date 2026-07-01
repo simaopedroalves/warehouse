@@ -89,22 +89,37 @@ header {
 
 .article-picker {
     display: flex;
+    flex-direction: column;
     gap: 8px;
-    align-items: flex-start;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .article-input-wrapper {
     position: relative;
-    flex: 1;
+    width: 100% !important;
 }
 
-.article-input-wrapper input {
+.article-input-wrapper .articleSearchInput {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: block !important;
+}
+
+.article-picker-row {
+    display: flex !important;
+    gap: 8px;
     width: 100%;
 }
 
-.articleQtyInput {
-    width: 70px;
+.article-picker-row .articleQtyInput {
+    width: 70px !important;
+    flex: 0 0 70px !important;
+    box-sizing: border-box !important;
+}
+
+.article-picker-row .addArticleBtn {
+    flex: 1 !important;
+    width: auto !important;
 }
 
 .articleSuggestions {
@@ -122,12 +137,15 @@ header {
     list-style: none;
     margin: 2px 0 0 0;
     padding: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .articleSuggestions li {
-    padding: 8px 10px;
+    padding: 10px 12px;
     cursor: pointer;
+    color: #000;
+    background: #fff;
+    text-align: left;
 }
 
 .articleSuggestions li:hover,
@@ -135,10 +153,18 @@ header {
     background: #e9ecef;
 }
 
-textarea[readonly] {
-    background-color: #f5f5f5;
+.removeLastArticleBtn {
+    background-color: #000 !important;
+    color: #fff !important;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
 }
 
+textarea[readonly] {
+    background-color: #f5f5f5;
+    opacity: 1;
+}
 /* .btn-light {
     color: var(--white);
     background-color: var(--black);
