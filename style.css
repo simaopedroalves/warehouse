@@ -109,6 +109,7 @@ header {
     display: flex !important;
     gap: 8px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .article-picker-row .articleQtyInput {
@@ -165,6 +166,23 @@ textarea[readonly] {
     background-color: #f5f5f5;
     opacity: 1;
 }
+
+.article-picker-row input.articleQtyInput {
+    flex: 0 0 70px !important;
+    max-width: 70px !important;
+    min-width: 70px !important;
+    width: 70px !important;
+    box-sizing: border-box !important;
+}
+
+.article-picker-row button.addArticleBtn {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    white-space: nowrap;
+}
+
 /* .btn-light {
     color: var(--white);
     background-color: var(--black);
