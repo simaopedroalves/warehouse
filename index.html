@@ -268,10 +268,22 @@
                     <input type="text" name="obsP" id="obsP">
                 </div>
 
-                <div class="textareaDiv">
-                    <label for="material" class="media-test">Material</label>
-                    <textarea id="materialPrep" name="Material" required autocorrect></textarea>
-                   </div>
+               <!-- PREPARAR -->
+<div class="textareaDiv">
+    <label for="material" class="media-test">Material</label>
+
+    <div class="article-picker" data-target="materialPrep">
+        <div class="article-input-wrapper">
+            <input type="text" class="articleSearchInput" placeholder="Escreva o nome do artigo..." autocomplete="off">
+            <ul class="articleSuggestions"></ul>
+        </div>
+        <input type="number" class="articleQtyInput" placeholder="Qtd" min="1" value="1">
+        <button type="button" class="btn btn-secondary addArticleBtn">Adicionar</button>
+    </div>
+
+    <textarea id="materialPrep" name="Material" required autocorrect="" readonly></textarea>
+    <button type="button" class="btn btn-sm btn-outline-danger removeLastArticleBtn" data-target="materialPrep">Remover último</button>
+</div>
                 
              <!-- ======================= BUTTONS ==================== -->
                 <div class="buttons">
@@ -313,10 +325,22 @@
                     <input type="text" name="obsC" id="obsC">
                 </div>
 
-               <div class="textareaDiv">
-                <label for="material" class="media-test">Material</label>
-                <textarea id="material" name="Material" required autocorrect></textarea>
-               </div>
+               <!-- CARGA -->
+<div class="textareaDiv">
+    <label for="material" class="media-test">Material</label>
+
+    <div class="article-picker" data-target="material">
+        <div class="article-input-wrapper">
+            <input type="text" class="articleSearchInput" placeholder="Escreva o nome do artigo..." autocomplete="off">
+            <ul class="articleSuggestions"></ul>
+        </div>
+        <input type="number" class="articleQtyInput" placeholder="Qtd" min="1" value="1">
+        <button type="button" class="btn btn-secondary addArticleBtn">Adicionar</button>
+    </div>
+
+    <textarea id="material" name="Material" required autocorrect="" readonly></textarea>
+    <button type="button" class="btn btn-sm btn-outline-danger removeLastArticleBtn" data-target="material">Remover último</button>
+</div>
             
              <!-- ======================= BUTTONS ==================== -->
                 <div class="buttons">
@@ -356,10 +380,22 @@
                     <input type="text" name="obsD" id="obsD">
                 </div>
 
-                <div class="textareaDiv">
-                    <label for="material" class="media-test">Material</label>
-                    <textarea id="materialD" name="Material" rows="5" required autocorrect></textarea>
-                </div>
+                <!-- DESCARGA -->
+<div class="textareaDiv">
+    <label for="material" class="media-test">Material</label>
+
+    <div class="article-picker" data-target="materialD">
+        <div class="article-input-wrapper">
+            <input type="text" class="articleSearchInput" placeholder="Escreva o nome do artigo..." autocomplete="off">
+            <ul class="articleSuggestions"></ul>
+        </div>
+        <input type="number" class="articleQtyInput" placeholder="Qtd" min="1" value="1">
+        <button type="button" class="btn btn-secondary addArticleBtn">Adicionar</button>
+    </div>
+
+    <textarea id="materialD" name="Material" rows="5" required autocorrect="" readonly></textarea>
+    <button type="button" class="btn btn-sm btn-outline-danger removeLastArticleBtn" data-target="materialD">Remover último</button>
+</div>
                 
                 <div class="buttons">
                     <button type="submit" name="q" id="submitD" class="btn btn-info">Submeter</button>
@@ -413,10 +449,22 @@
                 <input type="text" name="obsFaltas" id="obsFaltas">
             </div>
 
-            <div class="textareaDiv">
-                <label for="material" class="media-test">Material</label>
-                <textarea id="materialFaltas" name="MaterialFaltas" required autocorrect></textarea>
-               </div>
+            <!-- FALTAS -->
+<div class="textareaDiv">
+    <label for="material" class="media-test">Material</label>
+
+    <div class="article-picker" data-target="materialFaltas">
+        <div class="article-input-wrapper">
+            <input type="text" class="articleSearchInput" placeholder="Escreva o nome do artigo..." autocomplete="off">
+            <ul class="articleSuggestions"></ul>
+        </div>
+        <input type="number" class="articleQtyInput" placeholder="Qtd" min="1" value="1">
+        <button type="button" class="btn btn-secondary addArticleBtn">Adicionar</button>
+    </div>
+
+    <textarea id="materialFaltas" name="MaterialFaltas" required autocorrect="" readonly></textarea>
+    <button type="button" class="btn btn-sm btn-outline-danger removeLastArticleBtn" data-target="materialFaltas">Remover último</button>
+</div>
             
          <!-- ======================= BUTTONS ==================== -->
             <div class="buttons">
