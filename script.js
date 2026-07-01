@@ -1292,12 +1292,30 @@ function setupArticlePicker(pickerEl) {
   const targetId = pickerEl.dataset.target;
   const textarea = document.getElementById(targetId);
   const searchInput = pickerEl.querySelector('.articleSearchInput');
-  const suggestionsList = pickerEl.querySelector('.articleSuggestions');
   const qtyInput = pickerEl.querySelector('.articleQtyInput');
   const addBtn = pickerEl.querySelector('.addArticleBtn');
 
+  // Lista de sugestões flutuante, anexada ao body para escapar a overflow/z-index do formulário
+  const suggestionsList = document.createElement('ul');
+  suggestionsList.className = 'articleSuggestions articleSuggestionsFloating';
+  document.body.appendChild(suggestionsList);
+
   let artigoSelecionado = null;
   let indiceAtivo = -1;
+
+  function posicionarLista() {
+    const rect = searchInput.getBoundingClientRect();
+    suggestionsList.style.left = rect.left + 'px';
+    suggestionsList.style.top = (rect.bottom + window.scrollY) + 'px';
+    suggestionsList.style.width = rect.width + 'px';
+  }
+
+  window.addEventListener('scroll', () => {
+    if (suggestionsList.style.display === 'block') posicionarLista();
+  }, true);
+  window.addEventListener('resize', () => {
+    if (suggestionsList.style.display === 'block') posicionarLista();
+  });
 
   searchInput.addEventListener('input', () => {
     artigoSelecionado = null;
@@ -1312,6 +1330,8 @@ function setupArticlePicker(pickerEl) {
     const resultados = listaArtigos
       .filter(artigo => artigo.toLowerCase().includes(termo))
       .slice(0, 8);
+
+    console.log(`Termo: "${termo}" → ${resultados.length} resultados`, resultados);
 
     renderizarSugestoes(resultados);
   });
@@ -1328,12 +1348,13 @@ function setupArticlePicker(pickerEl) {
       const li = document.createElement('li');
       li.textContent = artigo;
       li.addEventListener('mousedown', (e) => {
-        e.preventDefault(); // evita perder o foco antes do click disparar
+        e.preventDefault();
         selecionarArtigo(artigo);
       });
       suggestionsList.appendChild(li);
     });
 
+    posicionarLista();
     suggestionsList.style.display = 'block';
   }
 
@@ -1383,7 +1404,6 @@ function setupArticlePicker(pickerEl) {
     }
   }
 
-  // Se sair do campo sem escolher um artigo válido, valida ou limpa
   searchInput.addEventListener('blur', () => {
     setTimeout(() => {
       if (searchInput.value !== '' && searchInput.value !== artigoSelecionado) {
@@ -1422,9 +1442,6 @@ function setupArticlePicker(pickerEl) {
     const novaLinha = `${quantidade} ${artigoSelecionado};`;
 
     textarea.value = textarea.value + novaLinha;
-
-    // dispara o evento 'input' para que toda a lógica existente
-    // (pré-visualização, localStorage, whatsapp, impressão) continue a funcionar
     textarea.dispatchEvent(new Event('input', { bubbles: true }));
 
     searchInput.value = '';
@@ -1442,4 +1459,5 @@ function setupArticlePicker(pickerEl) {
       textarea.dispatchEvent(new Event('input', { bubbles: true }));
     });
   }
+}
 }
