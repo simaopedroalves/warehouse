@@ -512,6 +512,10 @@
         {
             "name": "UNIÃO ESTEIRA",
             "oneUnweight": 16.8
+        },
+        {
+            "name": "UNIÃO TUBO VD 20MM",
+            "oneUnweight": 6
         }
 
     ]
