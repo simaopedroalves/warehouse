@@ -18,6 +18,8 @@ const searchBar = document.querySelector('.search-bar-section');
 const intervencaoBtn = document.querySelector('#intervencaoBtn');
 const intervencaoDiv = document.querySelector('.formIntervencao');
 
+
+
 // test scanner
 // const scannerMenuBtn = document.querySelector('#scannerMenuBtn');
 // const scannerSection = document.querySelector('.scanner-container');
@@ -1188,7 +1190,8 @@ function isAlreadyOrdered () {
 isAlreadyOrdered()
 
 const printBtnFaltas = document.querySelector('#printBtnFaltas')
-printBtnFaltas.addEventListener('click', () => {
+printBtnFaltas.addEventListener('click', (event) => {
+  event.preventDefault()
   printFaltasDiv.style.display = 'grid'
   printPreInsDiv.style.display = 'none'
   printCargaDiv.style.display = 'none'
@@ -1217,4 +1220,11 @@ obsFaltas.addEventListener('input', () => {
   showsObs()
 })
 
-
+// Impede que a tecla Enter submeta qualquer formulário
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && event.target.tagName !== 'TEXTAREA') {
+      event.preventDefault()
+    }
+  })
+})
